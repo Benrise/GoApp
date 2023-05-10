@@ -27,7 +27,7 @@
     <header class="header">
       <div class="header__container">
         <a href="" class="header__logo">
-          <img src="./img/icons/icons/Logo_group.svg" alt="Logo">
+          <img src="./img/icons/icons/Logo_group.svg" class="header__image header__image_adaptive" alt="Logo">
         </a>
         <nav class="header__menu menu">
           <ul class="menu__list">
@@ -35,12 +35,21 @@
             <li class="menu__item"><a href="" class="menu__link _icon-ticket">Мои билеты</a></li>
             <li class="menu__item"><a href="" class="menu__link _icon-message">Будьте в курсе</a></li>
             <li class="menu__item"><a href="" class="menu__link _icon-geo">Москва</a></li>
+            <li class="menu__item _hidden"><a href="" class="menu__link _icon-profile">Профиль</a></li>
           </ul>
         </nav>
-        <div class="header__profile">
-          <a href=""><img src="./img/pic/profile.png" alt="profile" class="profile__image"></a>
+        <div class="header__search _hidden">
+          <form action="" class="search-header">
+            <button type="submit" class="search-header__button _icon-magnify"></button>
+            <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск" class="search-header__input">
+          </form>
         </div>
-        <button class="icon-menu _icon-burger-menu" ><span></span></button>
+        <div class="header__profile">
+          <a href=""><img src="./img/pic/profile.png" alt="profile" class="header__profile header__image_adaptive"></a>
+        </div>
+
+        <div class="header__menu-icon"><span></span></div>
+        </nav>
       </div>
     </header>
     <main class="main">
@@ -53,7 +62,7 @@
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <script type="module" src="js/main.js"></script>
 </body>
 
 </html>

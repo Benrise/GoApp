@@ -5,20 +5,60 @@
     background-color: $whiteColor;
     &__container {
         display: flex;
+        @include adaptiveValue("gap", 32, 12);
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 16px;
+        padding: rem(16);
         text-align: center;
     }
 
     &__logo {
+        position: relative;
+        z-index: 5;
     }
-
     &__menu {
+        @media (max-width: $tablet) {
+            .menu__list > ._hidden {
+                display: block;
+            }
+            position: fixed;
+            top: 0;
+            right: -100%;
+            height: 100%;
+            transition: right 0.3s ease 0s;
+            display: flex;
+            justify-content: end;
+            .menu__list {
+                flex-direction: column;
+                align-items: start;
+                padding: rem(120) rem(30) rem(30) rem(30);
+                background-color: white;
+            }
+            &._active {
+                right: 0%;
+            }
+        }
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+            .menu__list {
+                width: 100%;
+            }
+        }
+        @media (max-width: $mobileXSmall) {
+            .menu__link {
+                font-size: 0.9rem;
+            }
+        }
     }
 
-    &__profile {
+    &__profile img {
+        @media (max-width: $tablet) {
+            display: none;
+        }
+    }
+
+    &__image {
     }
 }
 .menu {
@@ -26,77 +66,111 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
-        @include adaptiveValue("gap", 64, 24);
-        padding: 0px 12px 0px 12px;
+        @include adaptiveValue("gap", 64, 24, 1920, 1090, 1);
+        padding: 0px rem(12) 0px rem(12);
     }
 
     &__item {
-        ::before{
-            margin-right: 8px;
+        ::before {
+            margin-right: rem(8);
         }
     }
 
     &__link {
-        font-size: 20px;
+        font-size: rem(20);
         font-weight: 500;
         color: $fontColor;
     }
 }
-.profile {
-    &__image {
+
+.header__image_adaptive {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.header {
+    &__search {
+        @media (max-width: $tablet) {
+            display: block;
+        }
     }
 }
-.icon-menu {
+.search-header {
+    position: relative;
+    &__button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $secondaryFontColor;
+        background-color: transparent;
+        height: rem(40);
+        width: rem(40);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: rem(8);
+        font-size: rem(20);
+    }
+
+    &__input {
+        background-color: $bgColor;
+        border: rem(2) solid $containerBorderColor;
+        border-radius: 12px;
+        height: rem(43);
+        @include adaptiveValue("width",800,120);
+        padding: 0px rem(20) 0px rem(45);
+        &::placeholder {
+            color: $secondaryFontColor;
+            font-size: rem(16);
+            font-weight: 500;
+        }
+    }
 }
 
-
-
 //Бургер
-.icon-menu {
+.header__menu-icon {
     display: none;
     @media (max-width: $tablet) {
         display: block;
+        z-index: 5;
         position: relative;
         width: rem(30);
         height: rem(18);
         cursor: pointer;
-        z-index: 5;
-        // span,
-        // &::before,
-        // &::after {
-        //     content: "";
-        //     transition: all 0.3s ease 0s;
-        //     right: 0;
-        //     position: absolute;
-        //     width: 100%;
-        //     height: rem(2);
-        //     background-color: #000;
-        // }
-        // &::before {
-        //     top: 0;
-        // }
-        // &::after {
-        //     bottom: 0;
-        // }
-        // span {
-        //     top: calc(50% - rem(1));
-        // }
-        .menu-open & {
-            span {
-                width: 0;
-            }
-            &::before,
-            &::after {
-            }
-            &::before {
-                top: calc(50% - rem(1));
-                transform: rotate(-45deg);
-            }
-            &::after {
-                bottom: calc(50% - rem(1));
-                transform: rotate(45deg);
-            }
+        span,
+        &::before,
+        &::after {
+            content: "";
+            left: 0;
+            position: absolute;
+            height: rem(2);
+            width: 100%;
+            transition: all 0.3s ease 0s;
+            background-color: $fontColor;
         }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        span {
+            top: calc(50% - rem(1));
+        }
+    }
+
+    &._active span {
+        transform: scale(0) translate(0px, 50%);
+    }
+    &._active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+    &._active::after {
+        transform: scale(0) translate(0px, 50%);
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
     }
 }

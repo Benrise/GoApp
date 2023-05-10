@@ -24,9 +24,10 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Брейк-поинты
 $pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
-$tablet: em(1100); // Планшеты, некоторые телефоны в горизонтальном положении
+$tablet: em(1091.98); // Планшеты, некоторые телефоны в горизонтальном положении
 $mobile: em(767.98); // Телефоны L
 $mobileSmall: em(479.98); // Телефоны S
+$mobileXSmall: em(340);
 
 body {
     font-family: "Inter", "sans-serif";
@@ -44,6 +45,10 @@ body {
 [class*="__container"] {
     max-width: 1408px;
     margin: 0px auto;
+}
+
+[class*="_hidden"] {
+    display: none;
 }
 
 @import "_header";
