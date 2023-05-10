@@ -16,24 +16,44 @@
   <link rel="apple-touch-icon" href="icon.png">
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
 
   <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
 
-  <div class = "wrapper">
-      <header class="header">
-        <div class="header__container _container">
-          
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="" class="header__logo">
+          <img src="./img/icons/icons/Logo_group.svg" alt="Logo">
+        </a>
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="" class="menu__link _icon-calendar">Календарь мероприятий</a></li>
+            <li class="menu__item"><a href="" class="menu__link _icon-ticket">Мои билеты</a></li>
+            <li class="menu__item"><a href="" class="menu__link _icon-message">Будьте в курсе</a></li>
+            <li class="menu__item"><a href="" class="menu__link _icon-geo">Москва</a></li>
+          </ul>
+        </nav>
+        <div class="header__profile">
+          <a href=""><img src="./img/pic/profile.png" alt="profile" class="profile__image"></a>
         </div>
-      </header>
+        <button class="icon-menu _icon-burger-menu" ><span></span></button>
+      </div>
+    </header>
+    <main class="main">
+      Content
+    </main>
+    <footer class="footer">
+      Footer
+    </footer>
   </div>
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script> 
+  <script src="js/main.js"></script>
 </body>
 
 </html>

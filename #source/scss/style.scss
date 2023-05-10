@@ -1,11 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap&subset=cyrillic-ext');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap&subset=cyrillic-ext");
 
-// normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css
-@import "normalize.scss";
+@import "_mixins";
 
-@import "reset.scss";
+@import "_icons";
+@import "_normalize";
+@import "_reset";
+@import "_base";
 
-body{
+// Минимальная ширина полотна
+$minWidth: 320;
+
+// Максимальная ширина полотна
+$maxWidth: 1920;
+
+// Ширина ограничивающего контейнера
+$maxWidthContainer: 1408;
+
+// Общий отступ у контейнера
+$containerPadding: 30;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поинты
+$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(1100); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(767.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+
+body {
     font-family: "Inter", "sans-serif";
+    font-size: rem(20);
+    background-color: $bgColor;
 }
 
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+[class*="__container"] {
+    max-width: 1408px;
+    margin: 0px auto;
+}
+
+@import "_header";
+@import "_main";
+@import "_footer";

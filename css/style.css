@@ -1,4 +1,108 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap&subset=cyrillic-ext");
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.ttf");
+}
+[class*=_icon-]:before {
+  font-family: "icons" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*=_icon-]:before {
+  display: inline-block;
+}
+
+._icon-arrow:before {
+  content: "\e900";
+}
+
+._icon-burger-menu:before {
+  content: "\e901";
+}
+
+._icon-calendar:before {
+  font-size: 20px;
+  content: "\e902";
+}
+
+._icon-checkmark:before {
+  content: "\e903";
+}
+
+._icon-city:before {
+  content: "\e904";
+}
+
+._icon-exit:before {
+  content: "\e905";
+}
+
+._icon-filter:before {
+  content: "\e906";
+}
+
+._icon-fire:before {
+  content: "\e907";
+}
+
+._icon-geo:before {
+  font-size: 24px;
+  content: "\e908";
+}
+
+._icon-heart-filled:before {
+  content: "\e909";
+}
+
+._icon-heart:before {
+  content: "\e90a";
+}
+
+._icon-map:before {
+  content: "\e90b";
+}
+
+._icon-message:before {
+  font-size: 16px;
+  content: "\e90c";
+}
+
+._icon-pencil-fill:before {
+  content: "\e90d";
+}
+
+._icon-plus:before {
+  content: "\e90e";
+}
+
+._icon-profile:before {
+  content: "\e90f";
+}
+
+._icon-rublesignsquare:before {
+  content: "\e910";
+}
+
+._icon-ticket:before {
+  font-size: 16px;
+  content: "\e911";
+}
+
+._icon-upc-scan:before {
+  content: "\e912";
+}
+
+._icon-location-pin:before {
+  content: "\e948";
+}
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -257,4 +361,124 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: "Inter", "sans-serif";
+  font-size: 1.25rem;
+  background-color: #FFF9FF;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+[class*=__container] {
+  max-width: 1408px;
+  margin: 0px auto;
+}
+
+.header {
+  background-color: #FFFFFF;
+}
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px;
+  text-align: center;
+}
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 12px 0px 12px;
+}
+@media (min-width: 89.875em) {
+  .menu__list {
+    gap: 4rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 89.875em) {
+  @supports (gap: clamp( 1.5rem , 0.7844364937rem  +  3.5778175313vw , 4rem )) {
+    .menu__list {
+      gap: clamp( 1.5rem , 0.7844364937rem  +  3.5778175313vw , 4rem );
+    }
+  }
+  @supports not (gap: clamp( 1.5rem , 0.7844364937rem  +  3.5778175313vw , 4rem )) {
+    .menu__list {
+      gap: calc(
+				1.5rem + 40 * (100vw - 20rem) / 69.875
+			);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .menu__list {
+    gap: 1.5rem;
+  }
+}
+.menu__item ::before {
+  margin-right: 8px;
+}
+.menu__link {
+  font-size: 20px;
+  font-weight: 500;
+  color: #A43EA4;
+}
+
+.icon-menu {
+  display: none;
+}
+@media (max-width: 68.75em) {
+  .icon-menu {
+    display: block;
+    position: relative;
+    width: 1.875rem;
+    height: 1.125rem;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .menu-open .icon-menu span {
+    width: 0;
+  }
+  .menu-open .icon-menu::before {
+    top: calc(50% - 0.0625rem);
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .menu-open .icon-menu::after {
+    bottom: calc(50% - 0.0625rem);
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
