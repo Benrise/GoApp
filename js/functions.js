@@ -4,14 +4,19 @@ export function addTouchClass() {
 	if (isMobile.any()) document.body.classList.add('_touch');
 }
 
-export function burgerInit(){
+export function burgerInit() {
 	const iconMenu = document.querySelector('.header__menu-icon');
-	if (iconMenu){
+	if (iconMenu) {
 		const menuBody = document.querySelector('.header__menu');
-		iconMenu.addEventListener("click",function(e){
+		iconMenu.addEventListener("click", function (e) {
 			document.body.classList.toggle('_lock');
 			iconMenu.classList.toggle('_active');
 			menuBody.classList.toggle('_active');
 		});
 	}
 }
+
+
+
+
+
