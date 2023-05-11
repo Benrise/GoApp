@@ -3,6 +3,7 @@
 
 .header {
     background-color: $whiteColor;
+    z-index: 999;
     &__container {
         display: flex;
         @include adaptiveValue("gap", 32, 12);

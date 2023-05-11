@@ -54,5 +54,11 @@ new Swiper('.swiper-container',{
             slidesPerView: 6
         }
         
-    }
+    },
+
+    autoHeight: false,
+
+    slidesPerColumn: 1,
+
+    slidesPerView: 3
 });

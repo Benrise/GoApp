@@ -28,7 +28,6 @@
         align-items: center;
         padding: 24px 0px 24px 0px;
         @include adaptiveValue("padding", 24, 12);
-        
     }
 
     &__body {
@@ -54,9 +53,13 @@
         .swiper-slide:nth-child(2n) > & {
             justify-content: center;
         }
-
+        flex-wrap: wrap;
         width: 100%;
         height: 100%;
+
+        @media (max-width: $tablet) {
+            justify-content: space-around;
+        }
     }
     &__item {
         @include adaptiveValue("font-size", 16, 14);
@@ -75,8 +78,9 @@
 .swiper-container {
 }
 .swiper-wrapper {
-}
-.swiper-slide {
+    .swiper-slide {
+
+    }
 }
 
 .category {
@@ -86,7 +90,7 @@
     align-items: center;
     padding: rem(12);
     height: rem(40);
-    @include adaptiveValue("width", 227, 150);
+    @include adaptiveValue("width", 210, 150);
     gap: rem(10);
     color: white;
     @media (max-width: $mobileXSmall) {
@@ -96,5 +100,4 @@
         width: rem(50);
         font-size: rem(10);
     }
-
 }
