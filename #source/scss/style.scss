@@ -27,7 +27,8 @@ $pc: em($containerWidth); // ПК, ноутбуки, некоторые план
 $tablet: em(1091.98); // Планшеты, некоторые телефоны в горизонтальном положении
 $mobile: em(767.98); // Телефоны L
 $mobileSmall: em(479.98); // Телефоны S
-$mobileXSmall: em(340);
+$mobileXSmall: em(339.98); // Телефоны XS
+$mobileXSSmall: em(279.98); // ??
 
 body {
     font-family: "Inter", "sans-serif";
@@ -50,6 +51,8 @@ body {
 [class*="_hidden"] {
     display: none;
 }
+
+
 
 @import "_header";
 @import "_main";
