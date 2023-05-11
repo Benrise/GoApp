@@ -997,3 +997,103 @@ body {
     font-size: 0.625rem;
   }
 }
+
+.search-main__filters {
+  margin-top: 3rem;
+  max-width: 400px;
+}
+
+.select-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: 1px solid #a43ea4;
+  width: 100%;
+  gap: 12px;
+  color: #a43ea4;
+  font-weight: 500;
+}
+.select-btn ._icon-arrow {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  opacity: 50%;
+}
+.select-btn._open ~ .list-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.select-btn._open > ._icon-arrow {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  opacity: 100%;
+}
+
+.checkbox {
+  display: block;
+  height: 20px;
+  width: 20px;
+  background-color: #fff9ff;
+  border: 1px solid #a43ea4;
+  border-radius: 6px;
+}
+
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  font-size: 16px;
+  color: #a43ea4;
+  font-weight: 500;
+}
+
+._checked::before {
+  content: "";
+  display: block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 3px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: #a43ea4;
+  margin: 0;
+}
+
+.list-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  border-radius: 12px;
+  margin-top: 16px;
+  border: 1px solid #a43ea4;
+  padding: 16px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  display: none;
+}

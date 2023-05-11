@@ -16,6 +16,21 @@ export function burgerInit() {
 	}
 }
 
+export function dropdownFilter(){
+	const selectBtn = document.querySelector(".select-btn"), items = document.querySelectorAll(".checkbox");
+
+	selectBtn.addEventListener("click", () => {
+		selectBtn.classList.toggle("_open")
+	})
+
+	items.forEach(item => {
+		item.addEventListener("click", () => {
+			item.classList.toggle("_checked");
+		})
+	})
+
+}
+
 
 
 

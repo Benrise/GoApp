@@ -1,5 +1,6 @@
 import { isMobile, addTouchClass } from "./functions.js";
 import { burgerInit } from "./functions.js";
+import { dropdownFilter } from "./functions.js";
 
 if (isMobile.any()){
     addTouchClass();
@@ -62,3 +63,5 @@ new Swiper('.swiper-container',{
 
     slidesPerView: 3
 });
+
+dropdownFilter();
