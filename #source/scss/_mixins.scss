@@ -8,32 +8,6 @@
 	@return $result;
 }
 
-@mixin sliderSetup() {
-	.slider-button::after {
-		display: none;
-	}
-	.slider-button {
-		width: fit-content;
-		height: fit-content;
-	}
-
-	.swiper-button-prev {
-		transform: rotate(180deg);
-		left: var(--swiper-navigation-sides-offset, rem(-25));
-	}
-	.swiper-button-next {
-		right: var(--swiper-navigation-sides-offset, rem(-25));
-	}
-	.swiper-pagination-bullets.swiper-pagination-horizontal {
-		bottom: var(--swiper-pagination-bottom, -25px);
-	}
-	.swiper-pagination-bullet-active {
-		background-color: $funcButton_color;
-	}
-	.swiper-pagination-bullet {
-		background-color: $funcButton_color;
-	}
-}
 
 // Адаптивное свойство (clamp)
 @mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0) {

@@ -18,6 +18,7 @@
 
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/virtual-select.min.css" />
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -40,11 +41,13 @@
           </ul>
         </nav>
         <div class="header__search _hidden">
-          <form action="" class="search-header">
-            <button type="submit" class="search-header__button _icon-magnify"></button>
-            <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск"
-              class="search-header__input">
-          </form>
+          <div class="search">
+            <form action="" class="search__form">
+              <button type="submit" class="search__button _icon-magnify"></button>
+              <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск"
+                class="search__input">
+            </form>
+          </div>
         </div>
         <div class="header__profile">
           <a href=""><img src="./img/pic/profile.png" alt="profile" class="header__profile header__image_adaptive"></a>
@@ -58,7 +61,7 @@
       <section class="event-categories">
         <div class="event-categories__container">
           <h1 class="event-categories__title">
-            Go - это:
+            GO на мероприятия!
           </h1>
           <div class="event-categories__body">
             <div class="swiper-container event-categories__slider">
@@ -170,58 +173,37 @@
       </section>
 
       <section class="search-main">
-        <div class="search-main__text">
-
-        </div>
-        <div class="search-main__body">
-          <div class="search-main__search">
-
-          </div>
-          <div class="search-main__filters">
-            
-            <div class="select-btn">
-              <span class="btn-text">
-                Что именно?
-              </span>
-              <span class="arrow-dwn _icon-arrow">
-              </span>
+        <div class="search-main__container">
+          <div class="search-main__text">
+            <div class="block-info">
+              <h2 class="block-info__title">
+                Быстрый поиск
+              </h2>
+              <h3 class="block-info__subtitle">
+                Поиск по мероприятиям и событиям
+              </h3>
             </div>
-
-            <ul class="list-items">
-              <li class="item">
-                <span class="item-text">
-                  Концерт
-                </span>
-                <span class="checkbox ">
-                </span>
-              </li>
-
-              <li class="item">
-                <span class="item-text">
-                  Музыка
-                </span>
-                <span class="checkbox">
-                </span>
-              </li>
-
-              <li class="item">
-                <span class="item-text">
-                  Театр
-                </span>
-                <span class="checkbox">
-                </span>
-              </li>
-
-              <li class="item">
-                <label class="item-text" for="checkbox" >Тест</label>
-                <input class="checkbox" type="checkbox"/>
-              </li>
-            </ul>
-            
-
+          </div>
+          <div class="search-main__body">
+            <div class="search search-main">
+              <form action="" class="search__form">
+                <button type="submit" class="search__button _icon-magnify"></button>
+                <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="События, артисты и места"
+                  class="search__input">
+              </form>
+            </div>
+            <div class="filters">
+              <div class="filters__item filter _what-filter"></div>
+              <div class="filters__item filter _where-filter"></div>
+              <div class="filters__item filter _when-filter"></div>
+              <div class="filters__item filter _price-filter"></div>
+              <div class="filters__item filter _rating-filter"></div>
+              <div class="filters__item filter _other-filter"></div>
+            </div>
           </div>
         </div>
       </section>
+
     </main>
     <footer class="footer">
       Footer
@@ -232,6 +214,9 @@
   <script src="js/plugins.js"></script>
   <script type="module" src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="js/vendor/virtual-select.min.js"></script>
+  <script src="js/vendor/air-datepicker.js"></script>
+
 </body>
 
 </html>

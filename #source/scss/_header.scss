@@ -97,38 +97,6 @@
         }
     }
 }
-.search-header {
-    position: relative;
-    &__button {
-        position: absolute;
-        top: 0;
-        left: 0;
-        color: $secondaryFontColor;
-        background-color: transparent;
-        height: rem(40);
-        width: rem(40);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        top: 0;
-        left: rem(8);
-        font-size: rem(20);
-    }
-
-    &__input {
-        background-color: $bgColor;
-        border: rem(2) solid $containerBorderColor;
-        border-radius: 12px;
-        height: rem(43);
-        @include adaptiveValue("width",800,120);
-        padding: 0px rem(20) 0px rem(45);
-        &::placeholder {
-            color: $secondaryFontColor;
-            font-size: rem(16);
-            font-weight: 500;
-        }
-    }
-}
 
 //Бургер
 .header__menu-icon {

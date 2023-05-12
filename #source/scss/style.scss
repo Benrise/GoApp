@@ -7,6 +7,8 @@
 @import "_reset";
 @import "_base";
 
+
+
 // Минимальная ширина полотна
 $minWidth: 320;
 
@@ -52,9 +54,14 @@ body {
     display: none;
 }
 
-
-
-
 @import "_header";
+
 @import "_main";
+
+@import "_slider";
+@import "_block-info";
+@import "_search";
+@import "_scroll";
+@import "_filters";
+
 @import "_footer";
