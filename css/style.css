@@ -4,7 +4,7 @@
   font-family: "icons";
   src: url("../fonts/icons.ttf");
 }
-[class*=_icon-]:before {
+[class*=_icon-]:before, [class*=_icon-]:after {
   font-family: "icons" !important;
   font-style: normal;
   font-weight: normal;
@@ -16,7 +16,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-[class*=_icon-]:before {
+[class*=_icon-]:before, [class*=_icon-]:after {
   display: inline-block;
 }
 
@@ -96,7 +96,8 @@
   content: "\e912";
 }
 
-._icon-xmark:before {
+._icon-xmark:after {
+  font-size: 0.875rem;
   content: "\e913";
 }
 
@@ -1019,6 +1020,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 1.5rem;
+  width: 100%;
 }
 
 .search-main .search__input {
@@ -1027,6 +1029,59 @@ body {
 }
 .search-main .search__button {
   height: 100%;
+}
+
+.date-picker {
+  width: 100%;
+  text-align: center;
+  color: #a43ea4;
+  font-size: 1rem;
+  padding: 7px;
+}
+.date-picker::-webkit-input-placeholder {
+  font-family: "Inter", "sans-serif";
+  font-size: 1rem;
+  text-align: center;
+  vertical-align: center;
+  color: #a43ea4;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.air-datepicker.-is-mobile-.-active-:not(.-custom-position-) {
+  border-radius: 12px;
+}
+
+.air-datepicker-button {
+  color: #820083 !important;
+}
+
+.air-datepicker-cell.-current- {
+  color: #ff5341 !important;
+}
+
+.air-datepicker.-is-mobile- * {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.air-datepicker-cell.-selected- {
+  color: #fff;
+  border: none;
+  background: #ff5341 !important;
+}
+
+.air-datepicker-cell.-in-range- {
+  background: #f7e1ff !important;
+  border-radius: 0;
+}
+
+.air-datepicker-cell.-range-from-,
+.air-datepicker-cell.-range-to- {
+  border: 1px solid #820083 !important;
+  background-color: #f7e1ff !important;
+  border-radius: 0 var(--adp-cell-border-radius) var(--adp-cell-border-radius) 0;
 }
 
 .event-categories__container .slider-button::after {
@@ -1049,6 +1104,7 @@ body {
   right: var(--swiper-navigation-sides-offset, -1.5625rem);
 }
 .event-categories__container .swiper-pagination-bullets.swiper-pagination-horizontal {
+  z-index: -1;
   bottom: var(--swiper-pagination-bottom, -25px);
 }
 .event-categories__container .swiper-pagination-bullet-active {
@@ -1203,10 +1259,11 @@ body {
   gap: 1.5rem;
 }
 .filters__item {
-  min-width: 15.625rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+  max-width: 15.625rem;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -1217,13 +1274,40 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.75rem ren(24);
   gap: 0.75rem;
   position: relative;
   height: 3.75rem;
-  background: #ffffff;
+  background: white;
   border: 1px solid #a43ea4;
   border-radius: 12px;
+}
+.filters__item._reset {
+  border: 1px solid #ff5341;
+  color: #ff5341;
+  font-size: 1rem;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0.75rem 1.5rem;
+}
+.filters__item._reset > span {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.filters__item._when-filter {
+  min-width: 19.375rem;
+}
+@media (max-width: 39.375rem) {
+  .filters .vscomp-ele, .filters__item, .filters._other-filter {
+    min-width: none;
+    max-width: none;
+    width: 100%;
+  }
 }
 
 .filter .vscomp-toggle-button {
@@ -1233,9 +1317,6 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.filter .vscomp-wrapper.has-clear-button .vscomp-toggle-button {
-  padding: 0;
-}
 .filter .vscomp-ele-wrapper {
   height: 100%;
 }
@@ -1243,6 +1324,8 @@ body {
   position: relative;
 }
 .filter .vscomp-arrow::after {
+  height: 0.75rem;
+  width: 0.75rem;
   border-bottom-color: #a43ea4;
   border-right-color: #a43ea4;
   opacity: 0.5;
@@ -1342,4 +1425,15 @@ body {
   background-color: #fff9ff;
   border: 1px solid #f7e1ff;
   border-radius: 12px;
+}
+.filter .vscomp-wrapper.focused .vscomp-toggle-button,
+.filter .vscomp-wrapper:focus .vscomp-toggle-button {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.filter .vscomp-wrapper.has-clear-button .vscomp-toggle-button {
+  padding-right: 15px;
+}
+.filter .vscomp-toggle-button {
+  gap: 0.75rem;
 }

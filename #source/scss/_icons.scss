@@ -16,7 +16,8 @@
 }
 
 [class*="_icon-"] {
-    &:before {
+    &:before,
+    &:after {
         @extend %icon;
         display: inline-block;
     }
@@ -80,7 +81,8 @@
 ._icon-upc-scan:before {
     content: "\e912";
 }
-._icon-xmark:before {
+._icon-xmark:after {
+    font-size: rem(14);
     content: "\e913";
 }
 ._icon-pencil:before {

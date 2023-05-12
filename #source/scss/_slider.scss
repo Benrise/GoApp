@@ -15,6 +15,7 @@
         right: var(--swiper-navigation-sides-offset, rem(-25));
     }
     .swiper-pagination-bullets.swiper-pagination-horizontal {
+        z-index: -1;
         bottom: var(--swiper-pagination-bottom, -25px);
     }
     .swiper-pagination-bullet-active {

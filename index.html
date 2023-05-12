@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="css/style.css" type="text/css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/virtual-select.min.css" />
+  <link rel="stylesheet" href="css/air-datepicker.css" />
+  <link rel="stylesheet" href="css/nouislider.css" />
 
   <meta name="theme-color" content="#fafafa">
 </head>
@@ -38,6 +40,8 @@
             <li class="menu__item"><a href="" class="menu__link _icon-message">Будьте в курсе</a></li>
             <li class="menu__item"><a href="" class="menu__link _icon-geo">Москва</a></li>
             <li class="menu__item _hidden"><a href="" class="menu__link _icon-profile">Профиль</a></li>
+
+
           </ul>
         </nav>
         <div class="header__search _hidden">
@@ -184,26 +188,26 @@
               </h3>
             </div>
           </div>
-          <div class="search-main__body">
+          <form class="search-main__body">
             <div class="search search-main">
-              <form action="" class="search__form">
+              <div action="" class="search__form">
                 <button type="submit" class="search__button _icon-magnify"></button>
-                <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="События, артисты и места"
-                  class="search__input">
-              </form>
+                <input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+                  placeholder="События, артисты и места" class="search__input">
+              </div>
             </div>
             <div class="filters">
               <div class="filters__item filter _what-filter"></div>
               <div class="filters__item filter _where-filter"></div>
-              <div class="filters__item filter _when-filter"></div>
+              <div class="filters__item filter _when-filter"><input type="text" class="date-picker" placeholder="Когда и во сколько?"></div>
               <div class="filters__item filter _price-filter"></div>
               <div class="filters__item filter _rating-filter"></div>
               <div class="filters__item filter _other-filter"></div>
+              <button class="filters__item filter _reset _icon-xmark" type="reset"><span>Сброс</span></button>
             </div>
-          </div>
+          </form>
         </div>
       </section>
-
     </main>
     <footer class="footer">
       Footer
@@ -216,6 +220,7 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="js/vendor/virtual-select.min.js"></script>
   <script src="js/vendor/air-datepicker.js"></script>
+  <script src="js/vendor/nouislider.min.js"></script>
 
 </body>
 

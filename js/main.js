@@ -63,6 +63,8 @@ new Swiper('.swiper-container', {
     slidesPerView: 3
 });
 
+
+//========================================================================================  FILTERS ========================================================================================
 const selectOptions = [{
     ele: '._what-filter',
     placeholder: "Что именно?",
@@ -70,7 +72,6 @@ const selectOptions = [{
     noSearchResultsText: 'Ничего не найдено',
     noOptionsText: 'Опций не найдено',
     optionsSelectedText: "Категорий выбрано",
-    optionsSelectedText: "Выбрано",
     allOptionsSelectedText: "Все",
 
     multiple: true,
@@ -88,7 +89,6 @@ const selectOptions = [{
         { label: 'Искусство', value: '#' },
     ],
     optionHeight: '50px',
-
 },
 {
     ele: '._where-filter',
@@ -106,52 +106,54 @@ const selectOptions = [{
     ],
     optionHeight: '50px',
     showOptionsOnlyOnSearch: true,
-    onServerSearch: onSampleSelectServerSearch,
-},
-
-{
-    ele: '._when-filter',
-    placeholder: "Когда?",
-    options: [
-        { label: 'Options 1', value: '1' },
-        { label: 'Options 2', value: '2' },
-        { label: 'Options 3', value: '3' },
-    ],
-    optionHeight: '50px',
-
-    multiple: true,
+    // onServerSearch: onSampleSelectServerSearch,
 },
 
 {
     ele: '._price-filter',
     multiple: true,
+    search: false,
+    placeholder: "Ценовая категория",
+    selectAllText: "Выбрать всё",
+    allOptionsSelectedText: "Любая цена",
 
     options: [
-        { label: 'Options 1', value: '1' },
-        { label: 'Options 2', value: '2' },
-        { label: 'Options 3', value: '3' },
+        { label: 'Низкая', value: '#' },
+        { label: 'Средняя', value: '#' },
+        { label: 'Высокая', value: '#' },
     ],
     optionHeight: '50px',
 },
 {
     ele: '._rating-filter',
     multiple: true,
-
+    search: false,
+    placeholder: "Рейтинг",
+    allOptionsSelectedText: "Любой рейтинг",
+    selectAllText: "Выбрать всё",
+    optionsSelectedText: "рейтинга выбрано",
     options: [
-        { label: 'Options 1', value: '1' },
-        { label: 'Options 2', value: '2' },
-        { label: 'Options 3', value: '3' },
+        { label: '1 звёзда', value: '#' },
+        { label: '2 звёзды', value: '#' },
+        { label: '3 звёзды', value: '#' },
+        { label: '4 звёзды', value: '#' },
+        { label: '5 звёзд', value: '#' },
     ],
     optionHeight: '50px',
 },
 {
     ele: '._other-filter',
     multiple: true,
-
+    search: false,
+    placeholder: "Разное",
+    selectAllText: "Выбрать всё",
+    optionsSelectedText: "выбрано",
+    allOptionsSelectedText: "Все опции",
+    optionSelectedText: "опция выбрана",
     options: [
-        { label: 'Options 1', value: '1' },
-        { label: 'Options 2', value: '2' },
-        { label: 'Options 3', value: '3' },
+        { label: 'Онлайн-бронирование', value: '#' },
+        { label: 'Рекомендуем', value: '#' },
+        { label: 'Специальное предложение', value: '#' },
     ],
     optionHeight: '50px',
 },
@@ -159,9 +161,27 @@ const selectOptions = [{
 
 selectOptions.forEach(option => VirtualSelect.init(option));
 
-function onSampleSelectServerSearch(searchValue, virtualSelect) {
-    /** project developer has to define anyMehodToGetDataFromServer function to make API call */
-    anyMehodToGetDataFromServer(searchValue).then(function (newOptions) {
-        virtualSelect.setServerOptions(newOptions);
-    });
-}
+// function onSampleSelectServerSearch(searchValue, virtualSelect) {
+//     /** project developer has to define anyMehodToGetDataFromServer function to make API call */
+//     anyMehodToGetDataFromServer(searchValue).then(function (newOptions) {
+//         virtualSelect.setServerOptions(newOptions);
+//     });
+// }
+
+const resetButton = document.querySelector('._reset');
+resetButton.addEventListener('click', () => {
+    const selects = document.querySelectorAll('[class*=-filter]');
+    // document.querySelector('_what-filter').reset();
+    // document.querySelector('_other-filter').reset();
+    selects.forEach(select => select.reset());
+});
+
+
+new AirDatepicker(".date-picker", {
+    range: true,
+    multipleDatesSeparator: ' - ',
+    buttons: ['today', 'clear'],
+    timepicker: true,
+    isMobile: true,
+    autoClose: true,
+});
