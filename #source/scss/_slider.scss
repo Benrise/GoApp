@@ -1,26 +1,30 @@
+@import "_slider-card";
 %slider-setup {
-    .slider-button::after {
-        display: none;
-    }
-    .slider-button {
+    .swiper-button-next,
+    .swiper-button-prev {
         width: fit-content;
         height: fit-content;
+        &::after {
+            display: none;
+        }
     }
 
-    .swiper-button-prev {
-        transform: rotate(180deg);
-        left: var(--swiper-navigation-sides-offset, rem(-25));
+    .swiper-button {
+        &-prev {
+            transform: rotate(180deg);
+            left: var(--swiper-navigation-sides-offset, rem(-25));
+        }
+        &-next {
+            right: var(--swiper-navigation-sides-offset, rem(-25));
+        }
     }
-    .swiper-button-next {
-        right: var(--swiper-navigation-sides-offset, rem(-25));
-    }
+
     .swiper-pagination-bullets.swiper-pagination-horizontal {
         z-index: -1;
         bottom: var(--swiper-pagination-bottom, -25px);
     }
-    .swiper-pagination-bullet-active {
-        background-color: $funcButton_color;
-    }
+
+    .swiper-pagination-bullet-active,
     .swiper-pagination-bullet {
         background-color: $funcButton_color;
     }

@@ -5,8 +5,8 @@
 @import "_icons";
 @import "_normalize";
 @import "_reset";
-@import "_base";
-
+@import "_colors";
+@import "_categories";
 
 
 // Минимальная ширина полотна
@@ -53,6 +53,7 @@ body {
 [class*="_hidden"] {
     display: none;
 }
+
 
 @import "_header";
 

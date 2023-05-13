@@ -6,16 +6,16 @@ if (isMobile.any()) {
 }
 burgerInit();
 
-new Swiper('.swiper-container', {
+new Swiper('.event-categories__slider', {
 
 
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: '.event-categories__slider-btn-next',
+        prevEl: '.event-categories__slider-btn-prev'
     },
 
     pagination: {
-        el: '.swiper-pagination',
+        el: '.event-categories__slider-pagination',
         clickable: true,
     },
 
@@ -63,6 +63,54 @@ new Swiper('.swiper-container', {
     slidesPerView: 3
 });
 
+new Swiper('.upcoming-events__slider', {
+
+
+    navigation: {
+        nextEl: '.upcoming-events__slider-btn-next',
+        prevEl: '.upcoming-events__slider-btn-prev'
+    },
+    
+    slidesPerView: 1,
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+    },
+
+    mousewheel: {
+        sensivity: 1
+    },
+
+    spaceBetween: 24,
+
+    // autoplay: {
+    //     delay: 3000,
+
+    //     disableOnInteraction: false,
+    // },
+
+    loop: true,
+
+    speed: 1000,
+
+    breakpoints: {
+        280: {
+            
+        },
+        320: {
+            
+        },
+        580: {
+            
+        },
+        1100: {
+            
+        }
+
+    },
+
+});
 
 //========================================================================================  FILTERS ========================================================================================
 const selectOptions = [{

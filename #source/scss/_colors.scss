@@ -9,15 +9,16 @@ $cardGradeintColor: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0) 0
 $secondaryFontColor: rgba(128, 0, 128, 0.5);
 $sliderButtonColor: #EB3F98;
 
-$categories: (
-    travel: #8da0d1,
-    healthAndBeauty: #ff0000,
-    movie: #800080,
-    sportAndFitness: #00ca8d,
-    music: #0BB8AD,
-    concert: #001d82,
-    comedy: #ffa500,
-    party: #5200ff,
-    theater: #823e00,
-    test: black
-);
+
+
+._rating{
+    &-high{
+        color: green;
+    }
+    &-avg{
+        color: orange;
+    }
+    &-low{
+        color: red;
+    }
+}

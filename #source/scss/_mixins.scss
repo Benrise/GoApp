@@ -8,7 +8,12 @@
 	@return $result;
 }
 
-
+@mixin transition-all($duration: 0.3s, $timing-function: ease-out) {
+	-webkit-transition: all $duration $timing-function;
+	-moz-transition: all $duration $timing-function;
+	-o-transition: all $duration $timing-function;
+	transition: all $duration $timing-function;
+}
 // Адаптивное свойство (clamp)
 @mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0) {
 	// Для calc();

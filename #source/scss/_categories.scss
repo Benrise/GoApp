@@ -1,0 +1,97 @@
+$categories: (
+    travel: #8da0d1,
+    healthAndBeauty: #ff0000,
+    movie: #800080,
+    sportAndFitness: #00ca8d,
+    music: #0bb8ad,
+    concert: #001d82,
+    comedy: #ffa500,
+    party: #5200ff,
+    theater: #823e00,
+    test: black,
+    art: #ff6321,
+);
+
+$categories-name: (
+    travel: "Путешествия",
+    healthAndBeauty: "Здоровье и красота",
+    movie: "Фильмы",
+    sportAndFitness: "Спорт и фитнес",
+    music: "Музыка",
+    concert: "Концерты",
+    comedy: "Комедия",
+    party: "Вечеринки",
+    theater: "Театр",
+    test: "Тест",
+    art: "Культура",
+);
+
+[class*="_card-category"] {
+    text-align: center;
+    padding: rem(8) rem(12);
+    background-color: black;
+    border-radius: 12px;
+    width: rem(240);
+    height: rem(40);
+    line-height: 24px;
+}
+
+
+
+
+._card-category {
+    &-travel {
+        &::after {
+            content: map-get($map: $categories-name, $key: travel);
+        }
+        background-color: map-get($map: $categories, $key: travel);
+    }
+    &-healthAndBeauty {
+        &::after {
+            content: map-get($map: $categories-name, $key: healthAndBeauty);
+        }
+        background-color: map-get($map: $categories, $key: healthAndBeauty);
+    }
+    &-movie {
+        &::after {
+            content: map-get($map: $categories-name, $key: movie);
+        }
+        background-color: map-get($map: $categories, $key: movie);
+    }
+    &-sportAndFitness {
+        &::after {
+            content: map-get($map: $categories-name, $key: sportAndFitness);
+        }
+        background-color: map-get($map: $categories, $key: sportAndFitness);
+    }
+    &-concert {
+        &::after {
+            content: map-get($map: $categories-name, $key: concert);
+        }
+        background-color: map-get($map: $categories, $key: concert);
+    }
+    &-comedy {
+        &::after {
+            content: map-get($map: $categories-name, $key: comedy);
+        }
+        background-color: map-get($map: $categories, $key: comedy);
+    }
+    &-party {
+        &::after {
+            content: map-get($map: $categories-name, $key: party);
+        }
+        background-color: map-get($map: $categories, $key: party);
+    }
+    &-theater {
+        &::after {
+            content: map-get($map: $categories-name, $key: theater);
+        }
+        background-color: map-get($map: $categories, $key: theater);
+    }
+    &-art {
+        &::after {
+            content: map-get($map: $categories-name, $key: art);
+        }
+        background-color: map-get($map: $categories, $key: art);
+    }
+}

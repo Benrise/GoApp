@@ -75,12 +75,6 @@
     &__link {
     }
 }
-.swiper-container {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
 
 .category {
     display: flex;
@@ -204,13 +198,27 @@
 .filter {
 }
 
-.search-main{
-    .search__input{
+.search-main {
+    .search__input {
         width: 100%;
         height: rem(80);
     }
-    .search__button{
+    .search__button {
         height: 100%;
     }
 }
+
+.upcoming-events {
+    position: relative;
+    height: rem(587);
+    @extend %slider-setup;
+    &__slider {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+
 
