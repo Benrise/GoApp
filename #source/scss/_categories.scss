@@ -28,16 +28,18 @@ $categories-name: (
 
 [class*="_card-category"] {
     text-align: center;
-    padding: rem(8) rem(12);
     background-color: black;
+    font-weight: 500;
+    padding: rem(8) rem(12);
     border-radius: 12px;
-    width: rem(240);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include adaptiveValue("max-width", 240, 140);
     height: rem(40);
-    line-height: 24px;
+    line-height: rem(24);
+    @include adaptiveValue("font-size", 20, 14);
 }
-
-
-
 
 ._card-category {
     &-travel {

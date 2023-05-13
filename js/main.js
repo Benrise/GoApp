@@ -26,10 +26,6 @@ new Swiper('.event-categories__slider', {
         onlyInViewport: true,
     },
 
-    mousewheel: {
-        sensivity: 1
-    },
-
     spaceBetween: 1,
 
     autoplay: {
@@ -78,17 +74,14 @@ new Swiper('.upcoming-events__slider', {
         onlyInViewport: true,
     },
 
-    mousewheel: {
-        sensivity: 1
-    },
 
     spaceBetween: 24,
 
-    // autoplay: {
-    //     delay: 3000,
+    autoplay: {
+        delay: 3000,
 
-    //     disableOnInteraction: false,
-    // },
+        disableOnInteraction: false,
+    },
 
     loop: true,
 

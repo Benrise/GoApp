@@ -17,6 +17,20 @@
         &-next {
             right: var(--swiper-navigation-sides-offset, rem(-25));
         }
+        @media (max-width:$mobile) {
+            &-prev{
+                left: var(--swiper-navigation-sides-offset, rem(-9));
+
+            }
+            &-next{
+                right: var(--swiper-navigation-sides-offset, rem(-9));
+            }
+            &-next,
+            &-prev{
+                top: var(--swiper-navigation-top-offset,36%); 
+            }
+            
+        }
     }
 
     .swiper-pagination-bullets.swiper-pagination-horizontal {

@@ -6,7 +6,6 @@
 @import "_normalize";
 @import "_reset";
 @import "_colors";
-@import "_categories";
 
 
 // Минимальная ширина полотна
@@ -54,9 +53,8 @@ body {
     display: none;
 }
 
-
+@import "_categories";
 @import "_header";
-
 @import "_main";
 @import "_block";
 @import "_datepicker";

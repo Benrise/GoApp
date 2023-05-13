@@ -1,5 +1,5 @@
 .slide-card {
-    background-color: red;
+    background-color: $bgColor;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -8,16 +8,26 @@
     height: 100%;
     border-radius: 20px;
     overflow: hidden;
-    &__image img {
+    &__link {
+        height: 100%;
+    }
+    &__image {
+        display: flex;
+        align-items: center;
+        overflow: hidden;
         position: relative;
-        width: 100%;
-        height: 0;
-        padding-bottom: 56.25%; /* 16:9 aspect ratio */
-        object-position: center;
-        object-fit: cover;
+        min-height: 100%;
+        img {
+            border-radius: 12px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+        }
     }
     &__img-blackout {
-        filter: brightness(90%);
+        height: 100%;
+        
         &::after,
         &::before {
             content: "";
@@ -30,25 +40,35 @@
         &::after {
             z-index: 0;
             bottom: 0;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
         }
         &::before {
             z-index: 0;
             top: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
         }
     }
     &__geo {
         font-size: rem(16);
+        @include adaptiveValue("font-size",16,12);
         line-height: rem(20);
         &:after {
             margin-left: rem(6);
         }
     }
+
+    &__price{
+        @include adaptiveValue("font-size", 24, 16);
+    }
     &__buy-button,
     &__buy-button:visited {
+        display: flex;
+        align-items: center;
         padding: 6px 24px;
-        font-size: rem(16);
+        @include adaptiveValue("font-size", 16, 14);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         text-decoration: none;
         color: white;
         border-radius: 8px;
@@ -69,7 +89,7 @@
         background: none;
         box-shadow: none;
         text-decoration: none;
-        color: inherit;
+        color: white;
         padding: rem(6) rem(12);
         border-radius: 8px;
         width: rem(44);
@@ -84,17 +104,17 @@
         position: absolute;
         bottom: rem(30);
         left: rem(30);
-        font-size: rem(48);
+        @include adaptiveValue("font-size", 48, 16);
         font-weight: 500;
-        color: #fff;
+        color: white;
     }
 
     &__functions-right {
         display: flex;
         flex-direction: column;
         position: absolute;
-        bottom: 30px;
-        right: 30px;
+        bottom: rem(30);
+        right: rem(30);
         display: flex;
         gap: 12px;
         color: white;
@@ -118,16 +138,16 @@
         gap: rem(10);
         @include transition-all();
         &:hover {
-            transform: scale(1.01);
-            .slide-card__rating-desc{
+            transform: scale(1.01g);
+            .slide-card__rating-desc {
                 opacity: 1;
             }
         }
     }
     &__rating-score {
         font-weight: 500;
-        font-size: 48px;
-        line-height: 58px;
+        @include adaptiveValue("font-size", 48, 24);
+        @include adaptiveValue("line-height", 58, 29);
         color: green;
         background-color: white;
         padding: rem(12);
@@ -155,6 +175,7 @@
     }
 
     &__date {
+        @include adaptiveValue("font-size", 20, 14);
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -169,5 +190,43 @@
         height: rem(40);
         font-weight: 600;
         border: 1px solid $containerBorderColor;
+    }
+
+    @media (max-width: $mobile) {
+        &__img-blackout:after,
+        &__img-blackout:before{
+            display: none;
+        }
+        gap: rem(12);
+        padding: rem(16);
+        &__functions-right {
+            left: 0;
+            bottom: 0;
+            position: relative;
+            align-items: flex-end
+        }
+        &__functions-right{
+            color: $fontColor;
+        }
+        
+        &__title {
+            position: relative;
+            left: 0;
+            bottom: 0;
+            color: $fontColor;
+        }
+        &__info-left {
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        &__day:before {
+            display: none;
+        }
+        &__rating {
+            right: 0;
+            left: rem(30);
+            width: fit-content;
+        }
     }
 }
