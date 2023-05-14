@@ -12,24 +12,24 @@
     .swiper-button {
         &-prev {
             transform: rotate(180deg);
-            left: var(--swiper-navigation-sides-offset, rem(-25));
+            left: var(--swiper-navigation-sides-offset, -25px);
         }
         &-next {
-            right: var(--swiper-navigation-sides-offset, rem(-25));
+            right: var(--swiper-navigation-sides-offset, -25px);
         }
-        @media (max-width:$mobile) {
-            &-prev{
-                left: var(--swiper-navigation-sides-offset, rem(-9));
-
+        @media (max-width: $tablet) {
+            &-prev img,
+            &-next img {
+                display: none;
             }
-            &-next{
-                right: var(--swiper-navigation-sides-offset, rem(-9));
-            }
+        }
+    }
+    .upcoming-events__slider-btn {
+        @media (max-width: $mobileXSmall) {
             &-next,
-            &-prev{
-                top: var(--swiper-navigation-top-offset,36%); 
+            &-prev {
+                top: var(--swiper-navigation-top-offset, 33%);
             }
-            
         }
     }
 

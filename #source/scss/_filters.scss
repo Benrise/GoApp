@@ -34,8 +34,10 @@
                 white-space: nowrap;
             }
         }
-        &._when-filter {
-            min-width: rem(310);
+        &._when-filter .date-picker {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
     }
     @media (max-width: rem(630)) {

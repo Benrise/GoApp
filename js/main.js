@@ -77,15 +77,15 @@ new Swiper('.upcoming-events__slider', {
 
     spaceBetween: 24,
 
-    autoplay: {
-        delay: 3000,
+    // autoplay: {
+    //     delay: 3000,
 
-        disableOnInteraction: false,
-    },
+    //     disableOnInteraction: false,
+    // },
 
-    loop: true,
+    // loop: true,
 
-    speed: 1000,
+    // speed: 1000,
 
     breakpoints: {
         280: {
