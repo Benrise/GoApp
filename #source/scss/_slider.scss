@@ -1,4 +1,5 @@
 @import "_slider-card";
+
 %slider-setup {
     .swiper-button-next,
     .swiper-button-prev {
@@ -33,11 +34,14 @@
         }
     }
 
-    .swiper-pagination-bullets.swiper-pagination-horizontal {
-        z-index: -1;
-        bottom: var(--swiper-pagination-bottom, -25px);
+    .search-result__slider{
+        max-height: 400px;
     }
-    .swiper-free-mode> .swiper-wrapper_linear {
+
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: var(--swiper-pagination-bottom, -50px);
+    }
+    .swiper-free-mode > .swiper-wrapper_linear {
         transition-timing-function: linear;
         margin: 0 auto;
     }
@@ -45,5 +49,26 @@
     .swiper-pagination-bullet-active,
     .swiper-pagination-bullet {
         background-color: $funcButton_color;
+    }
+}
+
+
+
+@mixin slider($class-name) {
+    .slider-area {
+        width: 100%;
+        position: relative;
+        height: rem(587);
+        @extend %slider-setup;
+        .#{$class-name}__slider {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        @media (max-width: $mobileXSmall) {
+            height: rem(400);
+        }
     }
 }

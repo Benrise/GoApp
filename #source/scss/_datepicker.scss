@@ -4,11 +4,13 @@
     color: $fontColor;
     font-size: rem(16);
     padding: 7px;
+    font-weight: 500;
     &::-webkit-input-placeholder {
         font-family: "Inter", "sans-serif";
         font-size: rem(16);
         text-align: center;
         vertical-align: center;
+        font-weight: 500;
         color: $fontColor;
         max-width: 100%;
         overflow: hidden;
@@ -16,12 +18,16 @@
         white-space: nowrap;
     }
 }
-
+.air-datepicker{
+    font-family: 'Inter',sans-serif !important;
+}
 .air-datepicker.-is-mobile-.-active-:not(.-custom-position-) {
     border-radius: 12px;
 }
 .air-datepicker-button {
     color: $buttonColor !important;
+    font-weight: 500 !important;
+    font-family: 'Inter' !important;
 }
 
 .air-datepicker-cell.-current- {
@@ -45,4 +51,9 @@
     border: 1px solid $buttonColor !important;
     background-color: $containerBorderColor !important;
     border-radius: 0 var(--adp-cell-border-radius) var(--adp-cell-border-radius) 0;
+}
+.air-datepicker-time--current-hours, .air-datepicker-time--current-minutes{
+    font-family: 'Inter' !important;
+    font-weight: 500 !important;
+    font-size: rem(20);
 }

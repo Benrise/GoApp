@@ -14,11 +14,6 @@ new Swiper('.event-categories__slider', {
         prevEl: '.event-categories__slider-btn-prev'
     },
 
-    pagination: {
-        el: '.event-categories__slider-pagination',
-        clickable: true,
-    },
-
     slidesPerView: 6,
 
     keyboard: {
@@ -43,7 +38,7 @@ new Swiper('.event-categories__slider', {
 
     freeMode: true,
     freeModeMomentum: true,
-    freeModeMomentumRatio: 0.5, 
+    freeModeMomentumRatio: 0.5,
     freeModeMomentumBounce: false,
 
 
@@ -78,6 +73,12 @@ new Swiper('.upcoming-events__slider', {
         prevEl: '.upcoming-events__slider-btn-prev'
     },
 
+    pagination: {
+        el: '.upcoming-events__slider-pagination',
+        clickable: true,
+        dynamicBullets: true,
+    },
+
     slidesPerView: 1,
 
     keyboard: {
@@ -88,15 +89,15 @@ new Swiper('.upcoming-events__slider', {
 
     spaceBetween: 24,
 
-    // autoplay: {
-    //     delay: 3000,
+    autoplay: {
+        delay: 3000,
 
-    //     disableOnInteraction: false,
-    // },
+        disableOnInteraction: false,
+    },
 
-    // loop: true,
+    loop: true,
 
-    // speed: 1000,
+    speed: 1000,
 
     breakpoints: {
         280: {
@@ -116,6 +117,34 @@ new Swiper('.upcoming-events__slider', {
 
 });
 
+new Swiper('.search-result__slider', {
+
+
+    navigation: {
+        nextEl: '.search-result__slider-btn-next',
+        prevEl: '.search-result__slider-btn-prev'
+    },
+
+    pagination: {
+        el: '.search-result__slider-pagination',
+        clickable: true,
+        dynamicBullets: true,
+    },
+
+    slidesPerView: 1.45,
+
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+    },
+
+
+    spaceBetween: 12,
+
+});
+
+
 //========================================================================================  FILTERS ========================================================================================
 const selectOptions = [{
     ele: '._what-filter',
@@ -129,16 +158,16 @@ const selectOptions = [{
     multiple: true,
 
     options: [
-        { label: 'Здоровье и красота', value: '#' },
-        { label: 'Кино', value: '#' },
-        { label: 'Музыка', value: '#' },
-        { label: 'Тусовки', value: '#' },
-        { label: 'Путешествия', value: '#' },
-        { label: 'Спорт и фитнес', value: '#' },
-        { label: 'Комедия', value: '#' },
-        { label: 'Концерты', value: '#' },
-        { label: 'Театр', value: '#' },
-        { label: 'Искусство', value: '#' },
+        { label: 'Здоровье и красота', value: '1' },
+        { label: 'Кино', value: '2' },
+        { label: 'Музыка', value: '3' },
+        { label: 'Тусовки', value: '4' },
+        { label: 'Путешествия', value: '5' },
+        { label: 'Спорт и фитнес', value: '6' },
+        { label: 'Комедия', value: '7' },
+        { label: 'Концерты', value: '8' },
+        { label: 'Театр', value: '9' },
+        { label: 'Искусство', value: '10' },
     ],
     optionHeight: '50px',
 },
@@ -170,9 +199,9 @@ const selectOptions = [{
     allOptionsSelectedText: "Любая цена",
 
     options: [
-        { label: 'Низкая', value: '#' },
-        { label: 'Средняя', value: '#' },
-        { label: 'Высокая', value: '#' },
+        { label: 'Низкая', value: '1' },
+        { label: 'Средняя', value: '2' },
+        { label: 'Высокая', value: '3' },
     ],
     optionHeight: '50px',
 },
@@ -185,11 +214,11 @@ const selectOptions = [{
     selectAllText: "Выбрать всё",
     optionsSelectedText: "рейтинга выбрано",
     options: [
-        { label: '1 звёзда', value: '#' },
-        { label: '2 звёзды', value: '#' },
-        { label: '3 звёзды', value: '#' },
-        { label: '4 звёзды', value: '#' },
-        { label: '5 звёзд', value: '#' },
+        { label: '1 звёзда', value: '1' },
+        { label: '2 звёзды', value: '2' },
+        { label: '3 звёзды', value: '3' },
+        { label: '4 звёзды', value: '4' },
+        { label: '5 звёзд', value: '5' },
     ],
     optionHeight: '50px',
 },
@@ -203,12 +232,29 @@ const selectOptions = [{
     allOptionsSelectedText: "Все опции",
     optionSelectedText: "опция выбрана",
     options: [
-        { label: 'Онлайн-бронирование', value: '#' },
-        { label: 'Рекомендуем', value: '#' },
-        { label: 'Специальное предложение', value: '#' },
+        { label: 'Онлайн-бронирование', value: '1' },
+        { label: 'Рекомендуем', value: '2' },
+        { label: 'Специальное предложение', value: '3' },
     ],
     optionHeight: '50px',
 },
+
+{
+    ele: '._sort-search',
+    multiple: false,
+    placeholder: "Выбрать",
+    autoSelectFirstOption: true,
+    hideClearButton: true,
+    options: [
+        { label: 'Популярность', value: '1' },
+        { label: 'Актуальность', value: '2' },
+        { label: 'Рейтинг за всё время', value: '3' },
+        { label: 'По алфавиту', value: '4' },
+        { label: 'Дата события', value: '5' },
+    ],
+    optionHeight: '50px',
+},
+
 ];
 
 selectOptions.forEach(option => VirtualSelect.init(option));
@@ -237,3 +283,5 @@ new AirDatepicker(".date-picker", {
     isMobile: true,
     autoClose: true,
 });
+
+
