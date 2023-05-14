@@ -26,15 +26,26 @@ new Swiper('.event-categories__slider', {
         onlyInViewport: true,
     },
 
-    spaceBetween: 1,
-
     autoplay: {
-        delay: 3000,
+        delay: 0,
 
         disableOnInteraction: false,
     },
+    slidesPerView: 'auto',
+    loop: true,
+    speed: 5000,
+    slidesPerView: '2',
+    autoplay: {
+        enabled: true,
+        delay: 1,
+    },
 
-    speed: 1000,
+
+    freeMode: true,
+    freeModeMomentum: true,
+    freeModeMomentumRatio: 0.5, 
+    freeModeMomentumBounce: false,
+
 
     breakpoints: {
         280: {
@@ -66,7 +77,7 @@ new Swiper('.upcoming-events__slider', {
         nextEl: '.upcoming-events__slider-btn-next',
         prevEl: '.upcoming-events__slider-btn-prev'
     },
-    
+
     slidesPerView: 1,
 
     keyboard: {
@@ -89,16 +100,16 @@ new Swiper('.upcoming-events__slider', {
 
     breakpoints: {
         280: {
-            
+
         },
         320: {
-            
+
         },
         580: {
-            
+
         },
         1100: {
-            
+
         }
 
     },

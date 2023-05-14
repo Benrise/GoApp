@@ -35,7 +35,12 @@ body {
     font-family: "Inter", "sans-serif";
     font-size: rem(20);
     background-color: $bgColor;
+    &._lock{
+        overflow: hidden;
+    }
 }
+
+
 
 .wrapper {
     min-height: 100%;
