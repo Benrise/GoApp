@@ -449,6 +449,9 @@ body {
 body._lock {
   overflow: hidden;
 }
+body._lock .event-categories__body {
+  pointer-events: none;
+}
 
 .wrapper {
   min-height: 100%;
@@ -706,9 +709,9 @@ body._lock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -717,15 +720,10 @@ body._lock {
   width: 100%;
   height: 100%;
 }
-.event-categories__column:nth-child(2n) {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-.swiper-slide:nth-child(2n) > .event-categories__column {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.event-categories__column:has(> *:nth-child(2n)) {
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
 }
 @media (max-width: 68.24875em) {
   .event-categories__column {
@@ -1059,6 +1057,17 @@ body._lock {
           transform: rotate(45deg) translate(0px, 50%);
 }
 
+.hiding-mask {
+  z-index: 1;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 52%;
+  background-color: white;
+}
+
 .slide-card {
   background-color: #fff9ff;
   position: relative;
@@ -1100,10 +1109,6 @@ body._lock {
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
 }
 .slide-card__img-blackout {
   height: 100%;
@@ -1749,6 +1754,7 @@ body._lock {
   height: auto;
 }
 .search-result__upper {
+  z-index: 2;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1865,6 +1871,7 @@ body._lock {
   min-height: 729px;
 }
 .main-block__container {
+  position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -1931,6 +1938,7 @@ body._lock {
   }
 }
 .main-block__body {
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1942,6 +1950,7 @@ body._lock {
   width: 100%;
 }
 .main-block__info {
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

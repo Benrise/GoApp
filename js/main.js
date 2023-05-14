@@ -7,41 +7,24 @@ if (isMobile.any()) {
 burgerInit();
 
 new Swiper('.event-categories__slider', {
-
-
-    navigation: {
-        nextEl: '.event-categories__slider-btn-next',
-        prevEl: '.event-categories__slider-btn-prev'
+    slidesPerView: 'auto',
+    loop: true,
+    speed: 5000,
+    autoplay: {
+        enabled: true,
+        delay: 1,
+        disableOnInteraction: false,
     },
-
-    slidesPerView: 6,
-
     keyboard: {
         enabled: true,
         onlyInViewport: true,
     },
-
-    autoplay: {
-        delay: 0,
-
-        disableOnInteraction: false,
-    },
-    slidesPerView: 'auto',
-    loop: true,
-    speed: 5000,
-    slidesPerView: '2',
-    autoplay: {
-        enabled: true,
-        delay: 1,
-    },
-
-
     freeMode: true,
     freeModeMomentum: true,
     freeModeMomentumRatio: 0.5,
     freeModeMomentumBounce: false,
-
-
+    pauseOnMouseEnter: true,
+    reverseDirection: true,
     breakpoints: {
         280: {
             slidesPerView: 1
@@ -55,15 +38,9 @@ new Swiper('.event-categories__slider', {
         1100: {
             slidesPerView: 6
         }
-
     },
-
-    autoHeight: false,
-
-    slidesPerColumn: 1,
-
-    slidesPerView: 3
 });
+
 
 new Swiper('.upcoming-events__slider', {
 

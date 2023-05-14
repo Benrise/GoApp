@@ -37,6 +37,25 @@
 	color: #a43ea4;
 }
 
+@mixin slider($class-name) {
+    .slider-area {
+        width: 100%;
+        position: relative;
+        height: rem(587);
+        @extend %slider-setup;
+        .#{$class-name}__slider {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+        }
+        @media (max-width: $mobileXSmall) {
+            height: rem(400);
+        }
+    }
+}
+
 // Адаптивное свойство (clamp)
 @mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0) {
 	// Для calc();

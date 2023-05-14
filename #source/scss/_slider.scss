@@ -50,25 +50,8 @@
     .swiper-pagination-bullet {
         background-color: $funcButton_color;
     }
+    
 }
 
 
 
-@mixin slider($class-name) {
-    .slider-area {
-        width: 100%;
-        position: relative;
-        height: rem(587);
-        @extend %slider-setup;
-        .#{$class-name}__slider {
-            display: flex;
-            flex-direction: row;
-            height: 100%;
-            width: 100%;
-            overflow-x: hidden;
-        }
-        @media (max-width: $mobileXSmall) {
-            height: rem(400);
-        }
-    }
-}

@@ -136,14 +136,11 @@ $categories-name: (
     &__column {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
+        &:has(> *:nth-child(2n)) {
+            justify-content: space-between !important;
+        }
         align-items: center;
-        &:nth-child(2n) {
-            justify-content: center;
-        }
-        .swiper-slide:nth-child(2n) > & {
-            justify-content: center;
-        }
         flex-wrap: wrap;
         width: 100%;
         height: 100%;
@@ -152,6 +149,7 @@ $categories-name: (
             justify-content: space-around;
         }
     }
+
     &__item {
         @include adaptiveValue("font-size", 16, 14);
         user-select: none;
@@ -185,4 +183,3 @@ $categories-name: (
         font-size: rem(10);
     }
 }
-

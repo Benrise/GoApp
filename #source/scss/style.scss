@@ -7,7 +7,6 @@
 @import "_reset";
 @import "_colors";
 
-
 // Минимальная ширина полотна
 $minWidth: 320;
 
@@ -35,12 +34,13 @@ body {
     font-family: "Inter", "sans-serif";
     font-size: rem(20);
     background-color: $bgColor;
-    &._lock{
+    &._lock {
         overflow: hidden;
+        .event-categories__body{
+            pointer-events: none;
+        }
     }
 }
-
-
 
 .wrapper {
     min-height: 100%;
@@ -60,6 +60,7 @@ body {
 
 @import "_categories";
 @import "_header";
+@import "_hiding-mask";
 @import "_slider";
 @import "_main";
 @import "_block";
