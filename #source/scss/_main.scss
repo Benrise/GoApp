@@ -180,7 +180,7 @@
         overflow: hidden;
         position: relative;
         transition: top 0.3s ease-in-out, height 0.3s ease-in-out, top 1s ease-in-out, height 1s ease-in;
-        height: rem(700);
+        @include adaptiveValue('height',700,300);
     }
     .swiper-slide {
         width: 95%;
@@ -319,10 +319,15 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        @include adaptiveValue("gap",48,24);
+        @include adaptiveValue("gap",48, 24);
         width: fit-content;
     }
-
+    &__heading{
+        @media (max-width:$mobileXSSmall) {
+        flex-direction: column;
+        gap: rem(12);
+    }
+    }
 
     &__heading-title {
         font-weight: 500;

@@ -852,7 +852,7 @@ body._lock .event-categories__body {
     font-size: 0.75rem;
   }
 }
-@media (max-width: 17.49875em) {
+@media (max-width: 17.62375em) {
   .category {
     width: 3.125rem;
     font-size: 0.625rem;
@@ -1098,29 +1098,8 @@ body._lock .event-categories__body {
   border-radius: 20px;
   overflow: hidden;
 }
-@media (min-width: 89.875em) {
-  .slide-card__link {
-    min-height: 37.5rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 89.875em) {
-  @supports (min-height: clamp( 10.625rem , 2.9326923077rem  +  38.4615384615vw , 37.5rem )) {
-    .slide-card__link {
-      min-height: clamp( 10.625rem , 2.9326923077rem  +  38.4615384615vw , 37.5rem );
-    }
-  }
-  @supports not (min-height: clamp( 10.625rem , 2.9326923077rem  +  38.4615384615vw , 37.5rem )) {
-    .slide-card__link {
-      min-height: calc(
-				10.625rem + 430 * (100vw - 20rem) / 69.875
-			);
-    }
-  }
-}
-@media (max-width: 20em) {
-  .slide-card__link {
-    min-height: 10.625rem;
-  }
+.slide-card__link {
+  height: 100%;
 }
 .slide-card__image {
   display: -webkit-box;
@@ -2023,7 +2002,30 @@ body._lock .event-categories__body {
   position: relative;
   -webkit-transition: top 0.3s ease-in-out, height 0.3s ease-in-out, top 1s ease-in-out, height 1s ease-in;
   transition: top 0.3s ease-in-out, height 0.3s ease-in-out, top 1s ease-in-out, height 1s ease-in;
-  height: 43.75rem;
+}
+@media (min-width: 89.875em) {
+  .near-events__slider {
+    height: 43.75rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 89.875em) {
+  @supports (height: clamp( 18.75rem , 11.5943649374rem  +  35.7781753131vw , 43.75rem )) {
+    .near-events__slider {
+      height: clamp( 18.75rem , 11.5943649374rem  +  35.7781753131vw , 43.75rem );
+    }
+  }
+  @supports not (height: clamp( 18.75rem , 11.5943649374rem  +  35.7781753131vw , 43.75rem )) {
+    .near-events__slider {
+      height: calc(
+				18.75rem + 400 * (100vw - 20rem) / 69.875
+			);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .near-events__slider {
+    height: 18.75rem;
+  }
 }
 .near-events .swiper-slide {
   width: 95%;
@@ -2277,6 +2279,15 @@ body._lock .event-categories__body {
 @media (max-width: 20em) {
   .broadcast__heading-additionals, .broadcast__heading {
     gap: 1.5rem;
+  }
+}
+@media (max-width: 17.62375em) {
+  .broadcast__heading {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.75rem;
   }
 }
 .broadcast__heading-title {
