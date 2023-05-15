@@ -11,12 +11,15 @@
     }
 
     .swiper-button {
+        
         &-prev {
+            z-index: 1;
             transform: rotate(180deg);
-            left: var(--swiper-navigation-sides-offset, -25px);
+            left: var(--swiper-navigation-sides-offset, -24px);
         }
         &-next {
-            right: var(--swiper-navigation-sides-offset, -25px);
+            z-index: 1;
+            right: var(--swiper-navigation-sides-offset, -24px);
         }
         @media (max-width: $tablet) {
             &-prev img,
@@ -39,6 +42,7 @@
     }
 
     .swiper-pagination-bullets.swiper-pagination-horizontal {
+        z-index: 1;
         bottom: var(--swiper-pagination-bottom, -50px);
     }
     .swiper-free-mode > .swiper-wrapper_linear {

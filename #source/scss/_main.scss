@@ -98,6 +98,9 @@
 }
 
 .search-main {
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 24, 12);
     .search__input {
         width: 100%;
         height: rem(80);
@@ -130,15 +133,15 @@
     &__sort-button {
     }
 
-    &.slider-area{
+    &.slider-area {
         position: relative;
-        transition: height 1s ease-in;
+        transition: top 0.3s ease-in-out, height 0.3s ease-in-out, top 1s ease-in-out, height 1s ease-in;
         height: rem(400);
     }
-    .swiper-slide{
+    .swiper-slide {
         @include transition-all(0.5s, ease-in-out);
         &-prev,
-        &-next{
+        &-next {
             pointer-events: none;
             opacity: 0.5;
         }
@@ -146,6 +149,55 @@
     }
 }
 
+.search-result_hidden {
+    top: -500px;
+}
 @include slider("upcoming-events");
 @include slider("search-result");
+@include slider("near-events");
 
+.near-events {
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(24);
+        @media (max-width: rem(1200)) {
+            flex-direction: column;
+        }
+    }
+
+    &__map {
+        border-radius: 12px;
+        width: 100%;
+        min-height: 500px;
+    }
+
+    &__slider {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        transition: top 0.3s ease-in-out, height 0.3s ease-in-out, top 1s ease-in-out, height 1s ease-in;
+        height: rem(700);
+    }
+    .swiper-slide {
+        width: 95%;
+        @include adaptiveValue("max-height", 300, 550);
+    }
+    .slide-card{
+        &__title {
+            @include adaptiveValue("font-size", 32, 16);
+        }
+        &__date{
+
+        }
+    }
+
+    &__below {
+    }
+
+    &__show-categories-toggle {
+    }
+
+    &__categories {
+    }
+}

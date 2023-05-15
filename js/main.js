@@ -1,10 +1,11 @@
 import { isMobile, addTouchClass } from "./functions.js";
 import { burgerInit } from "./functions.js";
+import { init } from "./map.js";
 
-if (isMobile.any()) {
-    addTouchClass();
-}
+if (isMobile.any()) { addTouchClass(); }
+
 burgerInit();
+ymaps.ready(init);
 
 new Swiper('.event-categories__slider', {
     slidesPerView: 'auto',
@@ -115,6 +116,32 @@ new Swiper('.search-result__slider', {
         enabled: true,
         onlyInViewport: true,
     },
+
+
+    spaceBetween: 12,
+
+});
+
+new Swiper('.near-events__slider', {
+
+    direction: "vertical",
+    slidesPerView: "auto",
+    freeMode: true,
+    mousewheel: true,
+    scrollbar: {
+        el: ".swiper-scrollbar",
+    },
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+    },
+    autoplay: {
+        delay: 3000,
+
+        disableOnInteraction: false,
+    },
+    speed: 3000,
 
 
     spaceBetween: 12,
@@ -246,8 +273,6 @@ selectOptions.forEach(option => VirtualSelect.init(option));
 const resetButton = document.querySelector('._reset');
 resetButton.addEventListener('click', () => {
     const selects = document.querySelectorAll('[class*=-filter]');
-    // document.querySelector('_what-filter').reset();
-    // document.querySelector('_other-filter').reset();
     selects.forEach(select => select.reset());
 });
 

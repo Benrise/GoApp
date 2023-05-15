@@ -1,5 +1,8 @@
 .search {
+    width: 100%;
+    max-height: rem(80);
     &__form {
+        width: 100%;
         position: relative;
     }
 
@@ -35,4 +38,6 @@
         }
     }
 }
+
+
 

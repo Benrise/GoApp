@@ -38,6 +38,7 @@
 }
 
 @mixin slider($class-name) {
+	// FIX THAT (remove slider-area)
     .slider-area {
         width: 100%;
         position: relative;

@@ -38,7 +38,7 @@ $categories-name: (
     @include adaptiveValue("max-width", 240, 140);
     height: rem(40);
     line-height: rem(24);
-    @include adaptiveValue("font-size", 20, 14);
+    @include adaptiveValue("font-size", 16, 12);
 }
 
 ._card-category {

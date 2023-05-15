@@ -36,7 +36,7 @@ body {
     background-color: $bgColor;
     &._lock {
         overflow: hidden;
-        .event-categories__body{
+        .event-categories__body {
             pointer-events: none;
         }
     }
@@ -58,6 +58,16 @@ body {
     display: none;
 }
 
+[class*="copyrights-pane"] {
+    display: none !important;
+}
+
+[class*="inner-panes"],
+[class*="map-bg"] {
+    border-radius: 24px !important;
+}
+
+
 @import "_categories";
 @import "_header";
 @import "_hiding-mask";
@@ -66,7 +76,7 @@ body {
 @import "_block";
 @import "_datepicker";
 @import "_search";
-@import "_scroll";
+@import "_scrollbar";
 @import "_filters";
 
 @import "_footer";
