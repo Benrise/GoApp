@@ -1,11 +1,13 @@
 import { isMobile, addTouchClass } from "./functions.js";
 import { burgerInit } from "./functions.js";
 import { init } from "./map.js";
+import { spollers } from "./functions.js";
 
 if (isMobile.any()) { addTouchClass(); }
 
 burgerInit();
 ymaps.ready(init);
+spollers();
 
 new Swiper('.event-categories__slider', {
     slidesPerView: 'auto',
@@ -77,21 +79,6 @@ new Swiper('.upcoming-events__slider', {
 
     speed: 1000,
 
-    breakpoints: {
-        280: {
-
-        },
-        320: {
-
-        },
-        580: {
-
-        },
-        1100: {
-
-        }
-
-    },
 
 });
 
@@ -109,16 +96,23 @@ new Swiper('.search-result__slider', {
         dynamicBullets: true,
     },
 
-    slidesPerView: 1.45,
-
 
     keyboard: {
         enabled: true,
         onlyInViewport: true,
     },
 
-
     spaceBetween: 12,
+
+    breakpoints: {
+        280: {
+            slidesPerView: 1
+        },
+        1100: {
+            slidesPerView: 1.45,
+        }
+
+    },
 
 });
 
@@ -173,7 +167,6 @@ const selectOptions = [{
         { label: 'Театр', value: '9' },
         { label: 'Искусство', value: '10' },
     ],
-    optionHeight: '50px',
 },
 {
     ele: '._where-filter',
@@ -189,7 +182,6 @@ const selectOptions = [{
         { label: 'Казань', value: '#' },
         { label: 'Санкт-Петербург', value: '#' },
     ],
-    optionHeight: '50px',
     showOptionsOnlyOnSearch: true,
     // onServerSearch: onSampleSelectServerSearch,
 },
@@ -207,7 +199,6 @@ const selectOptions = [{
         { label: 'Средняя', value: '2' },
         { label: 'Высокая', value: '3' },
     ],
-    optionHeight: '50px',
 },
 {
     ele: '._rating-filter',
@@ -224,7 +215,6 @@ const selectOptions = [{
         { label: '4 звёзды', value: '4' },
         { label: '5 звёзд', value: '5' },
     ],
-    optionHeight: '50px',
 },
 {
     ele: '._other-filter',
@@ -240,7 +230,6 @@ const selectOptions = [{
         { label: 'Рекомендуем', value: '2' },
         { label: 'Специальное предложение', value: '3' },
     ],
-    optionHeight: '50px',
 },
 
 {
@@ -256,7 +245,6 @@ const selectOptions = [{
         { label: 'По алфавиту', value: '4' },
         { label: 'Дата события', value: '5' },
     ],
-    optionHeight: '50px',
 },
 
 ];
@@ -282,7 +270,6 @@ new AirDatepicker(".date-picker", {
     multipleDatesSeparator: ' - ',
     buttons: ['today', 'clear'],
     timepicker: true,
-    isMobile: true,
     autoClose: true,
 });
 

@@ -19,7 +19,7 @@
     }
     .vscomp-wrapper,
     .vscomp-value {
-        font-size: rem(16);
+        @include adaptiveValue('font-size', 16, 12);
         font-weight: 500;
         color: $fontColor;
     }
@@ -127,7 +127,7 @@
         align-items: center;
         gap: rem(12);
         position: relative;
-        height: rem(60);
+        height: rem(40);
         background: white;
         border: 1px solid $fontColor;
         border-radius: 12px;
@@ -135,7 +135,7 @@
         &._reset {
             border: 1px solid $funcButton_color;
             color: $funcButton_color;
-            font-size: rem(16);
+            @include adaptiveValue('font-size', 16, 12);
             font-weight: 500;
             max-width: fit-content;
             overflow: hidden;

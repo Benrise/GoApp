@@ -2,12 +2,13 @@
     width: 100%;
     text-align: center;
     color: $fontColor;
-    font-size: rem(16);
     padding: 7px;
+    border-radius: 12px;
     font-weight: 500;
+    background: none;
     &::-webkit-input-placeholder {
         font-family: "Inter", "sans-serif";
-        font-size: rem(16);
+        @include adaptiveValue('font-size', 16, 12);
         text-align: center;
         vertical-align: center;
         font-weight: 500;

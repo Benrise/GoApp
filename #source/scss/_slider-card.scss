@@ -9,7 +9,8 @@
     border-radius: 20px;
     overflow: hidden;
     &__link {
-        height: 100%;
+        @include adaptiveValue('min-height',600, 170);
+        
     }
     &__image {
         display: flex;

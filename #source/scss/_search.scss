@@ -1,6 +1,6 @@
 .search {
     width: 100%;
-    max-height: rem(80);
+    max-height: rem(40);
     &__form {
         width: 100%;
         position: relative;
@@ -12,7 +12,7 @@
         left: 0;
         color: $secondaryFontColor;
         background-color: transparent;
-        height: rem(40);
+        height: rem(43);
         width: rem(40);
         display: flex;
         justify-content: center;
