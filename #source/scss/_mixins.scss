@@ -42,7 +42,7 @@
     .slider-area {
         width: 100%;
         position: relative;
-        height: rem(587);
+        @include adaptiveValue('height',580,350);
         @extend %slider-setup;
         .#{$class-name}__slider {
             display: flex;

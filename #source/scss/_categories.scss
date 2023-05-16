@@ -12,88 +12,78 @@ $categories: (
     art: #ff6321,
 );
 
-$categories-name: (
-    travel: "Путешествия",
-    healthAndBeauty: "Здоровье и красота",
-    movie: "Фильмы",
-    sportAndFitness: "Спорт и фитнес",
-    music: "Музыка",
-    concert: "Концерты",
-    comedy: "Комедия",
-    party: "Вечеринки",
-    theater: "Театр",
-    test: "Тест",
-    art: "Культура",
-);
 
-[class*="_card-category"] {
+
+[class*="_category"] {
     text-align: center;
-    background-color: black;
+    background-color: $buttonColor;
+    color: white;
     font-weight: 500;
-    padding: rem(8) rem(12);
-    border-radius: 12px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    @include adaptiveValue("max-width", 240, 140);
-    height: rem(40);
-    line-height: rem(24);
+    max-width: fit-content;
     @include adaptiveValue("font-size", 16, 12);
 }
 
-._card-category {
+[class*="__category_no-fill"]{
+    background-color: inherit;
+    color: $fontColor;
+}
+
+.category {
+    display: block;
+    padding: rem(12) rem(24);
+    border-radius: 12px;
+    width: fit-content;
+    gap: rem(10);
+    color: white;
+    background-color: $buttonColor;
+
+}
+
+
+
+
+
+._category {
     &-travel {
-        &::after {
-            content: map-get($map: $categories-name, $key: travel);
-        }
         background-color: map-get($map: $categories, $key: travel);
     }
     &-healthAndBeauty {
-        &::after {
-            content: map-get($map: $categories-name, $key: healthAndBeauty);
-        }
+
         background-color: map-get($map: $categories, $key: healthAndBeauty);
     }
     &-movie {
-        &::after {
-            content: map-get($map: $categories-name, $key: movie);
-        }
+
         background-color: map-get($map: $categories, $key: movie);
     }
     &-sportAndFitness {
-        &::after {
-            content: map-get($map: $categories-name, $key: sportAndFitness);
-        }
+
         background-color: map-get($map: $categories, $key: sportAndFitness);
     }
+    &-music {
+
+        background-color: map-get($map: $categories, $key: music);
+    }
     &-concert {
-        &::after {
-            content: map-get($map: $categories-name, $key: concert);
-        }
+
         background-color: map-get($map: $categories, $key: concert);
     }
     &-comedy {
-        &::after {
-            content: map-get($map: $categories-name, $key: comedy);
-        }
+
         background-color: map-get($map: $categories, $key: comedy);
     }
     &-party {
-        &::after {
-            content: map-get($map: $categories-name, $key: party);
-        }
+
         background-color: map-get($map: $categories, $key: party);
     }
     &-theater {
-        &::after {
-            content: map-get($map: $categories-name, $key: theater);
-        }
+
         background-color: map-get($map: $categories, $key: theater);
     }
     &-art {
-        &::after {
-            content: map-get($map: $categories-name, $key: art);
-        }
+
         background-color: map-get($map: $categories, $key: art);
     }
 }
@@ -155,31 +145,10 @@ $categories-name: (
         user-select: none;
         border-radius: 12px;
         @each $category, $color in $categories {
-            &.event-categories__item_color-#{$category} {
+            &._category-#{$category} {
                 background-color: $color;
             }
         }
     }
 
-    &__link {
-    }
-}
-
-.category {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: rem(12);
-    height: rem(40);
-    @include adaptiveValue("width", 210, 150);
-    gap: rem(10);
-    color: white;
-    @media (max-width: $mobileXSmall) {
-        font-size: rem(12);
-    }
-    @media (max-width: $mobileXSSmall) {
-        width: rem(50);
-        font-size: rem(10);
-    }
 }

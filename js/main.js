@@ -69,11 +69,11 @@ new Swiper('.upcoming-events__slider', {
 
     spaceBetween: 24,
 
-    // autoplay: {
-    //     delay: 3000,
+    autoplay: {
+        delay: 3000,
 
-    //     disableOnInteraction: false,
-    // },
+        disableOnInteraction: false,
+    },
 
     loop: true,
 
@@ -109,7 +109,7 @@ new Swiper('.search-result__slider', {
             slidesPerView: 1
         },
         1100: {
-            slidesPerView: 1.45,
+            slidesPerView: 1.2,
         }
 
     },
