@@ -93,7 +93,16 @@
         &__copyright {
             flex-direction: column;
         }
-
+        &__main{
+            flex-wrap: wrap;
+        }
+    }
+    @media (max-width:$mobile) {
+        &__below{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
     }
 }
 

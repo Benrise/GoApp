@@ -2506,7 +2506,7 @@ body._lock .event-categories__body {
 
 .right-corner-logo {
   position: absolute;
-  bottom: -14rem;
+  bottom: -8rem;
   right: -2rem;
   z-index: -1;
 }
@@ -3570,6 +3570,19 @@ body._lock .event-categories__body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .footer__main {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media (max-width: 47.99875em) {
+  .footer__below {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
