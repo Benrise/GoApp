@@ -46,7 +46,7 @@
 
     &__button:visited,
     &__button {
-        max-height: rem(80);
+        max-height: rem(40);
         display: flex;
         align-items: center;
         width: fit-content;
@@ -63,6 +63,7 @@
         width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         @media (max-width:$mobile) {
             flex-wrap: wrap;
             

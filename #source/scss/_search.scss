@@ -19,7 +19,7 @@
         align-items: center;
         top: 0;
         left: rem(8);
-        font-size: rem(20);
+        font-size: rem(16);
     }
 
     &__input {
@@ -30,10 +30,13 @@
         height: rem(43);
         padding: 0px rem(20) 0px rem(45);
         @include adaptiveValue("width",800,120);
-
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
         &::placeholder {
+            
             color: $secondaryFontColor;
-            font-size: rem(16);
+            font-size: rem(14);
             font-weight: 500;
         }
     }

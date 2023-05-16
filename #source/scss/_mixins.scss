@@ -25,7 +25,7 @@
 ) {
 	font-weight: $font-weight;
 	@include adaptiveValue("font-size", $font-size, $font-size-mobile);
-	line-height: rem($line-height);
+	@include adaptiveValue("line-height", $line-height, 19);
 	color: $color;
 	opacity: $opacity;
 }
@@ -33,7 +33,7 @@
 @mixin title {
 	font-weight: 500;
 	@include adaptiveValue("font-size", 32, 24);
-	line-height: rem(39);
+	@include adaptiveValue("line-height", 39, 30);
 	color: #a43ea4;
 }
 

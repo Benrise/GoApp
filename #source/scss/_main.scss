@@ -119,7 +119,7 @@
         justify-content: space-between;
         align-items: center;
         gap: rem(12);
-        @media (max-width:$mobile) {
+        @media (max-width: $mobile) {
             align-items: flex-start;
             flex-direction: column;
         }
@@ -180,7 +180,7 @@
         overflow: hidden;
         position: relative;
         transition: top 0.3s ease-in-out, height 0.3s ease-in-out, top 1s ease-in-out, height 1s ease-in;
-        @include adaptiveValue('height',700,300);
+        @include adaptiveValue("height", 700, 300);
     }
     .swiper-slide {
         width: 95%;
@@ -213,6 +213,7 @@
     @media (max-width: $tablet) {
         flex-direction: column;
     }
+
     &__left {
         display: flex;
         flex-direction: column;
@@ -220,7 +221,7 @@
         gap: rem(12);
         width: 100%;
     }
-    &__right{
+    &__right {
         display: flex;
         flex-direction: column;
         gap: rem(24);
@@ -320,14 +321,14 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        @include adaptiveValue("gap",48, 24);
+        @include adaptiveValue("gap", 48, 24);
         width: fit-content;
     }
-    &__heading{
-        @media (max-width:$mobileXSSmall) {
-        flex-direction: column;
-        gap: rem(12);
-    }
+    &__heading {
+        @media (max-width: $mobileXSSmall) {
+            flex-direction: column;
+            gap: rem(12);
+        }
     }
 
     &__heading-title {
@@ -344,9 +345,9 @@
     }
 
     &__text {
-        @include adaptiveValue('font-size',20,14);
-        @include adaptiveValue('line-height',30,20);
-        @include adaptiveValue('max-height',180,60);
+        @include adaptiveValue("font-size", 20, 14);
+        @include adaptiveValue("line-height", 30, 20);
+        @include adaptiveValue("max-height", 180, 60);
         overflow-y: auto;
         color: white;
         opacity: 0.8;
@@ -354,7 +355,7 @@
     &__video {
         position: relative;
         padding: 0px 0px 80% 0px;
-        video{
+        video {
             object-fit: cover;
             position: absolute;
             top: 0;
@@ -366,7 +367,6 @@
     }
 }
 
-
 .recommendations {
     display: flex;
     flex-direction: column;
@@ -377,6 +377,19 @@
         display: flex;
         flex-wrap: wrap;
         gap: rem(24);
+    }
+
+    @media (max-width: $tablet) {
+        &__categories {
+            padding-bottom: rem(6);
+            flex-wrap: nowrap;
+            width: 100%;
+            overflow-x: scroll;
+            .category{
+                min-width: fit-content;
+            }
+            gap: rem(24);
+        }
     }
 
     &__content {
@@ -392,7 +405,22 @@
     .slide-card {
         width: 100%;
         &__link {
-            @include adaptiveValue('min-height',300, 150);
+            @include adaptiveValue("min-height", 300, 150);
+        }
+        &__title {
+            overflow-wrap: break-word;
+            @include adaptiveValue("font-size", 28, 16);
         }
     }
+}
+
+.right-corner-logo {
+    position: absolute;
+    bottom: -14rem;
+    right: -2rem;
+    &__image {
+        width: 100%;
+        height: auto;
+    }
+    z-index: -1;
 }
