@@ -1,0 +1,313 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="./index.html" class="header__logo">
+          <img src="./img/icons/icons/Logo_group.svg" class="header__image header__image_adaptive" alt="Logo">
+        </a>
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="" class="menu__link _icon-calendar">Календарь мероприятий</a></li>
+            <li class="menu__item"><a href="" class="menu__link _icon-ticket">Мои билеты</a></li>
+            <li class="menu__item"><a href="" class="menu__link _icon-message">Будьте в курсе</a></li>
+            <li class="menu__item"><a href="" class="menu__link _icon-geo">Москва</a></li>
+            <li class="menu__item _hidden"><a href="./profile.html" class="menu__link _icon-profile">Профиль</a></li>
+          </ul>
+        </nav>
+        <div class="header__search _hidden">
+          <div class="search">
+            <form action="" class="search__form">
+              <button type="submit" class="search__button _icon-magnify"></button>
+              <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск"
+                class="search__input">
+            </form>
+          </div>
+        </div>
+        <div class="header__profile">
+          <a href="./profile.html"><img src="./img/pic/profile.png" alt="profile" class="header__profile header__image_adaptive"></a>
+        </div>
+
+        <div class="header__menu-icon"><span></span></div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="main-block">
+        <div class="main-block__container _profile-margin">
+          <div class="main-block__info">
+            <h2 class="main-block__title">
+              Мой профиль
+            </h2>
+            <h3 class="main-block__subtitle">
+              Ваши GO Данные и пользовательские настройки хранятся здесь
+            </h3>
+          </div>
+          <div class="main-block__body">
+            <div class="profile">
+              <div class="profile__upper">
+                <div class="profile__exit">
+                  <button class="profile__exit-button">
+                    <span class="_icon-exit"></span>
+                  </button>
+                  <div class="profile__exit-title">
+                    Выйти
+                  </div>
+                </div>
+                <div class="profile__center">
+                  <div class="profile__pic"><img src="./img/icons/icons/Logo.svg" alt=""></div>
+                  <div class="profile__name">
+                    <div class="profile__name-title _icon-pencil">
+                      Латыпов Артём
+                    </div>
+                    <div class="profile__name-subtitle">
+                      (не отображается в билете)
+                    </div>
+                  </div>
+                </div>
+                <div class="profile__add">
+                  <button class="profile__add-button">
+                    <span class="_icon-plus"></span>
+                  </button>
+                  <div class="profile__add-title">
+                    Добавить
+                  </div>
+                </div>
+              </div>
+
+              <div class="profile__sections">
+                <div class="profile__tabs tabbar">
+                  <nav class="tabbar__buttons">
+                    <a href="#general" class="tabbar__button tabbar__button_active">Общее</a>
+                    <a href="#preferences" class="tabbar__button">Предпочтения</a>
+                    <a href="#payment" class="tabbar__button">Оплата</a>
+                    <a href="#bonuses" class="tabbar__button">Бонусы</a>
+                    <a href="#receipts" class="tabbar__button">Чеки</a>
+                    <a href="#reviews" class="tabbar__button">Отзывы</a>
+                  </nav>
+                  <div class="tabbar__body">
+                    <div id="general" class="tabbar__section section">
+                      <div class="profile__phone ">
+                        <div class="section__item">
+                          <div class="section__title">
+                            Телефон
+                          </div>
+                          <div class="section__form search">
+                            <form action="" class="search__form">
+                              <input autocomplete="off" type="tel" name="form[]" data-error="Ошибка" disabled
+                                placeholder="+7-***-***-77-75" class="search__input">
+                            </form>
+                            <button class="section__edit">
+                              Изменить
+                            </button>
+                            <div class="section__status section__status_success">
+                              Подтверждено
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="profile__mail ">
+                        <div class="section__item">
+                          <div class="section__title">
+                            Почта
+                          </div>
+                          <div class="section__form search">
+                            <form action="" class="search__form">
+                              <input autocomplete="off" type="email" name="form[]" data-error="Ошибка" disabled
+                                placeholder="benrise_x@mail.ru" disabled class="search__input">
+                            </form>
+                            <div class="section__edit">
+                              Изменить
+                            </div>
+                            <div class="section__status section__status_fail">
+                              Не подтверждена
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="profile__username ">
+                        <div class="section__item">
+                          <div class="section__title">
+                            Псевдоним (отображается в отзывах)
+                          </div>
+                          <div class="section__form search">
+                            <form action="" class="search__form">
+                              <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" disabled
+                                placeholder="Benrise" class="search__input">
+                            </form>
+                            <button class="section__edit">
+                              Изменить
+                            </button>
+                            <div class="section__status section__status_in-progress">
+                              В обработке
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="profile__passport ">
+                        <div class="section__item">
+                          <div class="section__title">
+                            Паспортные данные
+                          </div>
+                          <div class="section__form">
+                            <div class="section__status section__status_success">
+                              Безопасно импортированы из
+                            </div>
+                            <div class="section__img">
+                              <img src="./img/icons/icons/Gosuslugi Logo.svg" alt="">
+                            </div>
+                            <div class="section__edit">
+                              Изменить
+                            </div>
+                          </div>
+
+                          <div class="section__p">
+                            Паспортные данные нужны для подтверждения возраста и личности.
+                          </div>
+                          <div class="section__p">
+                            Ваши данные в безопасности. GO совместно с гос.услугами хранит их в защищённом виде.
+                          </div>
+                          <div class="section__p">
+                            Если возникли какие-то вопросы вы всегда сможете связаться с нами по кнопке ниже.
+                          </div>
+                          <button class="section__button">
+                            Связаться с нами
+                          </button>
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div id="preferences" class="tabbar__section">
+
+                    </div>
+
+                    <div id="payment" class="tabbar__section">
+
+                    </div>
+
+                    <div id="bonuses" class="tabbar__section">
+
+                    </div>
+
+                    <div id="receipts" class="tabbar__section">
+
+                    </div>
+
+                    <div id="reviews" class="tabbar__section">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+
+      </section>
+
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="subscribe">
+          <div class="subscribe__title">
+            Подпишитесь на акции и анонсы различных событий
+          </div>
+          <div class="subscribe__main">
+            <form action="" class="subscribe__form">
+              <input type="text" placeholder="Электронная почта" class="subscribe__input">
+              </input>
+              <button type="submit" class="subscribe__button">
+                Подписаться
+              </button>
+            </form>
+            <div class="subscribe__policy">
+              Подписываясь на рассылку, вы соглашаетесь с <a href="#" class="subscribe__policy-link">политикой
+                конфиденциальности</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__main">
+          <nav class="footer__menu menu-footer">
+            <ul class="menu-footer__list">
+              <li class="menu-footer__item"><a href="" class="menu-footer__link">О нас</a></li>
+              <li class="menu-footer__item"><a href="" class="menu-footer__link">Возврат билетов</a></li>
+              <li class="menu-footer__item"><a href="" class="menu-footer__link">Подарочные сертификаты</a></li>
+              <li class="menu-footer__item"><a href="" class="menu-footer__link">Соглашение</a></li>
+              <li class="menu-footer__item"><a href="" class="menu-footer__link">Реклама</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__media">
+            <img src="./img/icons/icons/VK - Original.svg" alt="social" class="footer__media-item"></img>
+            <img src="./img/icons/icons/Telegram - Original.svg" alt="social" class="footer__media-item"></img>
+            <img src="./img/icons/icons/YouTube - Original.svg" alt="social" class="footer__media-item"></img>
+          </div>
+        </div>
+        <div class="footer__below">
+          <div class="footer__copyright">
+            <div class="footer__copyright-date">
+              ©2016 - 2023 RTUITLab
+            </div>
+            <div class="footer__copyright-text">
+              Все права защищены
+            </div>
+          </div>
+          <div class="footer__geo-lang">
+            <div class="footer__geo _icon-location-pin">Москва</div>
+            <div class="footer__lang">
+              <img src="./img/icons/icons/Russia Flag.svg" class="footer__lang-img"></img>
+              <div class="footer__lang-text">Русский</div>
+            </div>
+          </div>
+          <a href="#" class="footer__contact">
+            Связаться с нами
+          </a>
+        </div>
+      </div>
+      <div class="right-corner-logo">
+        <img src="./img/pic/bg-logo.png" alt="logo" class="right-corner-logo__image"></img>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script type="module" src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,248 @@
+._profile-margin {
+    @include adaptiveValue("margin-top", 24, 0);
+}
+
+
+
+
+.profile {
+    padding-top: rem(24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(24);
+    width: 100%;
+    &__upper {
+        display: flex;
+        max-width: rem(541);
+        min-height: rem(252);
+        justify-content: center;
+    }
+
+    &__add,
+    &__exit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(6);
+    }
+
+    &__add-button,
+    &__exit-button {
+        background-color: $bgColor;
+        border: 1px solid $containerBorderColor;
+        border-radius: rem(50);
+        min-width: rem(100);
+        min-height: rem(100);
+        ::before {
+            opacity: 0.5;
+            font-size: rem(16);
+            color: $buttonColor;
+        }
+    }
+
+    &__add-title,
+    &__exit-title {
+        font-size: rem(16);
+        color: $secondaryFontColor;
+    }
+
+    &__center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(24);
+        width: 100%;
+        height: auto;
+    }
+
+    &__pic {
+        min-height: rem(150);
+        min-width: rem(150);
+        border-radius: rem(999);
+        img {
+            width: 100%;
+        }
+    }
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+        gap: rem(12);
+        align-items: center;
+        color: $buttonColor;
+    }
+
+    &__name-title {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: rem(12);
+        white-space: nowrap;
+        font-size: rem(40);
+        &._icon-pencil:after {
+            font-size: rem(28);
+            opacity: 0.5;
+        }
+    }
+
+    &__name-subtitle {
+        font-size: rem(16);
+        color: $secondaryFontColor;
+    }
+
+    &__sections {
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
+        width: 100%;
+    }
+
+    &__tabs {
+    }
+
+    &__phone {
+    }
+
+    &__mail {
+    }
+
+    &__username {
+    }
+
+    &__phone,
+    &__mail,
+    &__username {
+    }
+
+    &__passport {
+    }
+}
+.tabbar {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    &__buttons {
+        padding: rem(24);
+        border: 1px solid $containerBorderColor;
+        border-radius: rem(16);
+        display: flex;
+        flex-direction: row;
+        gap: rem(24);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__button {
+        max-height: rem(40);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        @include adaptiveValue("font-size", 16, 14);
+        padding: rem(12) rem(24);
+        font-weight: 500;
+        border: 1px solid $buttonColor;
+        text-decoration: none;
+        color: $buttonColor;
+        border-radius: 12px;
+        &_active {
+            background-color: $buttonColor;
+            color: white;
+        }
+    }
+
+    &__body {
+    }
+
+    &__section {
+    }
+}
+.section {
+    display: grid;
+    grid-gap: rem(12);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+
+    &__item {
+        padding: rem(24);
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
+        align-items: flex-start;
+        max-width: rem(674);
+        border: 1px solid $containerBorderColor;
+        border-radius: rem(12);
+    }
+
+    &__title {
+        @include subtitle;
+        color: $buttonColor;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        gap: rem(12);
+    }
+
+    &__edit {
+        cursor: pointer;
+        background: none;
+        color: $fontColor;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__p {
+        font-size: rem(16);
+        color: $fontColor;
+    }
+    &__button {
+        font-size: rem(16);
+        color: white;
+        padding: rem(12) rem(24);
+        background-color: $funcButton_color;
+        border-radius: rem(12);
+    }
+    &__img {
+    }
+    &__status {
+        white-space: nowrap;
+        &:after {
+            font-size: rem(16);
+        }
+        &_success {
+            color: $successColor;
+        }
+        &_fail {
+            color: red;
+        }
+        &_in-progress {
+            color: orange;
+        }
+
+        
+        
+    }
+
+    .search {
+        &__form {
+            width: auto;
+        }
+        gap: rem(24);
+        font-size: rem(16);
+        &__input {
+            width: fit-content;
+            padding: rem(12);
+            &::placeholder {
+                opacity: 0.5;
+                color: $fontColor;
+                font-size: inherit;
+                font-weight: 600;
+            }
+        }
+    }
+}

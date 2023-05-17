@@ -14,7 +14,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+[class*="_in-progress"],
+[class*="_success"],
+[class*="_fail"],
 [class*="_icon-"] {
     &:before,
     &:after {
@@ -23,6 +25,15 @@
     }
 }
 
+[class*="_success"]:after {
+    content: "\e902";
+}
+[class*="_fail"]:after {
+    content: "\e913";
+}
+[class*="_in-progress"]:after {
+    content: "\e994";
+}
 
 ._icon-arrow:after {
     content: "\e900";
@@ -74,7 +85,7 @@
 }
 ._icon-ruble-sign-square-1:before,
 ._icon-ruble-sign-square-2:before,
-._icon-ruble-sign-square-3:before{
+._icon-ruble-sign-square-3:before {
     content: "\e910";
 }
 
@@ -118,11 +129,11 @@
         ._icon-ruble-sign-square {
             &-1,
             &-2,
-            &-3{
+            &-3 {
                 display: none;
             }
         }
-        .price__free{
+        .price__free {
             font-size: rem(16);
             display: block;
         }
@@ -140,7 +151,7 @@
     font-size: rem(14);
     content: "\e913";
 }
-._icon-pencil:before {
+._icon-pencil:after {
     content: "\e905";
 }
 ._icon-credit-card:before {
