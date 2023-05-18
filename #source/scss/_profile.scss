@@ -28,7 +28,7 @@
     &__add-button,
     &__exit-button {
         background-color: $bgColor;
-        border: 1px solid $containerBorderColor;
+        border: 3px solid $containerBorderColor;
         border-radius: rem(50);
 
         @include adaptiveValue("width", 100, 50);
@@ -37,7 +37,7 @@
         ::before {
             opacity: 0.5;
             font-size: rem(16);
-            color: $buttonColor;
+            color: $fontColor;
         }
     }
 
@@ -164,6 +164,7 @@
     }
 
     &__button {
+        background: none;
         max-height: rem(40);
         display: flex;
         align-items: center;

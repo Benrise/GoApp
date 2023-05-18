@@ -4,6 +4,7 @@ import { init } from "./map.js";
 import { spollersInit } from "./functions.js";
 import { tabBarInit } from "./functions.js";
 import { resetInit } from "./functions.js";
+import { loginInit } from "./login.js";
 
 if (isMobile.any()) { addTouchClass(); }
 
@@ -11,12 +12,10 @@ burgerInit();
 resetInit();
 spollersInit();
 tabBarInit();
-
+loginInit();
 
 
 try{
-    ymaps.ready(init);
-
     new Swiper('.event-categories__slider', {
         slidesPerView: 'auto',
         loop: true,
@@ -297,6 +296,8 @@ try{
     
     ];
     selectOptions.forEach(option => VirtualSelect.init(option));
+    
+    ymaps.ready(init);
     
 }
 catch(error){

@@ -267,8 +267,9 @@ export function tabBarInit() {
 	if (tabButtons.length > 0) {
 		const firstTab = tabButtons[0];
 		const firstTabName = firstTab.getAttribute('data-section-id');
-		firstTab.classList.add('tabbar__button_active');
+		console.log(firstTab)
 		changeTab(null, firstTabName);
+		firstTab.classList.add('tabbar__button_active');
 	}
 }
 

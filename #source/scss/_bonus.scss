@@ -127,14 +127,14 @@
 
     &__subtitle {
         font-weight: 500;
-        font-size: rem(24);
-        color: $buttonColor;
+        @include title;
+        color: $buttonColor !important;
         line-height: rem(30);
     }
 
     &__text {
         font-weight: 500;
-        font-size: rem(20);
+        @include adaptiveValue('font-size',20,14);
         line-height: 150%;
 
         color: $fontColor;
@@ -170,7 +170,7 @@
         flex-direction: column;
         @include adaptiveValue("left", 40, 10, 768, 280, 1);
         @include adaptiveValue("bottom", 40, 10, 768, 280, 1);
-        @include adaptiveValue("gap", 16, 6, 768, 280, 1);
+        @include adaptiveValue("gap", 16, 3, 768, 280, 1);
         color: $buttonColor;
     }
     &__name {
@@ -193,23 +193,10 @@
         @include adaptiveValue("font-size", 224, 64, 768, 280, 1);
         @include adaptiveValue("left", 40, 5, 768, 280, 1);
         @include adaptiveValue("top", 60, 15, 768, 280, 1);
-        animation: animated_text 5s ease-in-out infinite;
-        -moz-animation: animated_text 5s ease-in-out infinite;
-        -webkit-animation: animated_text 5s ease-in-out infinite;
-        background-size: 400% 400%;
+        
+        @include gradient-text;
     }
 
-    @keyframes animated_text {
-        0% {
-            background-position: 0px 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0px 50%;
-        }
-    }
 
     &__img {
         @include adaptiveValue("width", 60, 20, 768, 280, 1);
@@ -246,7 +233,7 @@
         list-style-position: inside;
         list-style-type: disc;
         font-weight: 500;
-        font-size: rem(20);
+        @include adaptiveValue('font-size',20,14);
         line-height: 150%;
         color: $fontColor;
     }
