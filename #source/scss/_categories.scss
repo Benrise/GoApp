@@ -33,12 +33,18 @@ $categories: (
 
 .category {
     display: block;
-    padding: rem(12) rem(24);
     border-radius: 12px;
     width: fit-content;
     gap: rem(10);
     color: white;
     background-color: $buttonColor;
+    padding: rem(12) rem(24);
+    @media (max-width:$mobileSmall){
+        padding: 0;
+        font-size: rem(12);
+        background-color: inherit !important;
+        color: $buttonColor;
+    }
 
 }
 
@@ -99,6 +105,7 @@ $categories: (
         border-radius: 24px;
         padding: rem(24);
         height: rem(506);
+        @include adaptiveValue('height',506,200);
         @extend %slider-setup;
         @include adaptiveValue("margin-top", 24, 0);
     }

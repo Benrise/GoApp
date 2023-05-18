@@ -67,6 +67,11 @@ body {
     border-radius: 24px !important;
 }
 
+[class*="_bold"] {
+    font-weight: 700;
+}
+
+
 @import "_categories";
 @import "_header";
 @import "_hiding-mask";
@@ -78,5 +83,7 @@ body {
 @import "_scrollbar";
 @import "_filters";
 @import"_profile";
+@import "_tickets";
+@import "_bonus";
 
 @import "_footer";

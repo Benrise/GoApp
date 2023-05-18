@@ -1,6 +1,10 @@
 @import "_slider-card";
 
 %slider-setup {
+    [class*="_slider-area"] {
+        position: relative;
+    }
+
     .swiper-button-next,
     .swiper-button-prev {
         width: fit-content;
@@ -10,16 +14,21 @@
         }
     }
 
+    .swiper-button-next.swiper-button-disabled,
+    .swiper-button-prev.swiper-button-disabled {
+        pointer-events: all;
+    }
+
     .swiper-button {
-        
+        z-index: 5;
         &-prev {
             z-index: 1;
             transform: rotate(180deg);
-            left: var(--swiper-navigation-sides-offset, -24px);
+            left: var(--swiper-navigation-sides-offset, rem(-25));
         }
         &-next {
             z-index: 1;
-            right: var(--swiper-navigation-sides-offset, -24px);
+            right: var(--swiper-navigation-sides-offset, rem(-25));
         }
         @media (max-width: $tablet) {
             &-prev img,
@@ -28,15 +37,6 @@
             }
         }
     }
-    .upcoming-events__slider-btn {
-        @media (max-width: $mobileXSmall) {
-            &-next,
-            &-prev {
-                top: var(--swiper-navigation-top-offset, 33%);
-            }
-        }
-    }
-
 
     .swiper-pagination-bullets.swiper-pagination-horizontal {
         z-index: 1;
@@ -51,8 +51,4 @@
     .swiper-pagination-bullet {
         background-color: $funcButton_color;
     }
-    
 }
-
-
-

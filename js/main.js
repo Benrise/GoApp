@@ -6,7 +6,8 @@ import { spollers } from "./functions.js";
 if (isMobile.any()) { addTouchClass(); }
 
 burgerInit();
-ymaps.ready(init);
+
+try {ymaps.ready(init);}catch (error){console.error(error);}
 spollers();
 
 new Swiper('.event-categories__slider', {
@@ -113,6 +114,7 @@ new Swiper('.search-result__slider', {
         }
 
     },
+    slideToClickedSlide: true,
 
 });
 
@@ -135,12 +137,46 @@ new Swiper('.near-events__slider', {
 
         disableOnInteraction: false,
     },
-    speed: 3000,
 
 
     spaceBetween: 12,
 
 });
+
+new Swiper('.tickets__slider', {
+    navigation: {
+        nextEl: '.tickets__slider-btn-next',
+        prevEl: '.tickets__slider-btn-prev'
+    },
+
+    pagination: {
+        el: '.tickets__slider-pagination',
+        clickable: true,
+        dynamicBullets: true,
+    },
+
+
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+    },
+
+    breakpoints: {
+        280: {
+            slidesPerView: 1
+        },
+        670: {
+            slidesPerView: 3
+        },
+        1100: {
+            slidesPerView: 4,
+        },
+
+    },
+
+    spaceBetween: 24,
+
+})
 
 
 //========================================================================================  FILTERS ========================================================================================
@@ -249,7 +285,7 @@ const selectOptions = [{
 
 ];
 
-selectOptions.forEach(option => VirtualSelect.init(option));
+try {selectOptions.forEach(option => VirtualSelect.init(option));;}catch (error){console.error(error);}
 
 // function onSampleSelectServerSearch(searchValue, virtualSelect) {
 //     /** project developer has to define anyMehodToGetDataFromServer function to make API call */

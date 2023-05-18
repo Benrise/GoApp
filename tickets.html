@@ -1,0 +1,601 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <a href="./index.html" class="header__logo">
+          <img src="./img/icons/icons/Logo_group.svg" class="header__image header__image_adaptive" alt="Logo">
+        </a>
+        <div class="header__search _hidden">
+          <div class="search">
+            <form action="" class="search__form">
+              <button type="submit" class="search__button _icon-magnify"></button>
+              <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" placeholder="Поиск"
+                class="search__input">
+            </form>
+          </div>
+        </div>
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item"><a href="" class="menu__link _icon-calendar">Календарь мероприятий</a></li>
+            <li class="menu__item"><a href="" class="menu__link _icon-ticket">Мои билеты</a></li>
+            <li class="menu__item"><a href="" class="menu__link _icon-message">Будьте в курсе</a></li>
+            <li class="menu__item"><a href="" class="menu__link _icon-geo">Москва</a></li>
+            <li class="menu__item _hidden"><a href="./profile.html" class="menu__link _icon-profile">Профиль</a></li>
+          </ul>
+        </nav>
+        <div class="header__profile">
+          <a href="./profile.html"><img src="./img/pic/profile.png" alt="profile"
+              class="header__profile header__image_adaptive"></a>
+        </div>
+
+        <div class="header__menu-icon"><span></span></div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="main-block">
+        <div class="main-block__container _profile-margin">
+          <div class="main-block__upper">
+            <div class="main-block__info">
+              <h2 class="main-block__title">
+                Ваши билеты
+              </h2>
+              <h3 class="main-block__subtitle">
+                Все билеты должны также приходить на электронную почту.
+              </h3>
+            </div>
+            <div class="main-block__buttons">
+              <div class="main-block__radio">
+                <div class="radio">
+                  <input type="radio" name="select" id="active" checked>
+                  <input type="radio" name="select" id="archive">
+                  <label for="active" class="option active">
+                    <div class="dot"></div>
+                    <span>Активные</span>
+                  </label>
+                  <label for="archive" class="option archive">
+                    <div class="dot"></div>
+                    <span>Архив</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-block__body">
+            <div class="tickets">
+              <div class="tickets__slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="tickets__slide tickets-card">
+                      <a href="#" class="tickets-card__link">
+                        <div class="tickets-card__img-blackout">
+                          <div class="tickets-card__image">
+                            <img src="./img/pic/tickets-card.jpg" alt="Название промо">
+                          </div>
+                        </div>
+                        <div class="tickets-card__category">
+                          <div class="category _category-movie">
+                            Фильмы
+                          </div>
+                        </div>
+                        <div class="tickets-card__text">
+                          <div class="tickets-card__title">
+                            Человек-павук
+                          </div>
+                          <div class="tickets-card__additional">
+                            ТРЦ Комумбус, Киломакс
+                          </div>
+                        </div>
+                      </a>
+                      <div class="tickets-card__down">
+                        <div class="tickets-card__date">
+                          <div class="tickets-card__date-upper">
+                            <span class="tickets-card__date-text">
+                              Дата:
+                            </span>
+                            <div class="tickets-card__dd-mm-yy">
+                              10 мая 2023 г.
+                            </div>
+                          </div>
+                          <div class="tickets-card__date-down">
+                            <span class="tickets-card__date-text">
+                              Время:
+                            </span>
+                            <div class="tickets-card__hour">
+                              19:00 (МСК)
+                            </div>
+                          </div>
+
+                        </div>
+                        <button class="tickets-card__qr _icon-upc-scan">
+
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="tickets__slide tickets-card">
+                      <a href="#" class="tickets-card__link">
+                        <div class="tickets-card__img-blackout">
+                          <div class="tickets-card__image">
+                            <img src="./img/pic/tickets-card.jpg" alt="Название промо">
+                          </div>
+                        </div>
+                        <div class="tickets-card__category">
+                          <div class="category _category-movie">
+                            Фильмы
+                          </div>
+                        </div>
+                        <div class="tickets-card__text">
+                          <div class="tickets-card__title">
+                            Человек-павук
+                          </div>
+                          <div class="tickets-card__additional">
+                            ТРЦ Комумбус, Киломакс
+                          </div>
+                        </div>
+                      </a>
+                      <div class="tickets-card__down">
+                        <div class="tickets-card__date">
+                          <div class="tickets-card__date-upper">
+                            <span class="tickets-card__date-text">
+                              Дата:
+                            </span>
+                            <div class="tickets-card__dd-mm-yy">
+                              10 мая 2023 г.
+                            </div>
+                          </div>
+                          <div class="tickets-card__date-down">
+                            <span class="tickets-card__date-text">
+                              Время:
+                            </span>
+                            <div class="tickets-card__hour">
+                              19:00 (МСК)
+                            </div>
+                          </div>
+
+                        </div>
+                        <button class="tickets-card__qr _icon-upc-scan">
+
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="tickets__slide tickets-card">
+                      <a href="#" class="tickets-card__link">
+                        <div class="tickets-card__img-blackout">
+                          <div class="tickets-card__image">
+                            <img src="./img/pic/tickets-card.jpg" alt="Название промо">
+                          </div>
+                        </div>
+                        <div class="tickets-card__category">
+                          <div class="category _category-movie">
+                            Фильмы
+                          </div>
+                        </div>
+                        <div class="tickets-card__text">
+                          <div class="tickets-card__title">
+                            Человек-павук
+                          </div>
+                          <div class="tickets-card__additional">
+                            ТРЦ Комумбус, Киломакс
+                          </div>
+                        </div>
+                      </a>
+                      <div class="tickets-card__down">
+                        <div class="tickets-card__date">
+                          <div class="tickets-card__date-upper">
+                            <span class="tickets-card__date-text">
+                              Дата:
+                            </span>
+                            <div class="tickets-card__dd-mm-yy">
+                              10 мая 2023 г.
+                            </div>
+                          </div>
+                          <div class="tickets-card__date-down">
+                            <span class="tickets-card__date-text">
+                              Время:
+                            </span>
+                            <div class="tickets-card__hour">
+                              19:00 (МСК)
+                            </div>
+                          </div>
+
+                        </div>
+                        <button class="tickets-card__qr _icon-upc-scan">
+
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="tickets__slide tickets-card">
+                      <a href="#" class="tickets-card__link">
+                        <div class="tickets-card__img-blackout">
+                          <div class="tickets-card__image">
+                            <img src="./img/pic/tickets-card.jpg" alt="Название промо">
+                          </div>
+                        </div>
+                        <div class="tickets-card__category">
+                          <div class="category _category-movie">
+                            Фильмы
+                          </div>
+                        </div>
+                        <div class="tickets-card__text">
+                          <div class="tickets-card__title">
+                            Человек-павук
+                          </div>
+                          <div class="tickets-card__additional">
+                            ТРЦ Комумбус, Киломакс
+                          </div>
+                        </div>
+                      </a>
+                      <div class="tickets-card__down">
+                        <div class="tickets-card__date">
+                          <div class="tickets-card__date-upper">
+                            <span class="tickets-card__date-text">
+                              Дата:
+                            </span>
+                            <div class="tickets-card__dd-mm-yy">
+                              10 мая 2023 г.
+                            </div>
+                          </div>
+                          <div class="tickets-card__date-down">
+                            <span class="tickets-card__date-text">
+                              Время:
+                            </span>
+                            <div class="tickets-card__hour">
+                              19:00 (МСК)
+                            </div>
+                          </div>
+
+                        </div>
+                        <button class="tickets-card__qr _icon-upc-scan">
+
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="tickets__slide tickets-card">
+                      <a href="#" class="tickets-card__link">
+                        <div class="tickets-card__img-blackout">
+                          <div class="tickets-card__image">
+                            <img src="./img/pic/tickets-card.jpg" alt="Название промо">
+                          </div>
+                        </div>
+                        <div class="tickets-card__category">
+                          <div class="category _category-movie">
+                            Фильмы
+                          </div>
+                        </div>
+                        <div class="tickets-card__text">
+                          <div class="tickets-card__title">
+                            Человек-павук
+                          </div>
+                          <div class="tickets-card__additional">
+                            ТРЦ Комумбус, Киломакс
+                          </div>
+                        </div>
+                      </a>
+                      <div class="tickets-card__down">
+                        <div class="tickets-card__date">
+                          <div class="tickets-card__date-upper">
+                            <span class="tickets-card__date-text">
+                              Дата:
+                            </span>
+                            <div class="tickets-card__dd-mm-yy">
+                              10 мая 2023 г.
+                            </div>
+                          </div>
+                          <div class="tickets-card__date-down">
+                            <span class="tickets-card__date-text">
+                              Время:
+                            </span>
+                            <div class="tickets-card__hour">
+                              19:00 (МСК)
+                            </div>
+                          </div>
+
+                        </div>
+                        <button class="tickets-card__qr _icon-upc-scan">
+
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="tickets__slide tickets-card">
+                      <a href="#" class="tickets-card__link">
+                        <div class="tickets-card__img-blackout">
+                          <div class="tickets-card__image">
+                            <img src="./img/pic/tickets-card.jpg" alt="Название промо">
+                          </div>
+                        </div>
+                        <div class="tickets-card__category">
+                          <div class="category _category-movie">
+                            Фильмы
+                          </div>
+                        </div>
+                        <div class="tickets-card__text">
+                          <div class="tickets-card__title">
+                            Человек-павук
+                          </div>
+                          <div class="tickets-card__additional">
+                            ТРЦ Комумбус, Киломакс
+                          </div>
+                        </div>
+                      </a>
+                      <div class="tickets-card__down">
+                        <div class="tickets-card__date">
+                          <div class="tickets-card__date-upper">
+                            <span class="tickets-card__date-text">
+                              Дата:
+                            </span>
+                            <div class="tickets-card__dd-mm-yy">
+                              10 мая 2023 г.
+                            </div>
+                          </div>
+                          <div class="tickets-card__date-down">
+                            <span class="tickets-card__date-text">
+                              Время:
+                            </span>
+                            <div class="tickets-card__hour">
+                              19:00 (МСК)
+                            </div>
+                          </div>
+
+                        </div>
+                        <button class="tickets-card__qr _icon-upc-scan">
+
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tickets__slider-btn-next swiper-button-next"><img src="./img/pic/Slider Button.svg"
+                    alt="Слайдер кнопка вперед"></div>
+                <div class="tickets__slider-btn-prev swiper-button-prev"><img src="./img/pic/Slider Button.svg"
+                    alt="Слайдер кнопка назад"></div>
+                <div class="tickets__slider-pagination swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+
+      </section>
+
+      <section class="main-block">
+        <div class="main-block__container _profile-margin">
+          <div class="main-block__upper">
+            <div class="main-block__info">
+              <h2 class="main-block__title">
+                Бонусная программа
+              </h2>
+              <h3 class="main-block__subtitle">
+                Единая бонусная программа для всех мероприятий и событий года
+              </h3>
+            </div>
+          </div>
+          <div class="main-block__body">
+            <div class="bonus">
+              <div class="bonus__main">
+                <div class="bonus__left">
+                  <div class="bonus__card b-card">
+                    <img src="./img/pic/noise-filter.png" class="b-card__filter" alt="">
+                    <!-- <img src="./img/pic/bonus-card.png" class="b-card__filter" alt=""> -->
+                    <div class="b-card__sign">
+                      GO
+                    </div>
+                    <div class="b-card__info">
+                      <div class="b-card__name">
+                        LATYPOV ARTEM
+                      </div>
+                      <div class="b-card__number">
+                        9002950409356
+                      </div>
+                    </div>
+                    <div class="b-card__logo">
+                      <div class="b-card__img">
+                        <img src="./img/icons/icons/Logo.svg" alt="">
+                      </div>
+                      <div class="b-card__label">
+                        Бонус
+                      </div>
+                    </div>
+                    <button class="b-card__upc _icon-upc-scan">
+                    </button>
+                  </div>
+                  
+
+
+                </div>
+                <div class="bonus__right">
+                  <div class="bonus__scores">
+                    <div class="bonus__option">
+                      Бонусных баллов:
+                    </div>
+                    <div class="bonus__value">
+                      1488
+                    </div>
+                  </div>
+                  <div class="bonus__discount">
+                    <div class="bonus__option">
+                      Твоя скидка:
+                    </div>
+                    <div class="bonus__value">
+                      15%
+                    </div>
+                  </div>
+                  <div class="bonus__data">
+                    <div class="bonus__option">
+                      Данные:
+                    </div>
+                    <div class="bonus__value bonus__value_small">
+                      Латыпов Артём Равилевич
+                    </div>
+                    <div class="bonus__value bonus__value_small">
+                      ben******@mail.ru
+                    </div>
+                    <div class="bonus__value bonus__value_small">
+                      +7 *** *** 777 5
+                    </div>
+                  </div>
+                  <div class="bonus__free-ticket">
+                    <div class="bonus__option">
+                      Бесплатный билет:
+                    </div>
+                    <div class="bonus__value">
+                      2000
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bonus__about">
+                <div class="bonus__project">
+                  <div class="bonus__subtitle">
+                    Государственный проект “Городские события”
+                  </div>
+                  <div class="bonus__text">
+                    Спонсированная государством бонусная программа предлагает уникальную возможность получать бонусы за
+                    участие во всех мероприятиях и событиях вашего города!
+                    Просто укажите свою бонусную <span>GO-карту</span>  при оплате и получайте бонусы на свой счёт.
+                  </div>
+                </div>
+                <div class="bonus__special">
+                  <div class="bonus__subtitle">
+                    Специальные предложения
+                  </div>
+                  <ul class="bonus__list list ">
+                    <li class="list__item ">Чем <span class="_bold">чаще</span class="_bold"> вы покупаете билеты по программе, тем <span class="_bold">больше</span> бонусов вы получаете
+                    </li>
+                    <li class="list__item ">Бонусы можно потратить на покупку <span class="_bold">любых</span> предстоящих мероприятий или событий
+                    </li> 
+                    <li class="list__item ">Бонусы <span class="_bold">не</span> сгорают</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+
+
+
+
+      </section>
+
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="subscribe">
+          <div class="subscribe__title">
+            Подпишитесь на акции и анонсы различных событий
+          </div>
+          <div class="subscribe__main">
+            <form action="" class="subscribe__form">
+              <input type="text" placeholder="Электронная почта" class="subscribe__input">
+              </input>
+              <button type="submit" class="subscribe__button">
+                Подписаться
+              </button>
+            </form>
+            <div class="subscribe__policy">
+              Подписываясь на рассылку, вы соглашаетесь с <a href="#" class="subscribe__policy-link">политикой
+                конфиденциальности</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__main">
+          <nav class="footer__menu menu-footer">
+            <ul class="menu-footer__list">
+              <li class="menu-footer__item"><a href="" class="menu-footer__link">О нас</a></li>
+              <li class="menu-footer__item"><a href="" class="menu-footer__link">Возврат билетов</a></li>
+              <li class="menu-footer__item"><a href="" class="menu-footer__link">Подарочные сертификаты</a></li>
+              <li class="menu-footer__item"><a href="" class="menu-footer__link">Соглашение</a></li>
+              <li class="menu-footer__item"><a href="" class="menu-footer__link">Реклама</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__media">
+            <img src="./img/icons/icons/VK - Original.svg" alt="social" class="footer__media-item"></img>
+            <img src="./img/icons/icons/Telegram - Original.svg" alt="social" class="footer__media-item"></img>
+            <img src="./img/icons/icons/YouTube - Original.svg" alt="social" class="footer__media-item"></img>
+          </div>
+        </div>
+        <div class="footer__below">
+          <div class="footer__copyright">
+            <div class="footer__copyright-date">
+              ©2016 - 2023 RTUITLab
+            </div>
+            <div class="footer__copyright-text">
+              Все права защищены
+            </div>
+          </div>
+          <div class="footer__geo-lang">
+            <div class="footer__geo _icon-location-pin">Москва</div>
+            <div class="footer__lang">
+              <img src="./img/icons/icons/Russia Flag.svg" class="footer__lang-img"></img>
+              <div class="footer__lang-text">Русский</div>
+            </div>
+          </div>
+          <a href="#" class="footer__contact">
+            Связаться с нами
+          </a>
+        </div>
+      </div>
+      <div class="right-corner-logo">
+        <img src="./img/pic/bg-logo.png" alt="logo" class="right-corner-logo__image"></img>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
+</body>
+
+</html>

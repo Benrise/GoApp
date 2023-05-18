@@ -1,0 +1,253 @@
+.bonus {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("gap", 48, 24);
+    position: relative;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    padding-top: rem(24);
+    &__main {
+        display: flex;
+        @include adaptiveValue("gap", 48, 24);
+        width: 100%;
+    }
+
+    &__left {
+        min-width: rem(663);
+        min-height: rem(412);
+    }
+    @media (max-width: rem(1301)) {
+        &__left {
+            min-width: auto;
+            min-height: auto;
+            max-width: rem(663);
+            max-height: rem(412);
+        }
+    }
+
+    &__card {
+        overflow: hidden;
+    }
+
+    &__card:before {
+        content: "";
+        position: absolute;
+        height: 1000px;
+        width: 15px;
+        background: white;
+        box-shadow: 0 0 10px #fff;
+        filter: blur(1px);
+        opacity: 0.9;
+        top: -30px;
+        transition: 0.7s;
+        transform: rotate(50deg) translateY(-380px) translateX(-400px);
+    }
+
+    &__card:hover:before {
+        transform: rotate(50deg) translateY(-120px) translateX(600px);
+    }
+
+    &__right {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: rem(24);
+    }
+
+    @media (max-width: rem(1300)) {
+        &__right {
+            display: flex;
+        }
+        &__main {
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+
+    @media (max-width: rem(500)) {
+        &__right {
+            overflow-x: scroll;
+            min-height: rem(130);
+        }
+        &__text{
+            height: rem(150);
+            overflow: auto;
+        }
+
+    }
+
+    &__free-ticket,
+    &__data,
+    &__discount,
+    &__scores {
+        display: flex;
+        flex-direction: column;
+        gap: rem(12);
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    &__option {
+        @include adaptiveValue("font-size", 24, 12);
+        font-weight: 600;
+        color: $buttonColor;
+    }
+
+    &__value {
+        @include adaptiveValue("font-size", 48, 24);
+        font-weight: 600;
+        color: $funcButton_color;
+
+        &_small {
+            @include adaptiveValue("font-size", 20, 12);
+        }
+    }
+
+    &__discount {
+    }
+
+    &__data {
+    }
+
+    &__about {
+        display: flex;
+        flex-direction: column;
+        gap: rem(48);
+        @include adaptiveValue("padding-top", 24, 0);
+    }
+
+    &__special,
+    &__project {
+        display: flex;
+        flex-direction: column;
+        gap: rem(12);
+    }
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: rem(24);
+        color: $buttonColor;
+        line-height: rem(30);
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: rem(20);
+        line-height: 150%;
+
+        color: $fontColor;
+    }
+
+    &__list {
+    }
+}
+.b-card {
+    position: relative;
+    border-radius: rem(40);
+    @include adaptiveValue("border-radius", 40, 20, 768, 280, 1);
+    background: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0) 0.52%, #c69cd5 100%);
+    border: 4px solid $buttonColor;
+
+    &__upc,
+    &__logo,
+    &__info,
+    &__sign {
+        position: absolute;
+    }
+
+    &__logo {
+        @include adaptiveValue("top", 40, 5, 768, 280, 1);
+        @include adaptiveValue("right", 40, 2, 768, 280, 1);
+        display: flex;
+        flex-direction: column;
+        @include adaptiveValue("gap", 12, 6, 768, 280, 1);
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        @include adaptiveValue("left", 40, 10, 768, 280, 1);
+        @include adaptiveValue("bottom", 40, 10, 768, 280, 1);
+        @include adaptiveValue("gap", 16, 6, 768, 280, 1);
+        color: $buttonColor;
+    }
+    &__name {
+        @include adaptiveValue("font-size", 20, 5, 768, 280, 1);
+        font-weight: 600;
+    }
+
+    &__number {
+        @include adaptiveValue("font-size", 32, 8, 768, 280, 1);
+        font-weight: 600;
+        letter-spacing: 0.15em;
+    }
+
+    &__sign {
+        background: linear-gradient(90deg, #d05cfd 0%, #ff5145 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 800;
+        @include adaptiveValue("font-size", 224, 64, 768, 280, 1);
+        @include adaptiveValue("left", 40, 5, 768, 280, 1);
+        @include adaptiveValue("top", 60, 15, 768, 280, 1);
+        animation: animated_text 5s ease-in-out infinite;
+        -moz-animation: animated_text 5s ease-in-out infinite;
+        -webkit-animation: animated_text 5s ease-in-out infinite;
+        background-size: 400% 400%;
+    }
+
+    @keyframes animated_text {
+        0% {
+            background-position: 0px 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0px 50%;
+        }
+    }
+
+    &__img {
+        @include adaptiveValue("width", 60, 20, 768, 280, 1);
+    }
+
+    &__bg-filter {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: rem(663);
+        max-height: rem(412);
+    }
+
+    &__label {
+        @include adaptiveValue("font-size", 20, 8, 768, 280, 1);
+        font-weight: 800;
+        color: $buttonColor;
+    }
+
+    &__upc {
+        @include adaptiveValue("bottom", 40, 5, 768, 280, 1);
+        @include adaptiveValue("right", 40, 5, 768, 280, 1);
+        display: flex;
+        align-items: center;
+        @include adaptiveValue("padding", 12, 6, 768, 280, 1);
+        background-color: white;
+        color: $buttonColor;
+        @include adaptiveValue("font-size", 24, 12, 768, 280, 1);
+        border-radius: rem(12);
+    }
+}
+.list {
+    &__item {
+        list-style-position: inside;
+        list-style-type: disc;
+        font-weight: 500;
+        font-size: rem(20);
+        line-height: 150%;
+        color: $fontColor;
+    }
+}

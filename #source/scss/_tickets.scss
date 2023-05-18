@@ -1,0 +1,201 @@
+.tickets {
+    position: relative;
+    z-index: 5;
+    @extend %slider-setup;
+    &__slider {
+        overflow: hidden;
+    }
+
+    &__slide {
+    }
+
+    &__link {
+    }
+
+    &__slider-btn-next {
+    }
+
+    &__slider-btn-prev {
+    }
+
+    &__slider-pagination {
+    }
+}
+.swiper-wrapper {
+}
+
+.tickets-card {
+    &__img-blackout {
+    }
+    &__link {
+        position: relative;
+    }
+    &__image {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 12px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+    }
+
+    &__category {
+        position: absolute;
+        border-radius: 12px;
+        top: rem(25);
+        left: rem(25);
+        .category{
+            @include adaptiveValue("font-size", 24, 6);
+        }
+    }
+
+    &__title {
+        @include adaptiveValue("font-size", 24, 8);
+        padding-right: rem(12);
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: rem(12);
+        color: white;
+        position: absolute;
+        bottom: rem(25);
+        left: rem(25);
+        padding-right: rem(12);
+    }
+
+    &__additional {
+        @include adaptiveValue("font-size", 16, 6);
+        font-weight: 500;
+        color: white;
+        opacity: 0.5;
+    }
+
+    &__down {
+        display: flex;
+        justify-content: space-between;
+        @include adaptiveValue("padding", 24, 12);
+        background-color: black;
+        border-radius: rem(12);
+        height: rem(100);
+        width: inherit;
+        border-top: 4px dotted grey;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        align-items: center;
+    }
+
+    &__hour,
+    &__dd-mm-yy {
+        color: white;
+        @include adaptiveValue("font-size", 12, 6);
+    }
+
+    &__date {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+        @include adaptiveValue("gap",24,12);
+    }
+
+    &__qr {
+        display: flex;
+        align-items: center;
+        @include adaptiveValue("padding", 12, 6);
+        background-color: white;
+        color: $buttonColor;
+        @include adaptiveValue("font-size", 24, 12);
+        border-radius: rem(12);
+    }
+
+    &__date-down,
+    &__date-upper {
+        width: 100%;
+        display: flex;
+        @include adaptiveValue("gap",24,12);
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__date-text {
+        @include adaptiveValue("font-size", 12, 6);
+        color: white;
+        opacity: 0.5;
+    }
+}
+
+.radio{
+    display: flex;
+    flex-direction: row;
+    
+    padding: 12px 24px;
+    @include adaptiveValue("gap",24,12);
+    @include adaptiveValue("min-height",40,20);
+    align-items: center;
+    background: white;
+    border: 1px solid $fontColor;
+    border-radius: rem(12);
+    @media (max-width:$mobileXSmall) {
+        flex-wrap: wrap;
+    }
+}
+
+.option {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.option .dot {
+    height: 20px;
+    width: 20px;
+    background: white;
+    border: 1px solid $fontColor;
+    border-radius: 50%;
+    position: relative;
+    margin-right:rem(12);
+}
+.option .dot::before {
+    position: absolute;
+    content: "";
+    top: 3px;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    background: $funcButton_color;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+}
+input[type="radio"] {
+    display: none;
+}
+#active1:checked:checked ~ .active,
+#archive:checked:checked ~ .archive {
+}
+#active:checked:checked ~ .active .dot,
+#archive:checked:checked ~ .archive .dot {
+    background: #fff;
+}
+#active:checked:checked ~ .active .dot::before,
+#archive:checked:checked ~ .archive .dot::before {
+    opacity: 1;
+    transform: scale(1);
+}
+.option span {
+    font-size: rem(16);
+    color: $fontColor;
+}
+#active:checked:checked ~ .active span,
+#archive:checked:checked ~ .archive span {
+    color: $funcButton_color;
+}
