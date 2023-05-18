@@ -7,7 +7,7 @@ if (isMobile.any()) { addTouchClass(); }
 
 burgerInit();
 
-try {ymaps.ready(init);}catch (error){console.error(error);}
+try { ymaps.ready(init); } catch (error) { console.error(error); }
 spollers();
 
 new Swiper('.event-categories__slider', {
@@ -178,7 +178,6 @@ new Swiper('.tickets__slider', {
 
 })
 
-
 //========================================================================================  FILTERS ========================================================================================
 const selectOptions = [{
     ele: '._what-filter',
@@ -285,7 +284,7 @@ const selectOptions = [{
 
 ];
 
-try {selectOptions.forEach(option => VirtualSelect.init(option));;}catch (error){console.error(error);}
+try { selectOptions.forEach(option => VirtualSelect.init(option));; } catch (error) { console.error(error); }
 
 // function onSampleSelectServerSearch(searchValue, virtualSelect) {
 //     /** project developer has to define anyMehodToGetDataFromServer function to make API call */
