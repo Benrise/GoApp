@@ -39,15 +39,16 @@
         </div>
         <nav class="header__menu menu">
           <ul class="menu__list">
-            <li class="menu__item"><a href="./calendar.html" class="menu__link _icon-calendar">Календарь мероприятий</a></li>
+            <li class="menu__item"><a href="./calendar.html" class="menu__link _icon-calendar">Календарь мероприятий</a>
+            </li>
             <li class="menu__item"><a href="./tickets.html" class="menu__link _icon-ticket">Мои билеты</a></li>
             <li class="menu__item"><a href="" class="menu__link _icon-message">Будьте в курсе</a></li>
             <li class="menu__item"><a href="" class="menu__link _icon-geo">Москва</a></li>
-            <li class="menu__item _hidden"><a href="./profile.html" class="menu__link _icon-profile">Профиль</a></li>
+            <li class="menu__item _hidden"><a href="./profile.html#general" class="menu__link _icon-profile">Профиль</a></li>
           </ul>
         </nav>
         <div class="header__profile">
-          <a href="./profile.html"><img src="./img/pic/profile.png" alt="profile"
+          <a href="./profile.html#general"><img src="./img/pic/profile.png" alt="profile"
               class="header__profile header__image_adaptive"></a>
         </div>
 
@@ -101,12 +102,12 @@
               <div class="profile__sections">
                 <div class="profile__tabs tabbar">
                   <nav class="tabbar__buttons">
-                    <a href="#general" class="tabbar__button tabbar__button_active">Общее</a>
-                    <a href="#preferences" class="tabbar__button">Предпочтения</a>
-                    <a href="#payment" class="tabbar__button">Оплата</a>
-                    <a href="#bonuses" class="tabbar__button">Бонусы</a>
-                    <a href="#receipts" class="tabbar__button">Чеки</a>
-                    <a href="#reviews" class="tabbar__button">Отзывы</a>
+                    <button  class="tabbar__button"  data-section-id="general">Общее</button>
+                    <button  class="tabbar__button" data-section-id="preferences" >Предпочтения</button>
+                    <button  class="tabbar__button" data-section-id="payment" >Оплата</button>
+                    <button  class="tabbar__button" data-section-id="bonus" >Бонусы</button>
+                    <button  class="tabbar__button" data-section-id="receipts" >Чеки</button>
+                    <button  class="tabbar__button" data-section-id="reviews" >Отзывы</button>
                   </nav>
                   <div class="tabbar__body">
                     <div id="general" class="tabbar__section section">
@@ -172,10 +173,6 @@
                         </div>
                       </div>
 
-
-
-
-
                       <div class="profile__passport ">
                         <div class="section__item">
                           <div class="section__title">
@@ -207,7 +204,6 @@
                           </button>
                         </div>
                       </div>
-
                     </div>
 
                     <div id="preferences" class="tabbar__section">
@@ -218,8 +214,79 @@
 
                     </div>
 
-                    <div id="bonuses" class="tabbar__section">
+                    <div id="bonus" class="tabbar__section section">
+                      <div class="bonus__main">
+                        <div class="bonus__left">
+                          <div class="bonus__card b-card">
+                            <img src="./img/pic/noise-filter.png" class="b-card__filter" alt="">
+                            <!-- <img src="./img/pic/bonus-card.png" class="b-card__filter" alt=""> -->
+                            <div class="b-card__sign">
+                              GO
+                            </div>
+                            <div class="b-card__info">
+                              <div class="b-card__name">
+                                LATYPOV ARTEM
+                              </div>
+                              <div class="b-card__number">
+                                9002950409356
+                              </div>
+                            </div>
+                            <div class="b-card__logo">
+                              <div class="b-card__img">
+                                <img src="./img/icons/icons/Logo.svg" alt="">
+                              </div>
+                              <div class="b-card__label">
+                                Бонус
+                              </div>
+                            </div>
+                            <button class="b-card__upc _icon-upc-scan">
+                            </button>
+                          </div>
 
+
+
+                        </div>
+                        <div class="bonus__right">
+                          <div class="bonus__scores">
+                            <div class="bonus__option">
+                              Бонусных баллов:
+                            </div>
+                            <div class="bonus__value">
+                              1488
+                            </div>
+                          </div>
+                          <div class="bonus__discount">
+                            <div class="bonus__option">
+                              Твоя скидка:
+                            </div>
+                            <div class="bonus__value">
+                              15%
+                            </div>
+                          </div>
+                          <div class="bonus__data">
+                            <div class="bonus__option">
+                              Данные:
+                            </div>
+                            <div class="bonus__value bonus__value_small">
+                              Латыпов Артём Равилевич
+                            </div>
+                            <div class="bonus__value bonus__value_small">
+                              ben******@mail.ru
+                            </div>
+                            <div class="bonus__value bonus__value_small">
+                              +7 *** *** 777 5
+                            </div>
+                          </div>
+                          <div class="bonus__free-ticket">
+                            <div class="bonus__option">
+                              Бесплатный билет:
+                            </div>
+                            <div class="bonus__value">
+                              2000
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     <div id="receipts" class="tabbar__section">

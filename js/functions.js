@@ -16,7 +16,7 @@ export function burgerInit() {
 	}
 }
 
-export function spollers() {
+export function spollersInit() {
 	const spollersArray = document.querySelectorAll('[data-spollers]');
 	if (spollersArray.length > 0) {
 		// Получение обычных слойлеров
@@ -229,6 +229,58 @@ export function dataMediaQueries(array, dataSetValue) {
 
 
 
+
+export function changeTab(evt, tabName) {
+	// Declare all variables
+	var i, tabcontent, tablinks;
+	// Get all elements with class="tabcontent" and hide them
+	tabcontent = document.getElementsByClassName("section");
+
+	for (i = 0; i < tabcontent.length; i++) {
+		tabcontent[i].style.display = "none";
+	}
+
+	// Get all elements with class="tablinks" and remove the class "active"
+	tablinks = document.getElementsByClassName("tabbar__button");
+	for (i = 0; i < tablinks.length; i++) {
+		tablinks[i].className = tablinks[i].className.replace(" tabbar__button_active", "");
+	}
+
+	// Show the current tab, and add an "active" class to the button that opened the tab
+	document.getElementById(tabName).style.display = "grid";
+	if (evt != null) {
+		evt.currentTarget.className += " tabbar__button_active";
+	}
+}
+
+export function tabBarInit() {
+	const tabButtons = document.querySelectorAll('.tabbar__button');
+	tabButtons.forEach(function (button) {
+		button.addEventListener('click', function (evt) {
+			const sectionId = button.getAttribute('data-section-id');
+			changeTab(evt, sectionId);
+		})
+	})
+
+
+
+	if (tabButtons.length > 0) {
+		const firstTab = tabButtons[0];
+		const firstTabName = firstTab.getAttribute('data-section-id');
+		firstTab.classList.add('tabbar__button_active');
+		changeTab(null, firstTabName);
+	}
+}
+
+export function resetInit() {
+	const resetButton = document.querySelector('._reset');
+	if (resetButton !== null) {
+		resetButton.addEventListener('click', () => {
+			const selects = document.querySelectorAll('[class*=-filter]');
+			selects.forEach(select => select.reset());
+		});
+	}
+}
 
 
 

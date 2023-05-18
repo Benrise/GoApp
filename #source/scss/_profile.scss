@@ -2,8 +2,9 @@
     @include adaptiveValue("margin-top", 24, 0);
 }
 
+
 .profile {
-    @include adaptiveValue('padding-top',24, 12);
+    @include adaptiveValue("padding-top", 24, 12);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -29,10 +30,9 @@
         background-color: $bgColor;
         border: 1px solid $containerBorderColor;
         border-radius: rem(50);
-        
+
         @include adaptiveValue("width", 100, 50);
         @include adaptiveValue("height", 100, 50);
-
 
         ::before {
             opacity: 0.5;
@@ -41,27 +41,24 @@
         }
     }
 
-    @media (max-width:rem(600)){
-        &__upper{
+    @media (max-width: rem(600)) {
+        &__upper {
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        &__center{
+        &__center {
             order: -1;
         }
-        
     }
-    @media (max-width:$mobileXSmall){
-        &__upper{
+    @media (max-width: $mobileXSmall) {
+        &__upper {
             justify-content: space-around;
         }
-
-        
     }
 
     &__add-title,
     &__exit-title {
-        @include adaptiveValue('font-size',16, 12);
+        @include adaptiveValue("font-size", 16, 12);
         color: $secondaryFontColor;
     }
 
@@ -69,14 +66,14 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        @include adaptiveValue('gap',24, 12);
+        @include adaptiveValue("gap", 24, 12);
         width: 100%;
         height: auto;
     }
 
     &__pic {
-        @include adaptiveValue('height',150, 75);
-        @include adaptiveValue('width',150, 75);
+        @include adaptiveValue("height", 150, 75);
+        @include adaptiveValue("width", 150, 75);
         border-radius: rem(999);
         img {
             width: 100%;
@@ -84,7 +81,7 @@
     }
 
     &__name {
-        @include adaptiveValue("padding",24,12);
+        @include adaptiveValue("padding", 24, 12);
         display: flex;
         flex-direction: column;
         gap: rem(12);
@@ -99,7 +96,7 @@
         gap: rem(12);
         white-space: nowrap;
         font-weight: 500;
-        @include adaptiveValue('font-size', 36, 16);
+        @include adaptiveValue("font-size", 36, 16);
     }
 
     &__name-subtitle {
@@ -188,19 +185,17 @@
     &__body {
     }
 
-    &__section {
-    }
-
     @media (max-width: rem(940)) {
         &__buttons {
             overflow-x: scroll;
         }
     }
 }
-.section {
-    display: grid;
-    grid-gap: rem(12);
 
+.section {
+    grid-gap: rem(12);
+    display: grid;
+    display: none;
     &__item {
         position: relative;
         height: 100%;
@@ -255,20 +250,20 @@
         color: $fontColor;
     }
     &__button {
-        @include adaptiveValue('font-size',16,14);
+        @include adaptiveValue("font-size", 16, 14);
         color: white;
         padding: rem(12) rem(24);
         background-color: $funcButton_color;
         border-radius: rem(12);
     }
     &__img {
-        img{
+        img {
             max-width: rem(40);
         }
     }
     &__status {
         white-space: normal;
-        @include adaptiveValue('font-size',16,13);
+        @include adaptiveValue("font-size", 16, 13);
         &_success {
             color: $successColor;
         }
@@ -286,7 +281,7 @@
         &__form {
             width: inherit;
         }
-        @include adaptiveValue("gap",24,12);
+        @include adaptiveValue("gap", 24, 12);
         font-size: rem(16);
         &__input {
             width: inherit;
@@ -310,8 +305,8 @@
             align-items: flex-start;
         }
     }
-    @media (max-width: $mobileSmall){
-        .search{
+    @media (max-width: $mobileSmall) {
+        .search {
             width: 100%;
         }
     }
