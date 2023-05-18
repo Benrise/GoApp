@@ -2533,7 +2533,7 @@ body._lock .event-categories__body {
   }
 }
 .event-categories__body {
-  height: 25rem;
+  height: 100%;
   width: 100%;
 }
 .event-categories__slider {
