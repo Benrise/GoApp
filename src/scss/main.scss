@@ -1,0 +1,159 @@
+.main {
+    flex: 1 1 auto;
+    padding: rem(26);
+}
+
+.search-main__filters {
+    margin-top: rem(48);
+    max-width: 400px;
+}
+
+.select-btn {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    background-color: $whiteColor;
+    border: 1px solid $fontColor;
+    width: 100%;
+    gap: 12px;
+    ._icon-arrow {
+        transition: 0.3s;
+        transform: rotate(-90deg);
+        opacity: 50%;
+    }
+    color: $fontColor;
+    font-weight: 500;
+
+    &._open ~ .list-items {
+        display: flex;
+    }
+    &._open > ._icon-arrow {
+        transition: 0.3s;
+        transform: rotate(90deg);
+        opacity: 100%;
+    }
+}
+
+.checkbox {
+    display: block;
+    height: 20px;
+    width: 20px;
+    background-color: $bgColor;
+    border: 1px solid $fontColor;
+    border-radius: 6px;
+}
+.item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 16px;
+    color: $fontColor;
+    font-weight: 500;
+}
+
+._checked::before {
+    content: "";
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 3px;
+    transform: translate(-50%, -50%);
+    background-color: $fontColor;
+    margin: 0;
+}
+
+.list-items {
+    display: flex;
+    background-color: white;
+    border-radius: 12px;
+    margin-top: 16px;
+    border: 1px solid $fontColor;
+    padding: 16px;
+    flex-direction: column;
+    gap: 12px;
+    display: none;
+}
+
+.search {
+    &__form {
+    }
+
+    &__button {
+    }
+
+    &__input {
+    }
+}
+
+.filters {
+    &__item {
+    }
+}
+
+.search-main {
+    display: flex;
+    justify-content: space-between;
+    @include adaptiveValue("gap", 24, 12);
+    .search__input {
+        width: 100%;
+        height: rem(40);
+    }
+    .search__button {
+        height: 100%;
+    }
+}
+
+.search-result {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+
+    @extend %slider-setup;
+    &__slider {
+        overflow: hidden;
+    }
+
+    &__text {
+        @include subtitle();
+    }
+
+    &__sort {
+        display: flex;
+        gap: rem(24);
+        align-items: center;
+    }
+
+    &__sort-button {
+    }
+    &__upper {
+        display: flex;
+        gap: rem(12);
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+
+
+@import "@/scss/upcoming-events";
+@import "@/scss/search-input";
+@import "@/scss/filters";
+
+
+@import "@/scss/hiding-mask";
+@import "@/scss/block";
+
+
+@import "@/scss/categories";
+@import "@/scss/near-events";
+@import "@/scss/broadcast";
+@import "@/scss/recommendations";
+

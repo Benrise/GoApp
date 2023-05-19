@@ -1,2 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap&subset=cyrillic-ext");
+
+@import "mixins";
 @import 'normalize.css';
-@import 'variables.scss';
+@import 'reset';
+@import 'variables';
+@import 'icons';
+@import 'scrollbar';
+
+
+
+
+
+
+body {
+  font-family: "Inter", "sans-serif";
+  font-size: rem(20);
+  background-color: $bgColor;
+  &._lock {
+    overflow: hidden;
+    .event-categories__body {
+      pointer-events: none;
+    }
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+[class*="__container"] {
+  max-width: 1408px;
+  margin: 0 auto;
+}
+
+[class*="_hidden"] {
+  display: none;
+}
+
+[class*="copyrights-pane"] {
+  display: none !important;
+}
+
+[class*="inner-panes"],
+[class*="map-bg"] {
+  border-radius: 24px !important;
+}
+
+[class*="_bold"] {
+  font-weight: 700;
+}
+.right-corner-logo {
+  position: absolute;
+  bottom: -8rem;
+  right: -2rem;
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+  z-index: -1;
+}
+
+@import "slider-card";
+@import "slider";
+//@import "datepicker";
+//@import "profile";
+//@import "tickets";
+//@import "bonus";
+//@import "login";
+
+@import "footer";
+
+@import "main";
+@import "header";

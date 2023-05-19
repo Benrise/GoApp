@@ -1,0 +1,82 @@
+.main-block {
+    min-height: 729px;
+    &__container {
+        position: relative;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+        gap: rem(24);
+        background: white;
+        border: 0.5px solid $containerBorderColor;
+        border-radius: 24px;
+
+        @include adaptiveValue("margin-top", 128, 64);
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
+        width: 100%;
+    }
+
+    &__form{
+        width: 100%;
+    }
+
+    &__info {
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 12px;
+        width: 95%;
+    }
+    &__title {
+        @include title();
+    }
+
+    &__subtitle {
+        @include subtitle();
+    }
+
+    &__buttons {
+    }
+
+    &__button:visited,
+    &__button {
+        max-height: rem(40);
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        @include adaptiveValue("font-size", 16, 14);
+        padding: rem(12) rem(24);
+        font-weight: 500;
+        background-color: $buttonColor;
+        text-decoration: none;
+        color: white;
+        border-radius: 12px;
+    }
+    &__upper {
+        @include adaptiveValue("gap",60, 24);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width:$mobile) {
+            flex-wrap: wrap;
+            
+        }
+    }
+
+    .main-block__form{
+        display: flex;
+        flex-direction: column;
+        @include adaptiveValue("gap",24,12);
+    }
+    
+
+}

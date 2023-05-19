@@ -1,0 +1,32 @@
+.swiper-scrollbar {
+    --swiper-scrollbar-border-radius: 6px;
+    --swiper-scrollbar-top: auto;
+    --swiper-scrollbar-bottom: 4px;
+    --swiper-scrollbar-left: auto;
+    --swiper-scrollbar-right: 4px;
+    --swiper-scrollbar-sides-offset: 1%;
+    --swiper-scrollbar-bg-color: rgba(247, 225, 255, 0.5);
+    --swiper-scrollbar-drag-bg-color: rgba(164, 62, 164, 0.5);
+    --swiper-scrollbar-size: 7px;
+}
+
+::-webkit-scrollbar {
+    border-radius: 6px;
+    background-color: rgba(247, 225, 255, 0.5);
+    width: 7px;
+    height: 7px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(164, 62, 164, 0.5);
+    border-radius: 6px; 
+}
+
+/* Для горизонтального скролла */
+::-webkit-scrollbar-horizontal {
+    height: 10px;
+    background-color: #f5f5f5; 
+}
+
+::-webkit-scrollbar-thumb-horizontal {
+    background-color: #000; 
+}

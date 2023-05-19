@@ -3,7 +3,7 @@
     <div class="header__container">
       <a href="./index.html" class="header__logo">
         <img
-          src="./img/icons/icons/Logo_group.svg"
+          src="public/icons/Logo_group.svg"
           class="header__image header__image_adaptive"
           alt="Logo"
         />

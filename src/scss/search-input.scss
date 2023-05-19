@@ -1,0 +1,47 @@
+.search {
+    width: 100%;
+    max-height: rem(40);
+    &__form {
+        width: 100%;
+        position: relative;
+    }
+
+    &__button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $secondaryFontColor;
+        background-color: transparent;
+        height: rem(43);
+        width: rem(40);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: rem(8);
+        font-size: rem(16);
+    }
+
+    &__input {
+        color: $fontColor;
+        background-color: $bgColor;
+        border: rem(2) solid $containerBorderColor;
+        border-radius: 12px;
+        height: rem(43);
+        padding: 0px rem(20) 0px rem(45);
+        @include adaptiveValue("width",800,120);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: rem(16);
+        &::placeholder {
+            opacity: 0.5;
+            color: $secondaryFontColor;
+            font-size: inherit;
+            font-weight: 500;
+        }
+    }
+}
+
+
+

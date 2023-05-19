@@ -1,0 +1,48 @@
+$bgColor: #fff9ff;
+$funcButton_color: #ff5341;
+$buttonColor: #820083;
+$fontColor: #a43ea4;
+$whiteColor: #ffffff;
+$mainGradientColor: linear-gradient(90deg, #d05cfd 0%, #ff5145 100%);
+$containerBorderColor: #f7e1ff;
+$cardGradeintColor: radial-gradient(100% 100% at 0% 0%, rgba(255, 255, 255, 0) 0.52%, #c69cd5 100%);
+$secondaryFontColor: rgba(128, 0, 128, 0.5);
+$sliderButtonColor: #EB3F98;
+$successColor: #00CA8D;
+
+$categories: (
+        travel: #8da0d1,
+        healthAndBeauty: #ff0000,
+        movie: #800080,
+        sportAndFitness: #00ca8d,
+        music: #0bb8ad,
+        concert: #001d82,
+        comedy: #ffa500,
+        party: #5200ff,
+        theater: #823e00,
+        test: black,
+        art: #ff6321,
+);
+
+// Минимальная ширина полотна
+$minWidth: 320;
+
+// Максимальная ширина полотна
+$maxWidth: 1920;
+
+// Ширина ограничивающего контейнера
+$maxWidthContainer: 1408;
+
+// Общий отступ у контейнера
+$containerPadding: 30;
+
+// Ширина срабатывания первого брейкпоинта
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Брейк-поинты
+$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: em(1091.98); // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: em(767.98); // Телефоны L
+$mobileSmall: em(479.98); // Телефоны S
+$mobileXSmall: em(339.98); // Телефоны XS
+$mobileXSSmall: em(281.98); // Fold

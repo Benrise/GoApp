@@ -32,7 +32,7 @@
                 <div class="slide-card__img-blackout">
                   <div class="slide-card__image">
                     <img
-                      src="./img/pic/upcoming/yoga-promo.jpg"
+                      src="public/images/events/yoga-promo.jpg"
                       alt="Название промо"
                     />
                   </div>
@@ -73,7 +73,7 @@
                 <div class="slide-card__img-blackout">
                   <div class="slide-card__image">
                     <img
-                      src="./img/pic/upcoming/spider-man-promo.jpg"
+                      src="public/images/events/spider-man-promo.jpg"
                       alt="Название промо"
                     />
                   </div>
@@ -112,7 +112,7 @@
                 <div class="slide-card__img-blackout">
                   <div class="slide-card__image">
                     <img
-                      src="./img/pic/upcoming/the-beatles-promo.jpg"
+                      src="public/images/events/the-beatles-promo.jpg"
                       alt="Название промо"
                     />
                   </div>
@@ -151,7 +151,7 @@
                 <div class="slide-card__img-blackout">
                   <div class="slide-card__image">
                     <img
-                      src="./img/pic/upcoming/art-promo.jpg"
+                      src="public/images/events/art-promo.jpg"
                       alt="Название промо"
                     />
                   </div>
@@ -190,7 +190,7 @@
                 <div class="slide-card__img-blackout">
                   <div class="slide-card__image">
                     <img
-                      src="./img/pic/upcoming/yoga-promo.jpg"
+                      src="public/images/events/yoga-promo.jpg"
                       alt="Название промо"
                     />
                   </div>
@@ -231,7 +231,7 @@
                 <div class="slide-card__img-blackout">
                   <div class="slide-card__image">
                     <img
-                      src="./img/pic/upcoming/spider-man-promo.jpg"
+                      src="public/images/events/spider-man-promo.jpg"
                       alt="Название промо"
                     />
                   </div>
@@ -270,7 +270,7 @@
                 <div class="slide-card__img-blackout">
                   <div class="slide-card__image">
                     <img
-                      src="./img/pic/upcoming/the-beatles-promo.jpg"
+                      src="public/images/events/the-beatles-promo.jpg"
                       alt="Название промо"
                     />
                   </div>
@@ -309,7 +309,7 @@
                 <div class="slide-card__img-blackout">
                   <div class="slide-card__image">
                     <img
-                      src="./img/pic/upcoming/art-promo.jpg"
+                      src="public/images/events/art-promo.jpg"
                       alt="Название промо"
                     />
                   </div>
@@ -349,3 +349,6 @@
     </div>
   </section>
 </template>
+<style scoped>
+
+</style>

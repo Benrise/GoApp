@@ -1,10 +1,30 @@
-<script setup>
+<template>
+    <div class ="wrapper">
+        <TheHeader />
 
+        <main class="main">
+            <router-view></router-view>
+        </main>
+
+
+        <TheFooter />
+    </div>
+</template>
+
+<script>
+
+import TheHeader from './components/TheHeader.vue'
+import TheFooter from './components/TheFooter.vue'
+
+export default {
+    name: 'App',
+    components:{
+        TheHeader,
+        TheFooter
+    },
+}
 </script>
 
-<!-- <script src="https://api-maps.yandex.ru/2.1/?apikey=559dfe93-fc2a-44ff-830e-8ed8ca51c764&lang=ru_RU"
-                    type="text/javascript"></script> -->
+<style lang="scss" scoped>
 
-
-<style scoped>
 </style>

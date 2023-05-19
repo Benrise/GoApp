@@ -1,0 +1,31 @@
+.near-events {
+    @extend %slider-setup;
+    &__main {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(24);
+        @media (max-width: rem(1200)) {
+            flex-direction: column;
+        }
+    }
+
+    &__map {
+        border-radius: 12px;
+        width: 100%;
+        max-height: rem(500);
+    }
+
+    &__slider {
+        max-height: rem(500);
+        overflow: hidden;
+        width: 95%;
+    }
+    .slide-card {
+        &__title {
+            overflow-wrap: break-word;
+            @include adaptiveValue("font-size", 28, 16);
+        }
+        &__date {
+        }
+    }
+}

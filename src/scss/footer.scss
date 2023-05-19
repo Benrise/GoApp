@@ -1,0 +1,196 @@
+.footer {
+    position: relative;
+    margin: 24px;
+    @include adaptiveValue("margin-bottom", 128, 64);
+    &__container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background: white;
+        border: 0.5px solid $containerBorderColor;
+        border-radius: 24px;
+
+        @include adaptiveValue("margin-top", 128, 64);
+    }
+
+    &__menu {
+        width: 100%;
+    }
+
+    &__media {
+        display: flex;
+        justify-content: space-between;
+        gap: rem(24);
+    }
+
+    &__media-item {
+        @include adaptiveValue("max-width",32,16);
+    }
+
+    &__main,
+    &__below {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        @include adaptiveValue("padding", 64, 32);
+        gap: rem(24);
+        width: 100%;
+        border-top: 0.5px solid $containerBorderColor;
+    }
+
+    &__geo-lang,
+    &__copyright {
+        display: flex;
+        align-items: center;
+        @include adaptiveValue("gap",24,0);
+    }
+
+    &__geo-lang{
+        gap: rem(12);
+    }
+
+    &__contact,
+    &__geo,
+    &__lang-text,
+    &__copyright-text,
+    &__copyright-date {
+        font-weight: 500;
+        @include adaptiveValue("font-size",16,12);
+        color: $fontColor;
+        opacity: 0.5;
+    }
+
+    &__geo:before{
+        padding-right: rem(3);
+    }
+
+    &__contact:hover,
+    &__lang-text:hover,
+    &__geo:hover{
+        text-decoration: underline !important;
+        cursor: pointer;
+    }
+
+    &__lang{
+        display: flex;
+        align-items: center;
+        gap: rem(6);
+        &-img{
+            @include adaptiveValue("width", 24, 12);
+        }
+    }
+
+    @media (max-width:rem(1000)) {
+        .menu-footer__list{
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__copyright {
+            flex-direction: column;
+        }
+        &__main{
+            flex-wrap: wrap;
+        }
+    }
+    @media (max-width:$mobile) {
+        &__below{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+    }
+}
+
+.menu-footer {
+    &__list {
+        display: flex;
+        align-items: center;
+        @include adaptiveValue("gap",24,0);
+        width: 100%;
+    }
+
+    &__item {
+    }
+
+    &__link {
+        font-weight: 500;
+        @include adaptiveValue("font-size",16,12);
+        color: $fontColor;
+    }
+}
+
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    width: 100%;
+    @include adaptiveValue("padding", 64, 32);
+    &__input {
+        color: $fontColor;
+        background-color: $bgColor;
+        border: rem(2) solid $containerBorderColor;
+        border-radius: 12px;
+        padding: 0px rem(20) 0px rem(20);
+        min-height: rem(40);
+        max-width: rem(480);
+        font-size: rem(14) ;
+        @media (max-width:$mobileSmall) {
+            width: 100%;
+            
+        }
+
+        &::placeholder {
+            color: $secondaryFontColor;
+            font-size: inherit;
+            font-weight: 500;
+        }
+    }
+    &__title {
+        @include title();
+    }
+    &__main{
+        display: flex;
+        flex-direction: column;
+        gap: rem(12);
+    }
+
+    &__form {
+        flex-wrap: wrap;
+        width: 100%;
+        display: flex;
+        gap: rem(12);
+    }
+
+    &__button {
+        max-height: rem(40);
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        @include adaptiveValue("font-size", 16, 14);
+        padding: rem(12) rem(24);
+        font-weight: 500;
+        background-color: $funcButton_color;
+        text-decoration: none;
+        color: white;
+        border-radius: 12px;
+    }
+
+    &__policy {
+        @include adaptiveValue("padding-left", 24, 0);
+        line-height: rem(15);
+        font-size: rem(12);
+        color: $secondaryFontColor;
+        opacity: 1;
+    }
+
+    &__policy-link:visited,
+    &__policy-link {
+        color: inherit;
+        text-decoration: underline;
+    }
+}

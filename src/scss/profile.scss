@@ -1,0 +1,314 @@
+._profile-margin {
+    @include adaptiveValue("margin-top", 24, 0);
+}
+
+
+.profile {
+    @include adaptiveValue("padding-top", 24, 12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(24);
+    width: 100%;
+    &__upper {
+        display: flex;
+        max-width: rem(541);
+        min-height: rem(252);
+        justify-content: center;
+    }
+
+    &__add,
+    &__exit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: rem(6);
+    }
+
+    &__add-button,
+    &__exit-button {
+        background-color: $bgColor;
+        border: 3px solid $containerBorderColor;
+        border-radius: rem(50);
+
+        @include adaptiveValue("width", 100, 50);
+        @include adaptiveValue("height", 100, 50);
+
+        ::before {
+            opacity: 0.5;
+            font-size: rem(16);
+            color: $fontColor;
+        }
+    }
+
+    @media (max-width: rem(600)) {
+        &__upper {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__center {
+            order: -1;
+        }
+    }
+    @media (max-width: $mobileXSmall) {
+        &__upper {
+            justify-content: space-around;
+        }
+    }
+
+    &__add-title,
+    &__exit-title {
+        @include adaptiveValue("font-size", 16, 12);
+        color: $secondaryFontColor;
+    }
+
+    &__center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include adaptiveValue("gap", 24, 12);
+        width: 100%;
+        height: auto;
+    }
+
+    &__pic {
+        @include adaptiveValue("height", 150, 75);
+        @include adaptiveValue("width", 150, 75);
+        border-radius: rem(999);
+        img {
+            width: 100%;
+        }
+    }
+
+    &__name {
+        @include adaptiveValue("padding", 24, 12);
+        display: flex;
+        flex-direction: column;
+        gap: rem(12);
+        align-items: center;
+        color: $buttonColor;
+    }
+
+    &__name-title {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: rem(12);
+        white-space: nowrap;
+        font-weight: 500;
+        @include adaptiveValue("font-size", 36, 16);
+    }
+
+    &__name-subtitle {
+        font-size: rem(16);
+        color: $fontColor;
+    }
+
+    &__sections {
+        display: flex;
+        flex-direction: column;
+        gap: rem(24);
+        width: 100%;
+    }
+
+    &__tabs {
+    }
+
+    &__phone {
+    }
+
+    &__mail {
+    }
+
+    &__username {
+    }
+
+    &__passport {
+        grid-column: 2;
+        grid-row: 1 / span 3;
+        .section__status:after {
+            display: none;
+        }
+    }
+
+    @media (max-width: rem(1150)) {
+        &__phone,
+        &__mail,
+        &__username {
+            .section__item {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+    }
+    @media (max-width: rem(800)) {
+        .section__item {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+}
+.tabbar {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    &__buttons {
+        padding: rem(24);
+        border: 1px solid $containerBorderColor;
+        border-radius: rem(16);
+        display: flex;
+        flex-direction: row;
+        gap: rem(24);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__button {
+        background: none;
+        max-height: rem(40);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        @include adaptiveValue("font-size", 16, 14);
+        padding: rem(12) rem(24);
+        font-weight: 500;
+        border: 1px solid $fontColor;
+        text-decoration: none;
+        color: $fontColor;
+        border-radius: 12px;
+        &_active {
+            background-color: $fontColor;
+            color: white;
+        }
+    }
+
+    &__body {
+    }
+
+    @media (max-width: rem(940)) {
+        &__buttons {
+            overflow-x: scroll;
+        }
+    }
+}
+
+.section {
+    grid-gap: rem(12);
+    display: grid;
+    display: none;
+    &__item {
+        position: relative;
+        height: 100%;
+        padding: rem(24);
+        display: flex;
+        flex-direction: column;
+        gap: rem(12);
+        align-items: flex-start;
+        border: 1px solid $containerBorderColor;
+        border-radius: rem(12);
+    }
+
+    &__title {
+        @include subtitle;
+        color: $buttonColor;
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: rem(12);
+    }
+
+    &__edit {
+        cursor: pointer;
+        background: $bgColor;
+        font-size: rem(16);
+        color: $secondaryFontColor;
+        &:hover {
+            background-color: $fontColor;
+            color: white;
+            transition: all 0.1s ease-in;
+        }
+        position: absolute;
+        top: rem(12);
+        right: rem(12);
+        padding: rem(6);
+        padding-left: rem(8);
+        padding-right: rem(8);
+        border-radius: rem(6);
+        border: 1px solid $containerBorderColor;
+    }
+
+    &__extra {
+        font-size: rem(16);
+    }
+
+    &__p {
+        line-height: rem(24);
+        font-size: rem(16);
+        color: $fontColor;
+    }
+    &__button {
+        @include adaptiveValue("font-size", 16, 14);
+        color: white;
+        padding: rem(12) rem(24);
+        background-color: $funcButton_color;
+        border-radius: rem(12);
+    }
+    &__img {
+        img {
+            max-width: rem(40);
+        }
+    }
+    &__status {
+        white-space: normal;
+        @include adaptiveValue("font-size", 16, 13);
+        &_success {
+            color: $successColor;
+        }
+        &_fail {
+            color: red;
+        }
+        &_in-progress {
+            color: orange;
+        }
+    }
+
+    .search {
+        max-height: none;
+        width: fit-content;
+        &__form {
+            width: inherit;
+        }
+        @include adaptiveValue("gap", 24, 12);
+        font-size: rem(16);
+        &__input {
+            width: inherit;
+            padding: rem(12);
+            &::placeholder {
+                opacity: 0.5;
+                color: $fontColor;
+                font-size: inherit;
+                font-weight: 600;
+            }
+        }
+    }
+
+    @media (max-width: rem(1150)) {
+        display: flex;
+        flex-direction: column;
+    }
+    @media (max-width: rem(600)) {
+        &__form {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+    @media (max-width: $mobileSmall) {
+        .search {
+            width: 100%;
+        }
+    }
+}
