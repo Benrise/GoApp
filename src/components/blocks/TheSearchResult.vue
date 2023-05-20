@@ -7,7 +7,7 @@
       </div>
       <form method="post" class="main-block__form">
         <div class="search-main search">
-          <div action="" class="search__form">
+          <div class="search__form">
             <button type="submit" class="search__button _icon-magnify"></button>
             <input
               autocomplete="off"
@@ -24,11 +24,7 @@
           <div class="filters__item vs-filter _what-filter"></div>
           <div class="filters__item vs-filter _where-filter"></div>
           <div class="filters__item _when-filter">
-            <input
-              type="text"
-              class="date-picker"
-              placeholder="Когда и во сколько?"
-            />
+            <BaseDatePicker/>
           </div>
           <div class="filters__item vs-filter _price-filter"></div>
           <div class="filters__item vs-filter _rating-filter"></div>
@@ -61,6 +57,13 @@
 <style scoped>
 
 </style>
-<script setup>
+<script >
 import SearchResultSlider from "@/components/sliders/SearchResultSlider.vue";
+import BaseDatePicker from "@/components/ui/BaseDatePicker.vue";
+
+export default {
+    components: {
+        BaseDatePicker, SearchResultSlider
+    },
+};
 </script>

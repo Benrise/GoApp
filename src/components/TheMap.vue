@@ -10,6 +10,7 @@ export default {
     data() {
         return {
             accessToken: "pk.eyJ1IjoiYmVucmlzZSIsImEiOiJjbGg5b3ZlNHIwOW1yM2ZscGcyZDVobGRmIn0.iaTfbUJkg0e8X6V2F4pyeA",
+            language: 'ru'
         };
     },
     mounted() {
@@ -17,18 +18,23 @@ export default {
 
         new mapboxgl.Map({
             container: "mapContainer",
-            style: "mapbox://styles/mapbox/streets-v11",
-            center: [103.811279, 1.345399],
-            zoom: 12,
-            maxBounds: [
-                [103.6, 1.1704753],
-                [104.1, 1.4754753],
-            ],
+            style: "mapbox://styles/benrise/clhvflyod025701pn3tlyfpb3",
+            center: [37.6174943, 55.7504461],
+            zoom: 9,
+
         });
     },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
+.mapboxgl-ctrl{
+    &-bottom-right{
+        display: none;
+    }
+    &-bottom-left{
+        display: none;
+    }
+}
 
 </style>
 

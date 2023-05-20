@@ -1,7 +1,6 @@
 <script>
-import BaseSlide from '../slides/BaseSlide.vue';
+import BaseSlide from '../slides (empty)/BaseSlide.vue';
 import {Swiper, SwiperSlide, } from 'swiper/vue';
-import {Navigation, Pagination, Scrollbar} from 'swiper';
 
 import 'swiper/scss';
 import 'swiper/scss/navigation';

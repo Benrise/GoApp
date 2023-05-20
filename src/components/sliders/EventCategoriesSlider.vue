@@ -8,8 +8,8 @@
                 disableOnInteraction: false,
             }"
             :keyboard="{
-            enabled: true,
-            onlyInViewport: true,
+                enabled: true,
+                onlyInViewport: true,
             }"
             :freeMode="true"
             :freeModeMomentum="true"
@@ -32,14 +32,13 @@
                     }
             }"
             :modules="modules"
-            :isLinear="true"
             wrapperClass= "swiper-wrapper swiper-wrapper_linear"
             class="event-categories__slider">
-            <template v-for="(chunk, index) in chunkedCategories">
+            <template v-for="chunk in chunkedCategories">
                 <swiper-slide class="swiper-slide">
                     <div class="event-categories__column">
                         <div class="event-categories__item" v-for="category in chunk" :key="category.id">
-                            <a href="" :class="`_category-${category.name}`" class="category">{{ category.ru }}</a>
+                            <a href="" :class="`_category-${category.name}`" class="category">{{ category.title }}</a>
                         </div>
                     </div>
                 </swiper-slide>
@@ -56,48 +55,48 @@ export default {
         return {
             categories: [
                 {
-                    id: 1,
-                    ru: "Путешествия",
+                    id: 0,
+                    title: "Путешествия",
                     name: "travel"
                 },
                 {
-                    id: 2,
-                    ru: "Здоровье и красота",
+                    id: 1,
+                    title: "Здоровье и красота",
                     name: "healthAndBeauty"
                 },
                 {
-                    id: 3,
-                    ru: "Фильмы",
+                    id: 2,
+                    title: "Фильмы",
                     name: "movie"
                 },
                 {
-                    id: 4,
-                    ru: "Спорт и фитнес",
+                    id: 3,
+                    title: "Спорт и фитнес",
                     name: "sportAndFitness"
                 },
                 {
-                    id: 5,
-                    ru: "Музыка",
+                    id: 4,
+                    title: "Музыка",
                     name: "music"
                 },
                 {
-                    id: 6,
-                    ru: "Концерт",
+                    id: 5,
+                    title: "Концерт",
                     name: "concert"
                 },
                 {
-                    id: 7,
-                    ru: "Комедия",
+                    id: 6,
+                    title: "Комедия",
                     name: "comedy"
                 },
                 {
-                    id: 8,
-                    ru: "Вечеринка",
+                    id: 7,
+                    title: "Вечеринка",
                     name: "party"
                 },
                 {
-                    id: 9,
-                    ru: "Театр",
+                    id: 8,
+                    title: "Театр",
                     name: "theater"
                 },
                 ]
@@ -115,7 +114,6 @@ export default {
                     chunks.push(chunk)
                     chunk = []
                     flag = true
-                    continue
                 }
                 else if (flag){
                     chunks.push(chunk)

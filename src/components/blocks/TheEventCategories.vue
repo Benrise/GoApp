@@ -3,13 +3,14 @@
     <div class="event-categories__container">
       <h1 class="event-categories__title">GO на мероприятия!</h1>
       <div class="event-categories__body">
-        <EventSlider></EventSlider>
+        <EventCategoriesSlider></EventCategoriesSlider>
       </div>
     </div>
   </section>
 </template>
 <script setup>
-import EventSlider from "@/components/sliders/EventCategoriesSlider.vue";
+
+import EventCategoriesSlider from "@/components/sliders/EventCategoriesSlider.vue";
 </script>
 
 <style  scoped>

@@ -134,7 +134,7 @@
             }
         }
         .price__free {
-            font-size: rem(16);
+            @include adaptiveValue('font-size',16,12);
             display: block;
         }
     }

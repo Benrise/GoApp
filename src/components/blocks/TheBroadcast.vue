@@ -107,7 +107,7 @@
             <div class="broadcast__video">
               <video loop muted autoplay poster="" controls preload="metadata">
                 <source type="video/webm" src="" />
-                <source type="video/mp4" src="./video/mp4/videoplayback.mp4" />
+                <source type="video/mp4" src="public/video/mp4/videoplayback.mp4" />
               </video>
             </div>
             <div class="broadcast__description">
@@ -133,5 +133,12 @@
   </section>
 </template>
 
+
+<script>
+
+export default {
+
+};
+</script>
 <style scoped>
 </style>
