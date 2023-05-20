@@ -34,16 +34,8 @@
                             <TicketsSlider/>
                         </div>
                     </div>
-
-
-
                 </div>
-
-
-
-
             </section>
-
             <section class="main-block">
                 <div class="main-block__container _profile-margin">
                     <div class="main-block__upper">
@@ -60,32 +52,7 @@
                         <div class="bonus">
                             <div class="bonus__main">
                                 <div class="bonus__left">
-                                    <div class="bonus__card b-card">
-                                        <img src="public/images/noise-filter.png" class="b-card__filter" alt="">
-                                        <!--          Проверка на адаптивность согласно макету карточки             -->
-                                        <!-- <img src="public/images/bonus-card.png" class="b-card__filter" alt=""> -->
-                                        <div class="b-card__sign">
-                                            GO
-                                        </div>
-                                        <div class="b-card__info">
-                                            <div class="b-card__name">
-                                                LATYPOV ARTEM
-                                            </div>
-                                            <div class="b-card__number">
-                                                9002950409356
-                                            </div>
-                                        </div>
-                                        <div class="b-card__logo">
-                                            <div class="b-card__img">
-                                                <img src="public/images/logo.png" alt="">
-                                            </div>
-                                            <div class="b-card__label">
-                                                Бонус
-                                            </div>
-                                        </div>
-                                        <button class="b-card__upc _icon-upc-scan">
-                                        </button>
-                                    </div>
+                                    <BonusCard/>
 
 
 
@@ -173,8 +140,10 @@
 <script>
 
 import TicketsSlider from "@/components/sliders/TicketsSlider.vue";
+import BonusCard from "@/components/BonusCard.vue";
 export default {
     components: {
+        BonusCard,
         TicketsSlider
     },
     name: "Tickets",
