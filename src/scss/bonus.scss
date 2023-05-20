@@ -158,8 +158,8 @@
     }
 
     &__logo {
-        @include adaptiveValue("top", 40, 5, 768, 280, 1);
-        @include adaptiveValue("right", 40, 2, 768, 280, 1);
+        @include adaptiveValue("top", 35, 5, 768, 280, 1);
+        @include adaptiveValue("right", 35, 2, 768, 280, 1);
         display: flex;
         flex-direction: column;
         @include adaptiveValue("gap", 12, 6, 768, 280, 1);

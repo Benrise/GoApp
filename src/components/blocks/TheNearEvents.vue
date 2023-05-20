@@ -7,7 +7,7 @@
           <h3 class="main-block__subtitle">Карта ближайших мероприятий</h3>
         </div>
         <div class="search-main search">
-          <div action="" class="search__form">
+          <div class="search__form">
             <button type="submit" class="search__button _icon-magnify"></button>
             <input
               autocomplete="off"
@@ -25,8 +25,8 @@
       <div class="main-block__body">
         <div class="near-events">
           <div class="near-events__main">
-            <TheMap/>
-            <NearEventsSlider />
+              <TheMap/>
+              <NearEventsSlider />
           </div>
           <div class="near-events__below">
             <div class="near-events__show-categories-toggle"></div>

@@ -109,7 +109,7 @@ export default {
             let chunk = [];
             let flag = false;
             for (let i = 0; i < this.categories.length; i++) {
-                chunk.push(this.categories[i]); //+1 в мелкий
+                chunk.push(this.categories[i]);
                 if (chunk.length === 2){
                     chunks.push(chunk)
                     chunk = []

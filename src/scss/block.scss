@@ -1,17 +1,16 @@
 .main-block {
-    min-height: 729px;
+    min-height: fit-content;
     &__container {
         position: relative;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding: 24px;
+        padding: rem(24);
         gap: rem(24);
         background: white;
         border: 0.5px solid $containerBorderColor;
         border-radius: 24px;
-
         @include adaptiveValue("margin-top", 128, 64);
     }
 
@@ -79,4 +78,7 @@
     }
     
 
+}
+._heading-block {
+    margin-top: 0;
 }

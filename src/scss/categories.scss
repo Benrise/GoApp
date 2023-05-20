@@ -76,6 +76,7 @@
 }
 
 .event-categories {
+    padding: rem(26);
     &__container {
         position: relative;
         background-image: url("public/images/events/categories-background.jpg");
@@ -88,7 +89,7 @@
         height: rem(506);
         @include adaptiveValue('height',506,200);
         @extend %slider-setup;
-        @include adaptiveValue("margin-top", 24, 0);
+
     }
 
     &__title {

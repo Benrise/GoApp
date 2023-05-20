@@ -77,10 +77,10 @@
             </swiper-slide>
         </swiper>
         <div class="search-result__slider-btn-next swiper-button-next">
-            <img src="public/images/Slider Button.svg" alt="Слайдер кнопка вперед">
+            <img src="public/images/slider-button.svg" alt="Слайдер кнопка вперед">
         </div>
         <div class="search-result__slider-btn-prev swiper-button-prev">
-            <img src="public/images/Slider Button.svg" alt="Слайдер кнопка назад">
+            <img src="public/images/slider-button.svg" alt="Слайдер кнопка назад">
         </div>
         <div class="search-result__slider-pagination swiper-pagination"></div>
 
@@ -201,7 +201,7 @@ export default {
             return this.events.map(event => {
                 return {
                     ...event,
-                    category: this.categories.find(category => category.id === event.id)
+                    category: this.categories.find(category => category.id === event.category)
                 };
             });
         }

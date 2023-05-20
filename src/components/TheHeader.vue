@@ -1,13 +1,13 @@
 <template>
   <header class="header">
     <div class="header__container">
-      <a href="./index.html" class="header__logo">
+      <router-link to="/" class="header__logo">
         <img
           src="public/icons/Logo_group.svg"
           class="header__image header__image_adaptive"
           alt="Logo"
         />
-      </a>
+      </router-link>
       <div class="header__search _hidden">
         <div class="search">
           <form action="" class="search__form">
@@ -26,13 +26,13 @@
       <nav class="header__menu menu">
         <ul class="menu__list">
           <li class="menu__item">
-            <a href="./calendar.html" class="menu__link _icon-calendar"
-              >Календарь мероприятий</a
+            <router-link to="/calendar" class="menu__link _icon-calendar"
+              >Календарь мероприятий</router-link
             >
           </li>
           <li class="menu__item">
-            <a href="./tickets.html" class="menu__link _icon-ticket"
-              >Мои билеты</a
+            <router-link to="/tickets" class="menu__link _icon-ticket"
+              >Мои билеты</router-link
             >
           </li>
           <li class="menu__item">
@@ -42,8 +42,8 @@
             <a href="" class="menu__link _icon-geo">Москва</a>
           </li>
           <li class="menu__item _hidden">
-            <a href="./profile.html#general" class="menu__link _icon-profile"
-              >Профиль</a
+            <router-link to="/profile" class="menu__link _icon-profile"
+              >Профиль</router-link
             >
           </li>
         </ul>
@@ -53,11 +53,11 @@
                 class="header__profile header__image_adaptive"></a>
           </div> -->
       <div class="header__sign-in sign-in">
-        <a class="sign-in__link" href="./login.html">
+        <router-link to="/login" class="sign-in__link" >
           <button class="sign-in__button">
             <span class="_icon-exit"></span>
           </button>
-        </a>
+        </router-link>
       </div>
 
       <div class="header__menu-icon"><span></span></div>

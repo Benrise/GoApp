@@ -78,13 +78,13 @@
         </swiper>
         <div class="upcoming-events__slider-btn-next swiper-button-next">
             <img
-                src="public/images/Slider Button.svg"
+                src="public/images/slider-button.svg"
                 alt="Слайдер кнопка вперед"
             />
         </div>
         <div class="upcoming-events__slider-btn-prev swiper-button-prev">
             <img
-                src="public/images/Slider Button.svg"
+                src="public/images/slider-button.svg"
                 alt="Слайдер кнопка назад"
             />
         </div>
@@ -208,7 +208,7 @@ export default {
             return this.upcomingEvents.map(UpcomingEvent => {
                 return {
                     ...UpcomingEvent,
-                    category: this.categories.find(category => category.id === UpcomingEvent.id)
+                    category: this.categories.find(category => category.id === UpcomingEvent.category)
                 };
             });
         }

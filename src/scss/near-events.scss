@@ -12,7 +12,7 @@
     &__map {
         border-radius: 12px;
         width: 100%;
-        max-height: rem(500);
+        @include adaptiveValue("max-height",500,200);
     }
 
     &__slider {

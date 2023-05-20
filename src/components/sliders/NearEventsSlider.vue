@@ -189,7 +189,7 @@ export default {
             return this.nearEvents.map(nearEvent => {
                 return {
                     ...nearEvent,
-                    category: this.categories.find(category => category.id === nearEvent.id)
+                    category: this.categories.find(category => category.id === nearEvent.category)
                 };
             });
         }

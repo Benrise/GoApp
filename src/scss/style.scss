@@ -63,15 +63,36 @@ body {
   z-index: -1;
 }
 
+[class*="_img-blackout"]
+{
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 50%;
+    border-radius: rem(12);
+  }
+  &::after {
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.4) 100%);
+  }
+  &::before {
+    top: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 100%);
+  }
+}
+
+@import "footer";
+@import "main";
+@import "header";
+
 @import "slider-card";
 @import "slider";
 //@import "datepicker";
 //@import "profile";
-//@import "tickets";
-//@import "bonus";
-//@import "login";
+@import "tickets";
+@import "bonus";
+@import "login";
 
-@import "footer";
-
-@import "main";
-@import "header";
