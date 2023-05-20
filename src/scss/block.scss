@@ -13,6 +13,9 @@
         border-radius: 24px;
         @include adaptiveValue("margin-top", 128, 64);
     }
+    ._icon-fire:before{
+        margin-right: rem(6);
+    }
 
     &__body {
         display: flex;
@@ -47,18 +50,25 @@
 
     &__button:visited,
     &__button {
-        max-height: rem(40);
         display: flex;
+        justify-content: center;
+        gap: rem(12);
+        max-height: rem(40);
         align-items: center;
         width: fit-content;
-        @include adaptiveValue("font-size", 16, 14);
         padding: rem(12) rem(24);
-        font-weight: 500;
+        font-weight: 600;
         background-color: $buttonColor;
         text-decoration: none;
         color: white;
         border-radius: 12px;
+        @include adaptiveValue("font-size", 16, 12);
     }
+    &__button_disabled{
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
     &__upper {
         @include adaptiveValue("gap",60, 24);
         width: 100%;

@@ -36,50 +36,17 @@
 
             class="tickets__slider">
                 <swiper-slide v-for="ticket in tickets" :key="ticket.id" class="swiper-slide">
-                    <div class="tickets__slide tickets-card">
-                        <a href="#" class="tickets-card__link">
-                            <div class="tickets-card__img-blackout">
-                                <div class="tickets-card__image">
-                                    <img :src="ticket.img" :alt="ticket.name">
-                                </div>
-                            </div>
-                            <div class="tickets-card__category">
-                                <div class="category" :class="`_category-${ticket.category.name}`">
-                                    {{ ticket.category.title }}
-                                </div>
-                            </div>
-                            <div class="tickets-card__text">
-                                <div class="tickets-card__title">
-                                    {{ ticket.title }}
-                                </div>
-                                <div class="tickets-card__additional">
-                                    {{ ticket.place}}
-                                </div>
-                            </div>
-                        </a>
-                        <div class="tickets-card__down">
-                            <div class="tickets-card__date">
-                                <div class="tickets-card__date-upper">
-                            <span class="tickets-card__date-text">
-                              Дата:
-                            </span>
-                                    <div class="tickets-card__dd-mm-yy">
-                                        {{ ticket.date }}
-                                    </div>
-                                </div>
-                                <div class="tickets-card__date-down">
-                            <span class="tickets-card__date-text">
-                              Время:
-                            </span>
-                                    <div class="tickets-card__hour">
-                                        {{ticket.time}} ({{ticket.timeZone}})
-                                    </div>
-                                </div>
-
-                            </div>
-                            <button class="tickets-card__qr _icon-upc-scan"></button>
-                        </div>
-                    </div>
+                    <TicketCard
+                            :id="ticket.id"
+                            :title="ticket.title"
+                            :place="ticket.place"
+                            :date="ticket.date"
+                            :time="ticket.time"
+                            :timeZone="ticket.timeZone"
+                            :imgUrl="ticket.img"
+                            :categoryName="ticket.category.name"
+                            :categoryTitle="ticket.category.title"
+                    />
                 </swiper-slide>
         </swiper>
         <div class="tickets__slider-btn-next swiper-button-next"><img src="public/images/slider-button.svg"
@@ -91,11 +58,17 @@
 </template>
 
 <script>
-import BaseSlider from './BaseSlider.vue';
 import {Autoplay, FreeMode, Navigation, Pagination} from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import BaseButton from "@/components/ui/BaseButton.vue";
+import TicketCard from "@/components/sliders/TicketCard.vue";
 
 export default {
-    extends: BaseSlider,
+    components:{
+        TicketCard,
+        BaseButton,
+      Swiper, SwiperSlide
+    },
     data() {
         return {
             categories: [
@@ -199,14 +172,15 @@ export default {
             ],
             tickets: [
                 {
-                id: 1,
-                title: 'Человек-павук',
-                place: 'ТРЦ "Комумбус", Киломакс',
-                date: '19.12.2023',
-                time: '13:00',
-                timeZone: 'МСК',
-                img: 'public/images/tickets/SpiderMan.jpg',
-                category: 2
+                    id: 1,
+                    title: 'Человек-павук',
+                    place: 'ТРЦ "Комумбус", Киломакс',
+                    date: '19.12.2023',
+                    time: '13:00',
+                    timeZone: 'МСК',
+                    img: 'public/images/tickets/SpiderMan.jpg',
+                    category: 2,
+                    status: true
                 },
                 {
                     id: 2,
@@ -216,7 +190,8 @@ export default {
                     time: '10:30',
                     timeZone: 'МСК',
                     img: 'public/images/tickets/WinterSports.jpg',
-                    category: 3
+                    category: 3,
+                    status: true
                 },
 
                 {
@@ -227,17 +202,19 @@ export default {
                     time: '16:20',
                     timeZone: 'МСК',
                     img: 'public/images/tickets/NewspapersWall.jpg',
-                    category: 9
+                    category: 9,
+                    status: true
                 },
                 {
                     id: 3,
                     title: 'Акция в поддержку молока',
                     place: 'Красная Поляна',
-                    date: '3.09.2023',
+                    date: '03.09.2023',
                     time: '16:20',
                     timeZone: 'МСК',
                     img: 'public/images/tickets/Milk.jpg',
-                    category: 9
+                    category: 9,
+                    status: true
                 },
                 {
                     id: 3,
@@ -247,7 +224,8 @@ export default {
                     time: '16:20',
                     timeZone: 'МСК',
                     img: 'public/images/tickets/Starboy.jpg',
-                    category: 5
+                    category: 5,
+                    status: false
                 }
             ],
             bonusInfo: [{
@@ -258,9 +236,8 @@ export default {
                 name: 'Латыпов Артём Равилевич',
                 phone: '89872857775',
                 email: 'benrise_x@mail.ru',
-                freeTicketPrice: 2000,
+                freeTicketPrice: 2000
             }]
-
         };
     },
     computed: {

@@ -13,20 +13,7 @@
                             </h3>
                         </div>
                         <div class="main-block__buttons">
-                            <div class="main-block__radio">
-                                <div class="radio">
-                                    <input type="radio" name="select" id="active" checked>
-                                    <input type="radio" name="select" id="archive">
-                                    <label for="active" class="option active">
-                                        <div class="dot"></div>
-                                        <span>Активные</span>
-                                    </label>
-                                    <label for="archive" class="option archive">
-                                        <div class="dot"></div>
-                                        <span>Архив</span>
-                                    </label>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                     <div class="main-block__body">
@@ -140,13 +127,21 @@
 <script>
 
 import TicketsSlider from "@/components/sliders/TicketsSlider.vue";
-import BonusCard from "@/components/BonusCard.vue";
+import BonusCard from "@/components/blocks/BonusCard.vue";
 export default {
     components: {
         BonusCard,
         TicketsSlider
     },
     name: "Tickets",
+    data() {
+        return {
+            options: [
+                {name: 'Option 1', value: 1},
+                {name: 'Option 2', value: 2}
+            ]
+        }
+    },
 }
 </script>
 

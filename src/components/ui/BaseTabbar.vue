@@ -1,4 +1,5 @@
 <template>
+
   <div class="profile__tabs tabbar">
         <nav class="tabbar__buttons">
             <button
@@ -10,6 +11,7 @@
             >
                 {{title}}
             </button>
+
         </nav>
       <slot />
   </div>

@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import { ref } from "vue";
 import mapboxgl from "mapbox-gl";
 import {
     MglMap,
@@ -34,8 +35,10 @@ export default {
     data() {
         return {
             accessToken: "pk.eyJ1IjoiYmVucmlzZSIsImEiOiJjbGg5b3ZlNHIwOW1yM2ZscGcyZDVobGRmIn0.iaTfbUJkg0e8X6V2F4pyeA",
+
         };
     },
+
     mounted() {
         mapboxgl.accessToken = this.accessToken;
 
@@ -53,6 +56,17 @@ export default {
             map.resize();
         });
     },
+    setup(){
+        const coords = ref(null);
+        const fetchCoords = ref(null);
+        const geoMarker = ref(null);
+    },
+    methods(){
+        getGeoLocation()
+        {
+
+        }
+    }
 };
 </script>
 <style lang="scss">

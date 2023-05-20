@@ -1,5 +1,5 @@
 <template>
-    <swiper :slides-per-view="auto"
+    <Swiper :slides-per-view="auto"
             :loop="true"
             :speed="5000"
             :autoplay=" {
@@ -34,23 +34,24 @@
             :modules="modules"
             wrapperClass= "swiper-wrapper swiper-wrapper_linear"
             class="event-categories__slider">
-            <template v-for="chunk in chunkedCategories">
-                <swiper-slide class="swiper-slide">
-                    <div class="event-categories__column">
-                        <div class="event-categories__item" v-for="category in chunk" :key="category.id">
-                            <a href="" :class="`_category-${category.name}`" class="category">{{ category.title }}</a>
-                        </div>
-                    </div>
-                </swiper-slide>
-            </template>
-    </swiper>
+                <SwiperSlide v-for="chunk in chunkedCategories" v-bind:eventCategoriesData="chunk">
+                  <div class="event-categories__column">
+                      <div class="event-categories__item" v-for="category in chunk" :key="category.id">
+                          <BaseButton :label="category.title" :class="`_category-${category.name}`" class="category"/>
+                      </div>
+                  </div>
+              </SwiperSlide>
+    </Swiper>
 </template>
 
 <script>
-import BaseSlider from './BaseSlider.vue';
-import { Autoplay,FreeMode} from 'swiper';
+
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import {Autoplay, FreeMode} from "swiper";
+import BaseButton from "@/components/ui/BaseButton.vue";
 export default {
-    extends: BaseSlider,
+    name: "EventCategoriesSlider",
+    components: {BaseButton, SwiperSlide, Swiper},
     data() {
         return {
             categories: [
@@ -100,9 +101,9 @@ export default {
                     name: "theater"
                 },
                 ]
-
         }
     },
+    props:{},
     computed: {
         chunkedCategories() {
             let chunks = [];
@@ -124,6 +125,8 @@ export default {
             return chunks;
         }
 
+    },
+    methods(){
     },
     setup() {
         return {

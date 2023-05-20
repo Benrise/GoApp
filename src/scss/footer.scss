@@ -166,20 +166,6 @@
         gap: rem(12);
     }
 
-    &__button {
-        max-height: rem(40);
-        display: flex;
-        align-items: center;
-        width: fit-content;
-        @include adaptiveValue("font-size", 16, 14);
-        padding: rem(12) rem(24);
-        font-weight: 500;
-        background-color: $funcButton_color;
-        text-decoration: none;
-        color: white;
-        border-radius: 12px;
-    }
-
     &__policy {
         @include adaptiveValue("padding-left", 24, 0);
         line-height: rem(15);

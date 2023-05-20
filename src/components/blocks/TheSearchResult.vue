@@ -18,20 +18,16 @@
               class="search__input"
             />
           </div>
-          <button type="button" class="main-block__button toggle">Поиск</button>
+          <SubmitButton>Поиск</SubmitButton>
         </div>
         <div class="filters">
-          <div class="filters__item vs-filter _what-filter"></div>
-          <div class="filters__item vs-filter _where-filter"></div>
-          <div class="filters__item _when-filter">
-            <BaseDatePicker/>
-          </div>
-          <div class="filters__item vs-filter _price-filter"></div>
-          <div class="filters__item vs-filter _rating-filter"></div>
-          <div class="filters__item vs-filter _other-filter"></div>
-          <button class="filters__item _reset _icon-xmark" type="reset">
-            <span>Сброс</span>
-          </button>
+            <FilterButton>Что именно?</FilterButton>
+            <FilterButton>Где?</FilterButton>
+            <DatePicker></DatePicker>
+            <FilterButton>Целевая категория</FilterButton>
+            <FilterButton>Рейтинг</FilterButton>
+            <FilterButton>Разное</FilterButton>
+          <ResetFilterButton>Сброс</ResetFilterButton>
         </div>
       </form>
       <div class="main-block__body">
@@ -59,11 +55,18 @@
 </style>
 <script >
 import SearchResultSlider from "@/components/sliders/SearchResultSlider.vue";
-import BaseDatePicker from "@/components/ui/BaseDatePicker.vue";
+import DatePicker from "@/components/ui/DatePicker.vue";
+import SubmitButton from "@/components/ui/SubmitButton.vue";
+import ResetFilterButton from "@/components/ui/ResetFilterButton.vue";
+import FilterButton from "@/components/ui/FilterButton.vue";
+
 
 export default {
     components: {
-        BaseDatePicker, SearchResultSlider
+        FilterButton,
+        ResetFilterButton,
+        SubmitButton,
+        DatePicker, SearchResultSlider
     },
 };
 </script>

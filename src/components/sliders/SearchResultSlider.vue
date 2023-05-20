@@ -28,52 +28,17 @@
             class="search-result__slider"
         >
             <swiper-slide v-for="event in events" :key="event.id" class="swiper-slide">
-                <div class="slide-card">
-                    <a href="#" class="slide-card__link">
-                        <div class="slide-card__img-blackout">
-                            <div class="slide-card__image">
-                                <img :src="event.img" :alt="event.name">
-                            </div>
-                        </div>
-                    </a>
-                    <div class="slide-card__info-left">
-                        <div class="category" :class="`_category-${event.category.name}`">
-                            {{ event.category.title }}
-                        </div>
-                        <div class="slide-card__date">
-                            <div class="slide-card__day _icon-calendar">
-                                {{ event.day }}
-                            </div>
-                            <div class="slide-card__month">
-                                {{ event.month }}
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide-card__title">{{ event.name }}</div>
-                    <a href="#" class="slide-card__rating">
-                        <div class="slide-card__rating-score" :class="`_rating-${event.rating}`">
-                            {{ event.rating }}
-                        </div>
-                        <div class="slide-card__rating-desc">Оценка посетителей</div>
-                    </a>
-                    <div class="slide-card__functions-right">
-                        <div class="slide-card__functions-right-up">
-                            <div class="slide-card__geo _icon-city">
-                                {{ event.location }}
-                            </div>
-                            <div class="slide-card__price" :class="`_price-${event.price}`">
-                                <span class="_icon-ruble-sign-square-1"></span>
-                                <span class="_icon-ruble-sign-square-2"></span>
-                                <span class="_icon-ruble-sign-square-3"></span>
-                                <div v-if="event.price === 'free' " class="price__free">Бесплатно</div>
-                            </div>
-                        </div>
-                        <div class="slide-card__functions-right-down">
-                            <a href="#" class="slide-card__buy-button">Купить билеты</a>
-                            <button class="slide-card__fav-button _icon-heart"></button>
-                        </div>
-                    </div>
-                </div>
+                <SliderCard
+                    :imgUrl="event.img"
+                    :day="event.day"
+                    :month="event.month"
+                    :name="event.name"
+                    :rating="event.rating"
+                    :location="event.location"
+                    :price="event.price"
+                    :categoryName="event.category.name"
+                    :categoryTitle="event.category.title"
+                />
             </swiper-slide>
         </swiper>
         <div class="search-result__slider-btn-next swiper-button-next">
@@ -88,11 +53,14 @@
 </template>
 
 <script>
-import BaseSlider from "@/components/sliders/BaseSlider.vue";
+
+import { Swiper, SwiperSlide } from 'swiper/vue';
 import {Autoplay, FreeMode, Navigation, Pagination} from "swiper";
+import BaseButton from "@/components/ui/BaseButton.vue";
+import SliderCard from "@/components/sliders/SliderCard.vue";
 
 export default {
-    extends: BaseSlider,
+    components: {SliderCard, BaseButton, Swiper,SwiperSlide},
     data() {
         return {
             categories: [

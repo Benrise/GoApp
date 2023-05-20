@@ -12,7 +12,7 @@
               placeholder="Электронная почта"
               class="subscribe__input"
             />
-            <button type="submit" class="subscribe__button">Подписаться</button>
+            <SubscribeButton>Подписаться</SubscribeButton>
           </form>
           <div class="subscribe__policy">
             Подписываясь на рассылку, вы соглашаетесь с
@@ -88,3 +88,6 @@
     </div>
   </footer>
 </template>
+<script setup>
+import SubscribeButton from "@/components/ui/SubscribeButton.vue";
+</script>

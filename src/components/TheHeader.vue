@@ -48,10 +48,11 @@
           </li>
         </ul>
       </nav>
-      <!-- <div class="header__profile">
-            <a href="./profile.html#general"><img src="./img/pic/profile.png" alt="profile"
-                class="header__profile header__image_adaptive"></a>
-          </div> -->
+        <!-- Показать в случае авторизации -->
+      <div class="header__profile">
+            <router-link to="profile"><img src="/images/profile.png" alt="profile"
+                class="header__profile header__image_adaptive"></router-link>
+      </div>
       <div class="header__sign-in sign-in">
         <router-link to="/login" class="sign-in__link" >
           <button class="sign-in__button">
@@ -60,7 +61,9 @@
         </router-link>
       </div>
 
-      <div class="header__menu-icon"><span></span></div>
+      <div class="header__menu-icon" @click="toggle()"><span></span></div>
     </div>
   </header>
 </template>
+
+

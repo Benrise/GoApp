@@ -18,7 +18,7 @@
               class="search__input"
             />
           </div>
-          <button type="button" class="main-block__button toggle">Поиск</button>
+          <SubmitButton>Поиск</SubmitButton>
         </div>
       </div>
 
@@ -44,4 +44,5 @@
 <script setup>
 import NearEventsSlider from "@/components/sliders/NearEventsSlider.vue";
 import TheMap from "@/components/TheMap.vue";
+import SubmitButton from "@/components/ui/SubmitButton.vue";
 </script>

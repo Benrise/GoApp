@@ -23,52 +23,17 @@
                 :prevent-clicks="true"
             class="near-events__slider">
                 <swiper-slide v-for="nearEvent in nearEvents" :key="nearEvent.id" class="swiper-slide" >
-                    <div class="slide-card">
-                        <a href="#" class="slide-card__link">
-                            <div class="slide-card__img-blackout">
-                                <div class="slide-card__image">
-                                    <img :src="nearEvent.img" :alt="nearEvent.name">
-                                </div>
-                            </div>
-                        </a>
-                        <div class="slide-card__info-left">
-                            <div class="category " :class="`_category-${nearEvent.category.name}`">
-                                {{ nearEvent.category.title }}
-                            </div>
-                            <div class="slide-card__date">
-                                <div class="slide-card__day _icon-calendar">{{ nearEvent.day }}</div>
-                                <div class="slide-card__month">{{ nearEvent.month }}</div>
-                            </div>
-                        </div>
-                        <div class="slide-card__title">{{ nearEvent.name }}</div>
-                        <a href="#" class="slide-card__rating">
-                            <div class="slide-card__rating-score" :class="`_rating-${nearEvent.rating}`">
-                                {{ nearEvent.rating }}
-                            </div>
-                            <div class="slide-card__rating-desc">
-                                Оценка посетителей
-                            </div>
-                        </a>
-                        <div class="slide-card__functions-right">
-                            <div class="slide-card__functions-right-up">
-                                <div class="slide-card__geo _icon-city">{{ nearEvent.location }}</div>
-                                <div class="slide-card__price" :class="`_price-${nearEvent.price}`">
-                                    <span class="_icon-ruble-sign-square-1"></span>
-                                    <span class="_icon-ruble-sign-square-2"></span>
-                                    <span class="_icon-ruble-sign-square-3"></span>
-                                    <div v-if="nearEvent.price === 'free' " class="price__free">Бесплатно</div>
-                                </div>
-                            </div>
-                            <div class="slide-card__functions-right-down">
-                                <a href="#" class="slide-card__buy-button"
-                                >Купить билеты</a
-                                >
-                                <button
-                                        class="slide-card__fav-button _icon-heart"
-                                ></button>
-                            </div>
-                        </div>
-                    </div>
+                    <SliderCard
+                        :imgUrl="nearEvent.img"
+                        :day="nearEvent.day"
+                        :month="nearEvent.month"
+                        :name="nearEvent.name"
+                        :rating="nearEvent.rating"
+                        :location="nearEvent.location"
+                        :price="nearEvent.price"
+                        :categoryName="nearEvent.category.name"
+                        :categoryTitle="nearEvent.category.title"
+                    />
                 </swiper-slide>
         </swiper>
         <div class="swiper-scrollbar"></div>
@@ -76,11 +41,19 @@
 </template>
 
 <script>
-import BaseSlider from "@/components/sliders/BaseSlider.vue";
+
+
+import { Swiper, SwiperSlide } from 'swiper/vue';
 import {Autoplay, FreeMode, Scrollbar} from "swiper";
+import BaseButton from "@/components/ui/BaseButton.vue";
+import SliderCard from "@/components/sliders/SliderCard.vue";
 
 export default {
-    extends: BaseSlider,
+    components:{
+        SliderCard,
+        BaseButton,
+        Swiper, SwiperSlide
+    },
     data() {
         return {
             categories: [

@@ -12,59 +12,31 @@
       <div class="main-block__body">
         <div class="recommendations">
           <div class="recommendations__categories">
-            <a v-for="category in categories" v-bind:key="category.id" href="#" class="category" :class="`_category-${category.name}`">{{category.title}}</a>
+            <BaseButton :label="category.title" v-for="(category, index) in categories" :key="index" href="#" class="category" :class="`_category-${category.name}`"/>
           </div>
           <div class="recommendations__content">
-              <template v-for="recommendedEvent in recommendedEvents">
-                <div class="slide-card">
-                    <a href="#" class="slide-card__link">
-                        <div class="slide-card__img-blackout">
-                            <div class="slide-card__image">
-                                <img :src="recommendedEvent.img" :alt="recommendedEvent.name">
-                            </div>
-                        </div>
-                    </a>
-                    <div class="slide-card__info-left">
-                        <div class="category" :class="`_category-${recommendedEvent.category.name}`">
-                            {{ recommendedEvent.category.title }}
-                        </div>
-                        <div class="slide-card__date">
-                            <div class="slide-card__day _icon-calendar">{{ recommendedEvent.day }}</div>
-                            <div class="slide-card__month">{{ recommendedEvent.month }}</div>
-                        </div>
-                    </div>
-                    <div class="slide-card__title">{{ recommendedEvent.name }}</div>
-                    <a href="#" class="slide-card__rating">
-                        <div class="slide-card__rating-score" :class="`_rating-${recommendedEvent.rating}`">
-                            {{ recommendedEvent.rating }}
-                        </div>
-                        <div class="slide-card__rating-desc">
-                            Оценка посетителей
-                        </div>
-                    </a>
-                    <div class="slide-card__functions-right">
-                        <div class="slide-card__functions-right-up">
-                            <div class="slide-card__geo _icon-city">{{ recommendedEvent.location }}</div>
-                            <div class="slide-card__price " :class="`_price-${recommendedEvent.price}`">
-                                <span class="_icon-ruble-sign-square-1"></span>
-                                <span class="_icon-ruble-sign-square-2"></span>
-                                <span class="_icon-ruble-sign-square-3"></span>
-                                <div v-if="recommendedEvent.price === 'free' " class="price__free">Бесплатно</div>
+              <template v-for="(recommendedEvent, index) in recommendedEvents">
 
-                            </div>
-                        </div>
-                        <div class="slide-card__functions-right-down">
-                            <a href="#" class="slide-card__buy-button"
-                            >Купить билеты</a
-                            >
-                            <button
-                                    class="slide-card__fav-button _icon-heart"
-                            ></button>
-                        </div>
-                    </div>
-                </div>
+                  <SliderCard
+                          v-if="index < eventsToShow"
+                          :imgUrl="recommendedEvent.img"
+                          :day="recommendedEvent.day"
+                          :month="recommendedEvent.month"
+                          :name="recommendedEvent.name"
+                          :rating="recommendedEvent.rating"
+                          :location="recommendedEvent.location"
+                          :price="recommendedEvent.price"
+                          :categoryName="recommendedEvent.category.name"
+                          :categoryTitle="recommendedEvent.category.title"
+                  />
               </template>
           </div>
+            <ShowMoreButton
+                    :label="`Показать больше`"
+                    @click="showMoreEvents"
+                    v-if="hasMoreEvents"
+            />
+
         </div>
       </div>
     </div>
@@ -72,11 +44,14 @@
 </template>
 
 <script>
-import BaseSlider from "@/components/sliders/BaseSlider.vue";
-import {Autoplay, FreeMode, Navigation, Pagination} from "swiper";
+
+
+import ShowMoreButton from "@/components/ui/ShowMoreButton.vue";
+import BaseButton from "@/components/ui/BaseButton.vue";
+import SliderCard from "@/components/sliders/SliderCard.vue";
 
 export default {
-    extends: BaseSlider,
+    components: {SliderCard, BaseButton, ShowMoreButton},
     data() {
         return {
             categories: [
@@ -176,8 +151,53 @@ export default {
                     img: 'public/images/events/art-promo.jpg',
                     category: 9
                 },
+                {
+                    id: 5,
+                    day: "10",
+                    month: "мая",
+                    name: "Yoga Material",
+                    rating: 7.9,
+                    location: "Москва",
+                    price: 'low',
+                    img: 'public/images/events/yoga-promo.jpg',
+                    category: 3
+                },
+                {
+                    id: 6,
+                    day: "23",
+                    month: "мая",
+                    name: "Человек-павук",
+                    rating: 7.7,
+                    location: "Москва",
+                    price: 'avg',
+                    img: 'public/images/events/spider-man-promo.jpg',
+                    category: 2
+                },
+                {
+                    id: 7,
+                    day: "12",
+                    month: "мая",
+                    name: "Come Together",
+                    rating: 9.9,
+                    location: "Москва",
+                    price: 'high',
+                    img: 'public/images/events/the-beatles-promo.jpg',
+                    category: 4
+                },
+                {
+                    id: 8,
+                    day: "31",
+                    month: "мая",
+                    name: "ART - Цветная полоса",
+                    rating: 8,
+                    location: "Реутов",
+                    price: 'free',
+                    img: 'public/images/events/art-promo.jpg',
+                    category: 9
+                },
 
-            ]
+            ],
+            eventsToShow: 4
         }
     },
     computed: {
@@ -185,14 +205,25 @@ export default {
             return this.recommendedEvents.map(recommendedEvent => {
                 return {
                     ...recommendedEvent,
-                    category: this.categories.find(category => category.id === recommendedEvent.id)
+                    category: this.categories.find(category => category.id === recommendedEvent.category)
                 };
             });
+        },
+        hasMoreEvents() {
+            return this.eventsToShow < this.updatedRecommendedEvents.length;
         }
     },
     created() {
         this.recommendedEvents = this.updatedRecommendedEvents;
     },
+    methods: {
+        showMoreEvents() {
+            this.eventsToShow += 4;
+        }
+    },
+
+
+
 };
 </script>
 

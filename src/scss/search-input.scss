@@ -33,7 +33,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        font-size: rem(16);
+        @include adaptiveValue("font-size", 16, 12);
         &::placeholder {
             opacity: 0.5;
             color: $secondaryFontColor;

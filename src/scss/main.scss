@@ -100,7 +100,7 @@
 .search-main {
     display: flex;
     justify-content: space-between;
-    @include adaptiveValue("gap", 24, 12);
+    @include adaptiveValue("gap", 12, 6);
     .search__input {
         width: 100%;
         height: rem(40);
