@@ -18,10 +18,9 @@
                 enabled: true,
                 onlyInViewport: true,
             }"
-
             :breakpoints=" {
                 280: {
-                    slidesPerView: 1
+                    slidesPerView: 1,
                 },
                 670: {
                     slidesPerView: 3
@@ -30,7 +29,6 @@
                     slidesPerView: 4,
                 },
             }"
-
             :modules="modules"
             :spaceBetween=24
 

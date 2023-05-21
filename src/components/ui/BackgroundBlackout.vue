@@ -14,7 +14,7 @@ export default defineComponent({
 
 <style>
 .background-blackout{
-    z-index: 99;
+    z-index: 999;
     height: 100%;
     background: rgba(0,0,0, 0.5);
     width: 100%;
