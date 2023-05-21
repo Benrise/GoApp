@@ -2,35 +2,17 @@
     <MglMap
         id="mapContainer"
         class="near-events__map">
-        <MglAttributionControl />
-        <MglNavigationControl position="top-right" />
-        <MglGeolocateControl position="top-right" />
-        <MglNavigationControl position="top-right" />
-        <MglGeolocateControl position="top-right" />
-        <MglScaleControl />
     </MglMap>
 </template>
 
 <script>
-import { ref } from "vue";
 import mapboxgl from "mapbox-gl";
-import {
-    MglMap,
-    MglAttributionControl,
-    MglNavigationControl,
-    MglGeolocateControl,
-    MglFullscreenControl,
-    MglScaleControl
-} from "mapbox-gl";
+
+import {MglMap } from "mapbox-gl";
 import {mapState} from "vuex";
 export default {
     components: {
         MglMap,
-        MglAttributionControl,
-        MglNavigationControl,
-        MglGeolocateControl,
-        MglFullscreenControl,
-        MglScaleControl,
     },
     name: "TheMap",
     data() {
@@ -63,9 +45,7 @@ export default {
             zoom: 9,
             language: 'ru',
         });
-
-
-
+        map.addControl(new mapboxgl.NavigationControl());
         this.updatedEvents.forEach((event) => {
             const popup = new mapboxgl.Popup({offset:25}).setText(event.name)
             const marker = new mapboxgl.Marker({ color: event.category.color, scale: 0.8 })
@@ -89,6 +69,7 @@ export default {
         display: none;
     }
 }
+
 .marker{
     background-image: url("public/images/geo-icon.png");
     background-size: cover;

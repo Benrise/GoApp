@@ -25,11 +25,10 @@
 </template>
 
 <script>
-import {defineComponent} from 'vue'
 import FilterButton from "@/components/ui/FilterButton.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
 
-export default defineComponent({
+export default ({
     name: "BaseSelect",
     components: {BaseButton, FilterButton},
     props:{
@@ -70,42 +69,9 @@ export default defineComponent({
 
 
 <style lang="scss">
-@import 'src/scss/style.scss';
 
 
-.main-block__filter{
-  position: relative;
-  z-index: 10;
-}
 
-.select{
-
-  &__options{
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    border: 1px solid $fontColor;
-    width: 100%;
-    top: rem(48);
-    border-radius: rem(12);
-    background: white;
-    padding: rem(12);
-  }
-  &__option{
-    width: 100%;
-    background: none;
-    color: rgba(128, 0, 128, 0.5);
-    border-radius: rem(8);
-    font-weight: 500;
-    padding: rem(12) rem(6);
-
-    &:hover{
-      color: rgba(128, 0, 128, 1);
-      background: $bgColor;
-    }
-
-  }
-}
 
 
 

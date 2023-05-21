@@ -12,13 +12,13 @@
     &__map {
         border-radius: 12px;
         width: 100%;
-        @include adaptiveValue("max-height",500,200);
+        min-height: 300px !important;
     }
 
     &__slider {
         max-height: rem(500);
         overflow: hidden;
-        width: 95%;
+        width: 97%;
     }
     .swiper{
         margin: 0;

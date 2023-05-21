@@ -1,0 +1,28 @@
+.select{
+
+  &__options{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 1px solid $fontColor;
+    width: 100%;
+    top: rem(48);
+    border-radius: rem(12);
+    background: white;
+    padding: rem(12);
+  }
+  &__option{
+    width: 100%;
+    background: none;
+    color: rgba(128, 0, 128, 0.5);
+    border-radius: rem(8);
+    font-weight: 500;
+    padding: rem(12) rem(6);
+
+    &:hover{
+      color: rgba(128, 0, 128, 1);
+      background: $bgColor;
+    }
+
+  }
+}
