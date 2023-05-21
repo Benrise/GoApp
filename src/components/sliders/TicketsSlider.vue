@@ -72,53 +72,6 @@ export default {
     },
     data() {
         return {
-            events: [
-                {
-                    id: 1,
-                    day: "10",
-                    month: "мая",
-                    name: "Yoga Material",
-                    rating: 7.9,
-                    location: "Москва",
-                    price: 'low',
-                    img: 'public/images/events/yoga-promo.jpg',
-                    category: 3
-                },
-                {
-                    id: 2,
-                    day: "23",
-                    month: "мая",
-                    name: "Человек-павук",
-                    rating: 7.7,
-                    location: "Москва",
-                    price: 'avg',
-                    img: 'public/images/events/spider-man-promo.jpg',
-                    category: 2
-                },
-                {
-                    id: 3,
-                    day: "12",
-                    month: "мая",
-                    name: "Come Together",
-                    rating: 9.9,
-                    location: "Москва",
-                    price: 'high',
-                    img: 'public/images/events/the-beatles-promo.jpg',
-                    category: 4
-                },
-                {
-                    id: 4,
-                    day: "31",
-                    month: "мая",
-                    name: "ART - Цветная полоса",
-                    rating: 8,
-                    location: "Реутов",
-                    price: 'free',
-                    img: 'public/images/events/art-promo.jpg',
-                    category: 9
-                },
-
-            ],
             bonusInfo: [{
                 userId: 1,
                 bonusCardId: 1488228231014202013,
@@ -149,9 +102,6 @@ export default {
         return {
             modules: [Autoplay, FreeMode, Navigation, Pagination],
         };
-    },
-    methods: {
-        ...mapMutations(['updateTickets'])
     },
 };
 </script>

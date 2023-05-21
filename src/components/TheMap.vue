@@ -22,6 +22,7 @@ import {
     MglFullscreenControl,
     MglScaleControl
 } from "mapbox-gl";
+import {mapState} from "vuex";
 export default {
     components: {
         MglMap,
@@ -38,7 +39,20 @@ export default {
 
         };
     },
-
+    computed: {
+        ...mapState({
+            nearEvents: (state) => state.nearEvents,
+            categories: state => state.categories
+        }),
+        updatedEvents() {
+            return this.nearEvents.map(event => {
+                return {
+                    ...event,
+                    category: this.categories.find(category => category.id === event.category)
+                };
+            });
+        },
+    },
     mounted() {
         mapboxgl.accessToken = this.accessToken;
 
@@ -48,25 +62,22 @@ export default {
             center: [37.6174943, 55.7504461],
             zoom: 9,
             language: 'ru',
-            trackUserLocation: true,
-            showCompass: true,
-            showZoom: true,
+        });
+
+
+
+        this.updatedEvents.forEach((event) => {
+            const popup = new mapboxgl.Popup({offset:25}).setText(event.name)
+            const marker = new mapboxgl.Marker({ color: event.category.color, scale: 0.8 })
+                .setPopup(popup)
+                .setLngLat(event.coordinates)
+                .addTo(map);
         });
         map.on('load', function () {
             map.resize();
         });
-    },
-    setup(){
-        const coords = ref(null);
-        const fetchCoords = ref(null);
-        const geoMarker = ref(null);
-    },
-    methods(){
-        getGeoLocation()
-        {
 
-        }
-    }
+    },
 };
 </script>
 <style lang="scss">
@@ -77,6 +88,13 @@ export default {
     &-bottom-left{
         display: none;
     }
+}
+.marker{
+    background-image: url("public/images/geo-icon.png");
+    background-size: cover;
+    width: 25px;
+    height: 36px;
+    cursor: pointer;
 }
 </style>
 
