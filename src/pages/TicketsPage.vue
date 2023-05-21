@@ -126,6 +126,7 @@
 import TicketsSlider from "@/components/sliders/TicketsSlider.vue";
 import BonusCard from "@/components/blocks/BonusCard.vue";
 import BaseSelect from "@/components/ui/BaseSelect.vue";
+import {mapGetters} from "vuex";
 export default {
     components: {
         BaseSelect,
@@ -144,11 +145,12 @@ export default {
         }
     },
     computed:{
+        ...mapGetters(['getTickets']),
       filteredTickets(){
           if (this.sorted.length){
               return this.sorted
           }else{
-              this.tickets //Как я могу достать её из родительского компонента TicketsSlider???
+              return this.getTickets
           }
       }
     },

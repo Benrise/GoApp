@@ -56,7 +56,7 @@ export default defineComponent({
         id: 1,
         title: String,
         place: String,
-        date: Date,
+        date: String,
         time: String,
         timeZone: String,
         imgUrl: String,

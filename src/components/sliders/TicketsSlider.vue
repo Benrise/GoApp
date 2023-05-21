@@ -62,6 +62,7 @@ import {Autoplay, FreeMode, Navigation, Pagination} from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import BaseButton from "@/components/ui/BaseButton.vue";
 import TicketCard from "@/components/sliders/TicketCard.vue";
+import { mapState, mapMutations, mapGetters } from 'vuex';
 
 export default {
     components:{
@@ -71,58 +72,6 @@ export default {
     },
     data() {
         return {
-            categories: [
-                {
-                    id: 0,
-                    title: "Путешествия",
-                    name: "travel"
-                },
-                {
-                    id: 1,
-                    title: "Здоровье и красота",
-                    name: "healthAndBeauty"
-                },
-                {
-                    id: 2,
-                    title: "Фильмы",
-                    name: "movie"
-                },
-                {
-                    id: 3,
-                    title: "Спорт и фитнес",
-                    name: "sportAndFitness"
-                },
-                {
-                    id: 4,
-                    title: "Музыка",
-                    name: "music"
-                },
-                {
-                    id: 5,
-                    title: "Концерт",
-                    name: "concert"
-                },
-                {
-                    id: 6,
-                    title: "Комедия",
-                    name: "comedy"
-                },
-                {
-                    id: 7,
-                    title: "Вечеринка",
-                    name: "party"
-                },
-                {
-                    id: 8,
-                    title: "Театр",
-                    name: "theater"
-                },
-                {
-                    id:9,
-                    title: "Культура",
-                    name: "art"
-                }
-            ],
             events: [
                 {
                     id: 1,
@@ -170,64 +119,6 @@ export default {
                 },
 
             ],
-            tickets: [
-                {
-                    id: 1,
-                    title: 'Человек-павук',
-                    place: 'ТРЦ "Комумбус", Киломакс',
-                    date: '19.12.2023',
-                    time: '13:00',
-                    timeZone: 'МСК',
-                    img: 'public/images/tickets/SpiderMan.jpg',
-                    category: 2,
-                    status: true
-                },
-                {
-                    id: 2,
-                    title: 'Зимние игры',
-                    place: 'Спортивный комплекс "Аура"',
-                    date: '19.12.2023',
-                    time: '10:30',
-                    timeZone: 'МСК',
-                    img: 'public/images/tickets/WinterSports.jpg',
-                    category: 3,
-                    status: true
-                },
-
-                {
-                    id: 3,
-                    title: 'Стены Газет',
-                    place: 'ТРЦ "Галерея"',
-                    date: '19.07.2023',
-                    time: '16:20',
-                    timeZone: 'МСК',
-                    img: 'public/images/tickets/NewspapersWall.jpg',
-                    category: 9,
-                    status: true
-                },
-                {
-                    id: 3,
-                    title: 'Акция в поддержку молока',
-                    place: 'Красная Поляна',
-                    date: '03.09.2023',
-                    time: '16:20',
-                    timeZone: 'МСК',
-                    img: 'public/images/tickets/Milk.jpg',
-                    category: 9,
-                    status: true
-                },
-                {
-                    id: 3,
-                    title: 'Star Boy Tour',
-                    place: 'ВТБ Арена',
-                    date: '03.09.2013',
-                    time: '16:20',
-                    timeZone: 'МСК',
-                    img: 'public/images/tickets/Starboy.jpg',
-                    category: 5,
-                    status: false
-                }
-            ],
             bonusInfo: [{
                 userId: 1,
                 bonusCardId: 1488228231014202013,
@@ -241,22 +132,30 @@ export default {
         };
     },
     computed: {
+        ...mapGetters(['getCategories']),
         updatedTickets() {
             return this.tickets.map(ticket => {
                 return {
                     ...ticket,
-                    category: this.categories.find(category => category.id === ticket.category)
+                    category: this.getCategories.find(category => category.id === ticket.category)
                 };
             });
-        }
+        },
+        ...mapState({
+            tickets: state => state.tickets
+        })
     },
     created() {
-        this.tickets = this.updatedTickets;
+        const updatedTickets = this.updatedTickets;
+        this.updateTickets(updatedTickets);
     },
     setup() {
         return {
             modules: [Autoplay, FreeMode, Navigation, Pagination],
         };
+    },
+    methods: {
+        ...mapMutations(['updateTickets'])
     },
 };
 </script>
