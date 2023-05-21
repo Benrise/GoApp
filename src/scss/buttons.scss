@@ -1,0 +1,85 @@
+.base-button:visited,
+.base-button {
+  display: flex;
+  justify-content: center;
+  gap: rem(12);
+  max-height: rem(40);
+  align-items: center;
+  width: fit-content;
+  padding: rem(12) rem(24);
+  font-weight: 600;
+  background-color: $buttonColor;
+  text-decoration: none;
+  color: white;
+  border-radius: 12px;
+  @include adaptiveValue("font-size", 16, 12);
+  transition: transform 0.1s ease-in-out;
+  &:hover{
+    transform: scale(1.01);
+  }
+}
+.base-button{
+  &_disabled{
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  &_close{
+    background: $bgColor;
+    color: $fontColor;
+    transition: background 0.2s ease-in-out;
+    &:hover{
+      background: $buttonColor;
+      color: white;
+    }
+  }
+
+  &_date-picker{
+    max-width: rem(250);
+    ::placeholder {
+      all: unset;
+      color: $secondaryFontColor;
+      font-family: 'Inter',sans-serif;
+      @include adaptiveValue('font-size',16,12);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    transition: transform 0.1s ease-in-out;
+    &:hover{
+      transform: scale(1.01);
+    }
+  }
+
+  &_filter{
+    color: $secondaryFontColor ;
+    position: relative;
+    border: 1px solid $fontColor;
+    background: none ;
+  }
+
+  &_reset {
+    border: 1px solid $funcButton_color;
+    color: $funcButton_color ;
+  }
+
+  &_show-more{
+    max-width: none;
+    width: 100% ;
+    justify-content: center;
+    background: none ;
+    color: $funcButton_color ;
+    border: 1px solid $funcButton_color;
+  }
+  &_show-more::after{
+    transform: rotate(-90deg);
+  }
+
+  &_submit{
+    background: $funcButton_color ;
+  }
+
+  &_subscribe{
+    background-color: $funcButton_color ;
+  }
+}

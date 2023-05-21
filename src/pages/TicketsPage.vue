@@ -13,11 +13,7 @@
                             </h3>
                         </div>
                         <div class="main-block__buttons">
-                            <BaseSelect
-                                :options="statuses"
-                                @select="sortByStatus"
-                                :selected="selected"
-                            />
+                            <BaseRadio/>
                         </div>
                     </div>
                     <div class="main-block__body">
@@ -127,8 +123,10 @@ import TicketsSlider from "@/components/sliders/TicketsSlider.vue";
 import BonusCard from "@/components/blocks/BonusCard.vue";
 import BaseSelect from "@/components/ui/BaseSelect.vue";
 import {mapGetters} from "vuex";
+import BaseRadio from "@/components/ui/BaseRadio.vue";
 export default {
     components: {
+        BaseRadio,
         BaseSelect,
         BonusCard,
         TicketsSlider

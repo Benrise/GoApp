@@ -1,27 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer__container">
-      <div class="subscribe">
-        <div class="subscribe__title">
-          Подпишитесь на акции и анонсы различных событий
-        </div>
-        <div class="subscribe__main">
-          <form action="" class="subscribe__form">
-            <input
-              type="text"
-              placeholder="Электронная почта"
-              class="subscribe__input"
-            />
-            <SubscribeButton>Подписаться</SubscribeButton>
-          </form>
-          <div class="subscribe__policy">
-            Подписываясь на рассылку, вы соглашаетесь с
-            <a href="#" class="subscribe__policy-link"
-              >политикой конфиденциальности</a
-            >
-          </div>
-        </div>
-      </div>
+      <TheSubscribe :title="`Подпишитесь на акции и анонсы различных событий`"/>
       <div class="footer__main">
         <nav class="footer__menu menu-footer">
           <ul class="menu-footer__list">
@@ -89,5 +69,5 @@
   </footer>
 </template>
 <script setup>
-import SubscribeButton from "@/components/ui/SubscribeButton.vue";
+import TheSubscribe from "@/components/blocks/TheSubscribe.vue";
 </script>

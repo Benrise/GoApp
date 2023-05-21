@@ -18,7 +18,7 @@
               class="search__input"
             />
           </div>
-          <SubmitButton>Поиск</SubmitButton>
+            <SubmitButton :label="`Поиск`"/>
         </div>
       </div>
 

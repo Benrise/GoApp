@@ -184,3 +184,7 @@
 ._icon-bin:before {
     content: "\e9ad";
 }
+
+.rotate-arrow::after {
+    transform: rotate(90deg) !important;
+}

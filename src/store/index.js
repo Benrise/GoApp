@@ -161,14 +161,6 @@ export default createStore({
         ],
 
     },
-    getters: {
-        getTickets(state) {
-            return state.tickets;
-        },
-        getCategories(state){
-            return state.categories;
-        }
-    },
     mutations: {
         updateTickets(state, tickets) {
             state.tickets = tickets;

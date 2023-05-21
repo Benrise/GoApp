@@ -1,5 +1,5 @@
 <template>
-    <FilterButton class="_reset _icon-xmark" @click="reset"><slot></slot></FilterButton>
+    <FilterButton class="base-button_reset _icon-xmark" @click="reset"></FilterButton>
 </template>
 
 <script>

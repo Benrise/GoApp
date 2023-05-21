@@ -1,9 +1,7 @@
 <template>
-    <keep-alive>
     <div class="tabbar__section section" v-show="title == selectedTitle">
         <slot />
     </div>
-    </keep-alive>
 </template>
 
 <script>

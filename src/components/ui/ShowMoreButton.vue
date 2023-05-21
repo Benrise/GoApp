@@ -1,5 +1,6 @@
 <template>
-    <BaseButton class="main-block__button_show-more" />
+    <BaseButton
+        class="base-button_show-more _icon-arrow" ></BaseButton>
 </template>
 
 <script>
@@ -15,13 +16,4 @@ export default {
 </script>
 
 <style lang="scss">
-@import "src/scss/variables";
-.main-block__button_show-more{
-    max-width: none;
-    width: 100%;
-    justify-content: center;
-    background: none;
-    color: $funcButton_color;
-    border: 1px solid $funcButton_color;
-}
 </style>

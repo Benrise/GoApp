@@ -35,7 +35,7 @@
             :spaceBetween=24
 
             class="tickets__slider">
-                <swiper-slide v-for="ticket in tickets" :key="ticket.id" class="swiper-slide">
+                <swiper-slide v-for="ticket in updatedTickets" :key="ticket.id" class="swiper-slide">
                     <TicketCard
                             :id="ticket.id"
                             :title="ticket.title"
@@ -132,22 +132,18 @@ export default {
         };
     },
     computed: {
-        ...mapGetters(['getCategories']),
+        ...mapState({
+            tickets: state => state.tickets,
+            categories: state => state.categories
+        }),
         updatedTickets() {
             return this.tickets.map(ticket => {
                 return {
                     ...ticket,
-                    category: this.getCategories.find(category => category.id === ticket.category)
+                    category: this.categories.find(category => category.id === ticket.category)
                 };
             });
         },
-        ...mapState({
-            tickets: state => state.tickets
-        })
-    },
-    created() {
-        const updatedTickets = this.updatedTickets;
-        this.updateTickets(updatedTickets);
     },
     setup() {
         return {

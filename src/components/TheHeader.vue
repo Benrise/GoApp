@@ -23,7 +23,7 @@
           </form>
         </div>
       </div>
-      <nav class="header__menu menu">
+      <nav class="header__menu menu" :class="{ '_active': isMenuOpen }">
         <ul class="menu__list">
           <li class="menu__item">
             <router-link to="/calendar" class="menu__link _icon-calendar"
@@ -36,16 +36,24 @@
             >
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link _icon-message">Будьте в курсе</a>
+            <a href="" class="menu__link _icon-message"
+               @click.prevent="openModal"
+
+            >Будьте в курсе</a>
           </li>
           <li class="menu__item">
-            <a href="" class="menu__link _icon-geo">Москва</a>
+            <a href="" class="menu__link _icon-geo" >Москва</a>
           </li>
           <li class="menu__item _hidden">
             <router-link to="/profile" class="menu__link _icon-profile"
               >Профиль</router-link
             >
           </li>
+            <li class="menu__item _hidden">
+                <router-link to="/profile" class="menu__link _icon-exit"
+                >Войти</router-link
+                >
+            </li>
         </ul>
       </nav>
         <!-- Показать в случае авторизации -->
@@ -61,9 +69,58 @@
         </router-link>
       </div>
 
-      <div class="header__menu-icon" @click="toggle()"><span></span></div>
+      <div class="header__menu-icon"  @click="toggleMenu"><span></span></div>
     </div>
   </header>
+    <transition name="fade">
+      <SubscribeModal v-model:show="isModalOpen"
+
+      />
+    </transition>
 </template>
+
+<script>
+
+import BaseModal from "@/components/ui/modal/BaseModal.vue";
+import SubscribeButton from "@/components/ui/SubscribeButton.vue";
+import BaseButton from "@/components/ui/BaseButton.vue";
+import SubscribeModal from "@/components/ui/modal/SubscribeModal.vue";
+export default {
+    components:{
+        SubscribeModal,
+        BaseButton,
+        SubscribeButton,
+        BaseModal
+    },
+    data() {
+        return {
+            isMenuOpen: false,
+            isModalOpen: false
+        };
+    },
+    methods: {
+        toggleMenu() {
+            document.body.classList.toggle('_lock');
+            this.isMenuOpen = !this.isMenuOpen;
+        },
+        openModal(){
+            this.isModalOpen = true;
+        },
+        closeModal(){
+            this.isModalOpen = false;
+        }
+
+    },
+    watch: {
+        '$route' () {
+            this.isMenuOpen = false
+        }
+    }
+
+}
+</script>
+
+<style>
+</style>
 
 

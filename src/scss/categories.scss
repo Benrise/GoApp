@@ -28,43 +28,43 @@
 
 ._category {
     &-travel {
-        background-color: map-get($map: $categories, $key: travel);
+        background-color: map-get($map: $categories, $key: travel) !important;
     }
     &-healthAndBeauty {
 
-        background-color: map-get($map: $categories, $key: healthAndBeauty);
+        background-color: map-get($map: $categories, $key: healthAndBeauty) !important;
     }
     &-movie {
 
-        background-color: map-get($map: $categories, $key: movie);
+        background-color: map-get($map: $categories, $key: movie) !important;
     }
     &-sportAndFitness {
 
-        background-color: map-get($map: $categories, $key: sportAndFitness);
+        background-color: map-get($map: $categories, $key: sportAndFitness)  !important;
     }
     &-music {
 
-        background-color: map-get($map: $categories, $key: music);
+        background-color: map-get($map: $categories, $key: music) !important;
     }
     &-concert {
 
-        background-color: map-get($map: $categories, $key: concert);
+        background-color: map-get($map: $categories, $key: concert) !important;
     }
     &-comedy {
 
-        background-color: map-get($map: $categories, $key: comedy);
+        background-color: map-get($map: $categories, $key: comedy) !important;
     }
     &-party {
 
-        background-color: map-get($map: $categories, $key: party);
+        background-color: map-get($map: $categories, $key: party) !important;
     }
     &-theater {
 
-        background-color: map-get($map: $categories, $key: theater);
+        background-color: map-get($map: $categories, $key: theater) !important;
     }
     &-art {
 
-        background-color: map-get($map: $categories, $key: art);
+        background-color: map-get($map: $categories, $key: art) !important;
     }
 }
 

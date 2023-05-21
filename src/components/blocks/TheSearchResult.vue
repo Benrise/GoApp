@@ -18,16 +18,16 @@
               class="search__input"
             />
           </div>
-          <SubmitButton>Поиск</SubmitButton>
+          <SubmitButton :label="`Поиск`"/>
         </div>
         <div class="filters">
-            <FilterButton>Что именно?</FilterButton>
-            <FilterButton>Где?</FilterButton>
-            <DatePicker></DatePicker>
-            <FilterButton>Целевая категория</FilterButton>
-            <FilterButton>Рейтинг</FilterButton>
-            <FilterButton>Разное</FilterButton>
-          <ResetFilterButton>Сброс</ResetFilterButton>
+            <FilterButton :label="`Что именно?`"/>
+            <FilterButton :label="`Где`"/>
+            <DatePicker />
+            <FilterButton :label="`Целевая категория`"/>
+            <FilterButton :label="`Рейтинг`"/>
+            <FilterButton :label="`Разное`"/>
+          <ResetFilterButton :label="`Сброс`"/>
         </div>
       </form>
       <div class="main-block__body">

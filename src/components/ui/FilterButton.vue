@@ -1,5 +1,5 @@
 <template>
-    <BaseButton class="filters__item"><slot></slot></BaseButton>
+    <BaseButton class="base-button_filter"></BaseButton>
 </template>
 
 <script>
@@ -15,13 +15,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import "src/scss/variables";
-.filters__item{
-    color: $secondaryFontColor !important;
-    position: relative;
-    border: 1px solid $fontColor;
-    background: none !important;
 
-}
 
 </style>

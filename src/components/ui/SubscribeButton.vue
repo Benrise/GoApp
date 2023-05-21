@@ -1,5 +1,5 @@
 <template>
-    <BaseButton class="subscribe__button" @click="subscribe"><slot></slot></BaseButton>
+    <BaseButton class="base-button_subscribe" @click="subscribe"></BaseButton>
 </template>
 
 <script>
@@ -20,8 +20,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "src/scss/variables";
-.subscribe__button{
-  background-color: $funcButton_color !important;
-}
+
 </style>

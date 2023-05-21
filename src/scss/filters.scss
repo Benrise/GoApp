@@ -118,39 +118,6 @@
     @include adaptiveValue("gap",24,12);
 
     &__item {
-
-        //color: white;
-        //display: flex;
-        //width: 100%;
-        //max-width: rem(250);
-        //flex-direction: row;
-        //justify-content: center;
-        //align-items: center;
-        //gap: rem(12);
-        //position: relative;
-        //height: rem(40);
-        //border: 1px solid $fontColor;
-        //border-radius: 12px;
-        //background: none !important;
-
-        &._reset {
-            border: 1px solid $funcButton_color;
-            color: $funcButton_color;
-            background: none !important;
-            @include adaptiveValue('font-size', 16, 12);
-            font-weight: 500;
-            max-width: fit-content;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            padding: rem(12) rem(24);
-            & > span {
-                max-width: 100%;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-            }
-        }
         &._when-filter .date-picker {
             overflow: hidden;
             text-overflow: ellipsis;

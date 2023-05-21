@@ -53,7 +53,7 @@ export default defineComponent({
     name: "TicketCard",
     components: {BaseButton},
     props:{
-        id: 1,
+        id: Number,
         title: String,
         place: String,
         date: String,

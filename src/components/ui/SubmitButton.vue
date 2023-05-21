@@ -1,5 +1,5 @@
 <template>
-    <BaseButton class="main-block__button_submit" @click="submit"><slot></slot></BaseButton>
+    <BaseButton class="base-button_submit" @click="submit"></BaseButton>
 </template>
 
 <script>
@@ -20,8 +20,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import "src/scss/variables";
-.main-block__button_submit{
-    background: $funcButton_color !important;
-}
+
 </style>

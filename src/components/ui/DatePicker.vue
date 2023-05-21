@@ -1,13 +1,14 @@
 <template>
-    <DatePicker :placeholder="placeholderText" class="date-picker" v-model="date"></DatePicker>
+    <DatePicker :placeholder="placeholderText" class="base-button_date-picker" v-model="date"/>
 </template>
 
 <script>
 import DatePicker from '@vuepic/vue-datepicker';
 import '@vuepic/vue-datepicker/dist/main.css'
+import BaseButton from "@/components/ui/BaseButton.vue";
 
 export default {
-    components: { DatePicker },
+    components: {BaseButton, DatePicker },
     data() {
         return {
             date: null,
@@ -19,20 +20,4 @@ export default {
 
 <style lang="scss">
 
-@import "src/scss/style.scss";
-
-
-:root{
-    .date-picker{
-        max-width: rem(250);
-        ::placeholder {
-            all: unset;
-            color: $secondaryFontColor;
-            font-family: 'Inter',sans-serif;
-            @include adaptiveValue('font-size',16,12);
-            font-weight: 600;
-            white-space: nowrap;
-        }
-    }
-}
 </style>

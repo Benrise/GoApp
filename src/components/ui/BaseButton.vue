@@ -4,7 +4,7 @@ export default {
     props:{
       label:{
           type: String,
-          default: "Кнопка"
+          default: ""
 
       },
       disabled:{
@@ -15,7 +15,7 @@ export default {
     computed:{
       classModificator(){
           return{
-              "main-block__button_disabled": this.disabled
+              "main-block__button_disabled": this.disabled,
           }
       }
     }
@@ -25,5 +25,9 @@ export default {
 </script>
 
 <template>
-    <button :class="classModificator" type="button" class="main-block__button">{{label}}</button>
+    <button :class="classModificator" type="button" class="base-button">{{label}}</button>
 </template>
+
+<style lang="scss">
+
+</style>
