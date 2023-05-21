@@ -23,7 +23,6 @@ export default ({
             this.isOpen = !this.isOpen
         },
         updateVideoSource(broadcastUrl) {
-            console.log(broadcastUrl + "from child")
             this.$emit("update-video-source", broadcastUrl);
         }
     }
