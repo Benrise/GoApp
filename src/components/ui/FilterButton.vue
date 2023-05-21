@@ -1,5 +1,5 @@
 <template>
-    <BaseButton class="filters__item" @click="filter"><slot></slot></BaseButton>
+    <BaseButton class="filters__item"><slot></slot></BaseButton>
 </template>
 
 <script>
@@ -10,11 +10,6 @@ export default {
     components:{
         BaseButton
     },
-    methods:{
-        filter(){
-            console.log("Filter!")
-        }
-    }
 
 }
 </script>
@@ -22,7 +17,7 @@ export default {
 <style lang="scss">
 @import "src/scss/variables";
 .filters__item{
-    color: $secondaryFontColor;
+    color: $secondaryFontColor !important;
     position: relative;
     border: 1px solid $fontColor;
     background: none !important;

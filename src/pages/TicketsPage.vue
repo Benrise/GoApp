@@ -13,12 +13,16 @@
                             </h3>
                         </div>
                         <div class="main-block__buttons">
-
+                            <BaseSelect
+                                :options="statuses"
+                                @select="sortByStatus"
+                                :selected="selected"
+                            />
                         </div>
                     </div>
                     <div class="main-block__body">
                         <div class="tickets">
-                            <TicketsSlider/>
+                            <TicketsSlider @statusUpdated="sortByStatus"/>
                         </div>
                     </div>
                 </div>
@@ -111,14 +115,7 @@
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
-
-
-
-
             </section>
         </main>
     </div>
@@ -128,20 +125,46 @@
 
 import TicketsSlider from "@/components/sliders/TicketsSlider.vue";
 import BonusCard from "@/components/blocks/BonusCard.vue";
+import BaseSelect from "@/components/ui/BaseSelect.vue";
 export default {
     components: {
+        BaseSelect,
         BonusCard,
         TicketsSlider
     },
     name: "Tickets",
     data() {
         return {
-            options: [
-                {name: 'Option 1', value: 1},
-                {name: 'Option 2', value: 2}
-            ]
+            statuses: [
+                {name: 'Активные', value: 1},
+                {name: 'Архив', value: 0}
+            ],
+            selected: "Активные",
+            sorted: []
         }
     },
+    computed:{
+      filteredTickets(){
+          if (this.sorted.length){
+              return this.sorted
+          }else{
+              this.tickets //Как я могу достать её из родительского компонента TicketsSlider???
+          }
+      }
+    },
+    methods:{
+        sortByStatus(status){
+            this.sorted = [];
+            let vm = this;
+            this.tickets.map(function (item){
+                if (item.status === status.name){
+                    vm.sorted.push(item);
+                }
+            })
+
+        }
+
+    }
 }
 </script>
 
