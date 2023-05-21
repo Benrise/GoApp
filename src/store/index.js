@@ -335,7 +335,7 @@ export default createStore({
                 location: "Москва",
                 price: "high",
                 img: "public/images/events/new-year-music-festival-promo.jpg",
-                category: 5,
+                category: 4,
                 coordinates: [37.645428, 55.776591]
             },
             {
@@ -359,7 +359,7 @@ export default createStore({
                 location: "Москва",
                 price: "high",
                 img: "public/images/events/rock-band-concert-promo.jpg",
-                category: 5,
+                category: 4,
                 coordinates: [37.622635, 55.747326]
             },
             {
@@ -397,9 +397,528 @@ export default createStore({
                 img: "public/images/events/jazz-music-concert-promo.jpg",
                 category: 4,
                 coordinates: [37.607852, 55.743519]
+            },
+            {
+                id: 20,
+                day: "3",
+                month: "июня",
+                name: "Выставка современного искусства",
+                rating: 8.9,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/modern-art-exhibition-promo.jpg",
+                category: 1,
+                coordinates: [37.601095, 55.770239]
+            },
+            {
+                id: 21,
+                day: "15",
+                month: "июля",
+                name: "Концерт классической музыки",
+                rating: 9.5,
+                location: "Москва",
+                price: "high",
+                img: "public/images/events/classical-music-concert-promo.jpg",
+                category: 4,
+                coordinates: [37.599533, 55.769687]
+            },
+            {
+                id: 22,
+                day: "28",
+                month: "августа",
+                name: "Танцевальное шоу",
+                rating: 7.2,
+                location: "Москва",
+                price: "low",
+                img: "public/images/events/dance-show-promo.jpg",
+                category: 1,
+                coordinates: [37.594215, 55.757518]
+            },
+            {
+                id: 23,
+                day: "10",
+                month: "сентября",
+                name: "Концерт поп-исполнителя",
+                rating: 8.3,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/pop-artist-concert-promo.jpg",
+                category: 5,
+                coordinates: [37.612911, 55.740953]
+            },
+            {
+                id: 24,
+                day: "22",
+                month: "октября",
+                name: "Фестиваль кулинарии",
+                rating: 9.1,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/culinary-festival-promo.jpg",
+                category: 1,
+                coordinates: [37.625145, 55.736993]
+            },
+            {
+                id: 25,
+                day: "5",
+                month: "ноября",
+                name: "Выставка фотографии",
+                rating: 8.7,
+                location: "Москва",
+                price: "low",
+                img: "public/images/events/photography-exhibition-promo.jpg",
+                category: 2,
+                coordinates: [37.416560, 55.782423]
+            },
+            {
+                id: 26,
+                day: "18",
+                month: "декабря",
+                name: "Концерт хоровой музыки",
+                rating: 9.4,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/choir-music-concert-promo.jpg",
+                category: 4,
+                coordinates: [37.438650, 55.780358]
+            },
+            {
+                id: 27,
+                day: "10",
+                month: "января",
+                name: "Театральное представление",
+                rating: 8.5,
+                location: "Москва",
+                price: "high",
+                img: "public/images/events/theater-performance-promo.jpg",
+                category: 2,
+                coordinates: [37.486959, 55.777894]
+            },
+            {
+                id: 28,
+                day: "22",
+                month: "февраля",
+                name: "Выставка скульптур",
+                rating: 8.2,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/sculpture-exhibition-promo.jpg",
+                category: 4,
+                coordinates: [37.524195, 55.760628]
+            },
+            {
+                id: 29,
+                day: "7",
+                month: "марта",
+                name: "Концерт электронной музыки",
+                rating: 7.9,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/electronic-music-concert-promo.jpg",
+                category: 4,
+                coordinates: [37.554650, 55.734924]
+            },
+
+            {
+                id: 30,
+                day: "15",
+                month: "апреля",
+                name: "Фестиваль комедийного кино",
+                rating: 9.0,
+                location: "Москва",
+                price: "high",
+                img: "public/images/events/comedy-film-festival-promo.jpg",
+                category: 4,
+                coordinates: [37.555670, 55.681119]
+            },
+            {
+                id: 31,
+                day: "28",
+                month: "мая",
+                name: "Выставка исторических артефактов",
+                rating: 9.6,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/historical-artifacts-exhibition-promo.jpg",
+                category: 3,
+                coordinates: [37.602573, 55.665523]
+            },
+            {
+                id: 32,
+                day: "10",
+                month: "июня",
+                name: "Концерт рэп-исполнителя",
+                rating: 8.8,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/rap-artist-concert-promo.jpg",
+                category: 5,
+                coordinates: [37.641832, 55.672297]
+            },
+            {
+                id: 33,
+                day: "22",
+                month: "июля",
+                name: "Танцевальный флешмоб",
+                rating: 7.5,
+                location: "Москва",
+                price: "low",
+                img: "public/images/events/dance-flashmob-promo.jpg",
+                category: 2,
+                coordinates: [37.672494, 55.692981]
+            },
+            {
+                id: 34,
+                day: "5",
+                month: "августа",
+                name: "Выставка моды",
+                rating: 8.3,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/fashion-exhibition-promo.jpg",
+                category: 1,
+                coordinates: [37.706374, 55.709521]
+            },
+            {
+                id: 40,
+                day: "22",
+                month: "января",
+                name: "Кинофестиваль",
+                rating: 9.1,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/film-festival-promo.jpg",
+                category: 2,
+                coordinates: [37.610762, 55.625122]
+            },
+            {
+                id: 41,
+                day: "5",
+                month: "февраля",
+                name: "Фитнес-марафон",
+                rating: 8.9,
+                location: "Москва",
+                price: "low",
+                img: "public/images/events/fitness-marathon-promo.jpg",
+                category: 3,
+                coordinates: [37.613100, 55.629870]
+            },
+            {
+                id: 42,
+                day: "18",
+                month: "марта",
+                name: "Концерт классической музыки",
+                rating: 9.7,
+                location: "Москва",
+                price: "high",
+                img: "public/images/events/classical-music-concert-promo.jpg",
+                category: 4,
+                coordinates: [37.617260, 55.632618]
+            },
+            {
+                id: 43,
+                day: "3",
+                month: "апреля",
+                name: "Шоу стендап-комедии",
+                rating: 8.4,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/standup-comedy-show-promo.jpg",
+                category: 6,
+                coordinates: [37.621303, 55.637339]
+            },
+            {
+                id: 44,
+                day: "15",
+                month: "мая",
+                name: "Вечеринка в стиле 80-х",
+                rating: 7.8,
+                location: "Москва",
+                price: "high",
+                img: "public/images/events/80s-party-promo.jpg",
+                category: 7,
+                coordinates: [37.625200, 55.641541]
+            },
+
+            {
+                id: 45,
+                day: "28",
+                month: "мая",
+                name: "Танцевальный фестиваль",
+                rating: 8.7,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/dance-festival-promo.jpg",
+                category: 9,
+                coordinates: [37.615866, 55.654872]
+            },
+            {
+                id: 46,
+                day: "10",
+                month: "июня",
+                name: "Концерт рэп-исполнителя",
+                rating: 9.3,
+                location: "Москва",
+                price: "high",
+                img: "public/images/events/rap-artist-concert-promo.jpg",
+                category: 5,
+                coordinates: [37.612956, 55.660820]
+            },
+            {
+                id: 47,
+                day: "22",
+                month: "июля",
+                name: "Выставка современного искусства",
+                rating: 9.6,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/modern-art-exhibition-promo.jpg",
+                category: 9,
+                coordinates: [37.608889, 55.668736]
+            },
+            {
+                id: 48,
+                day: "5",
+                month: "августа",
+                name: "Концерт джазовой музыки",
+                rating: 8.8,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/jazz-music-concert-promo.jpg",
+                category: 4,
+                coordinates: [37.604231, 55.678094]
+            },
+            {
+                id: 49,
+                day: "18",
+                month: "августа",
+                name: "Театральное представление",
+                rating: 8.5,
+                location: "Москва",
+                price: "high",
+                img: "public/images/events/theater-performance-promo.jpg",
+                category: 8,
+                coordinates: [37.600548, 55.687382]
+            },
+
+            {
+                id: 50,
+                day: "30",
+                month: "августа",
+                name: "Выставка фотографии",
+                rating: 9.2,
+                location: "Москва",
+                price: "low",
+                img: "public/images/events/photography-exhibition-promo.jpg",
+                category: 9,
+                coordinates: [37.585459, 55.778269]
+            },
+            {
+                id: 51,
+                day: "12",
+                month: "сентября",
+                name: "Концерт поп-группы",
+                rating: 8.9,
+                location: "Москва",
+                price: "high",
+                img: "public/images/events/pop-band-concert-promo.jpg",
+                category: 5,
+                coordinates: [37.582282, 55.772491]
+            },
+            {
+                id: 52,
+                day: "25",
+                month: "октября",
+                name: "Танцевальная вечеринка",
+                rating: 7.6,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/dance-party-promo.jpg",
+                category: 7,
+                coordinates: [37.578003, 55.766592]
+            },
+            {
+                id: 53,
+                day: "7",
+                month: "ноября",
+                name: "Выставка скульптуры",
+                rating: 8.3,
+                location: "Москва",
+                price: "low",
+                img: "public/images/events/sculpture-exhibition-promo.jpg",
+                category: 9,
+                coordinates: [37.573723, 55.760574]
+            },
+            {
+                id: 54,
+                day: "20",
+                month: "декабря",
+                name: "Концерт классической музыки",
+                rating: 9.7,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/classical-music-concert-promo.jpg",
+                category: 4,
+                coordinates: [37.569335, 55.754440]
+            },
+
+            {
+                id: 55,
+                day: "2",
+                month: "января",
+                name: "Концерт рок-группы",
+                rating: 9.0,
+                location: "Москва",
+                price: "high",
+                img: "public/images/events/rock-band-concert-promo.jpg",
+                category: 5,
+                coordinates: [37.646677, 55.884390]
+            },
+            {
+                id: 56,
+                day: "15",
+                month: "февраля",
+                name: "Выставка живописи",
+                rating: 8.8,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/painting-exhibition-promo.jpg",
+                category: 9,
+                coordinates: [37.641813, 55.879679]
+            },
+            {
+                id: 57,
+                day: "28",
+                month: "марта",
+                name: "Концерт электронной музыки",
+                rating: 9.4,
+                location: "Москва",
+                price: "high",
+                img: "public/images/events/electronic-music-concert-promo.jpg",
+                category: 4,
+                coordinates: [37.636939, 55.874958]
+            },
+            {
+                id: 58,
+                day: "10",
+                month: "апреля",
+                name: "Театральное представление",
+                rating: 8.6,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/theater-performance-promo.jpg",
+                category: 8,
+                coordinates: [37.632070, 55.870211]
+            },
+            {
+                id: 59,
+                day: "23",
+                month: "мая",
+                name: "Концерт джазовой музыки",
+                rating: 9.7,
+                location: "Москва",
+                price: "high",
+                img: "public/images/events/jazz-music-concert-promo.jpg",
+                category: 4,
+                coordinates: [37.627205, 55.865437]
+            },
+
+            {
+                id: 60,
+                day: "5",
+                month: "июня",
+                name: "Выставка фотографии",
+                rating: 8.9,
+                location: "Москва",
+                price: "low",
+                img: "public/images/events/photography-exhibition-promo.jpg",
+                category: 9,
+                coordinates: [37.576932, 55.606840]
+            },
+            {
+                id: 61,
+                day: "18",
+                month: "июня",
+                name: "Танцевальный фестиваль",
+                rating: 9.3,
+                location: "Москва",
+                price: "high",
+                img: "public/images/events/dance-festival-promo.jpg",
+                category: 9,
+                coordinates: [37.570756, 55.604279]
+            },
+            {
+                id: 62,
+                day: "1",
+                month: "июля",
+                name: "Концерт поп-исполнителя",
+                rating: 8.7,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/pop-artist-concert-promo.jpg",
+                category: 5,
+                coordinates: [37.565415, 55.602470]
+            },
+            {
+                id: 63,
+                day: "14",
+                month: "июля",
+                name: "Выставка современного искусства",
+                rating: 9.5,
+                location: "Москва",
+                price: "high",
+                img: "public/images/events/modern-art-exhibition-promo.jpg",
+                category: 9,
+                coordinates: [37.560215, 55.600521]
+            },
+            {
+                id: 64,
+                day: "27",
+                month: "июля",
+                name: "Концерт рэп-исполнителя",
+                rating: 8.8,
+                location: "Москва",
+                price: "avg",
+                img: "public/images/events/rap-artist-concert-promo.jpg",
+                category: 5,
+                coordinates: [37.555096, 55.598435]
             }
 
         ],
+        activeBroadcasts: [
+            {
+                count: 2,
+                items: [
+                    { title: "Парижские улицы", url: "http://url1" },
+                    { title: "Пляжи Бали", url: "http://url2" }
+                ],
+                category: 0
+            },
+            {
+                count: 1,
+                items: [
+                    { title: "Спа и релакс", url: "http://url3" }
+                ],
+                category: 1
+            },
+            {
+                count: 3,
+                items: [
+                    { title: "Coachella Festifal 2023", url: "public/video/mp4/videoplayback.mp4" },
+                    { title: "Новые премьеры", url: "http://url5" },
+                    { title: "Ретроспектива классики", url: "http://url6" }
+                ],
+                category: 2
+            },
+            {
+                count: 2,
+                items: [
+                    { title: "Футбольный матч", url: "http://url7" },
+                    { title: "Тренировка в зале", url: "http://url8" }
+                ],
+                category: 3
+            }
+        ]
 
 
     },

@@ -12,102 +12,22 @@
       <div class="main-block__body">
         <div class="broadcast">
           <div class="broadcast__left">
-            <div class="broadcast__spoller" data-spollers data-one-spoller>
-              <div class="broadcast__spoller-item">
-                <button
-                  type="button"
-                  tab-index="-1"
-                  data-spoller
-                  class="broadcast__title"
-                >
-                  <div class="broadcast__category broadcast__category_no-fill">
-                    Концерты
-                  </div>
-                  <div class="broadcast__count _icon-arrow">3</div>
-                </button>
-                <div class="broadcast__items">
-                  <button class="broadcast__item">
-                    Coachella Festifal 2023
-                  </button>
-                  <button class="broadcast__item">
-                    The Weeknd, Metro Boomin & Mike Dean - Live
-                  </button>
-                  <button class="broadcast__item">Дора</button>
-                </div>
-              </div>
-              <div class="broadcast__spoller-item">
-                <button
-                  type="button"
-                  tab-index="-1"
-                  data-spoller
-                  class="broadcast__title"
-                >
-                  <div class="broadcast__category broadcast__category_no-fill">
-                    Спорт и фитнесс
-                  </div>
-                  <div class="broadcast__count _icon-arrow">3</div>
-                </button>
-                <div class="broadcast__items">
-                  <button class="broadcast__item">
-                    Coachella Festifal 2023
-                  </button>
-                  <button class="broadcast__item">
-                    The Weeknd, Metro Boomin & Mike Dean - Live
-                  </button>
-                  <button class="broadcast__item">Дора</button>
-                </div>
-              </div>
-              <div class="broadcast__spoller-item">
-                <button
-                  type="button"
-                  tab-index="-1"
-                  data-spoller
-                  class="broadcast__title"
-                >
-                  <div class="broadcast__category broadcast__category_no-fill">
-                    Кино
-                  </div>
-                  <div class="broadcast__count _icon-arrow">1</div>
-                </button>
-                <div class="broadcast__items">
-                  <button class="broadcast__item">
-                    Coachella Festifal 2023
-                  </button>
-                  <button class="broadcast__item">
-                    The Weeknd, Metro Boomin & Mike Dean - Live
-                  </button>
-                  <button class="broadcast__item">Дора</button>
-                </div>
-              </div>
-              <div class="broadcast__spoller-item">
-                <button
-                  type="button"
-                  tab-index="-1"
-                  data-spoller
-                  class="broadcast__title"
-                >
-                  <div class="broadcast__category broadcast__category_no-fill">
-                    Другие
-                  </div>
-                  <div class="broadcast__count _icon-arrow">5</div>
-                </button>
-                <div class="broadcast__items">
-                  <button class="broadcast__item">
-                    Coachella Festifal 2023
-                  </button>
-                  <button class="broadcast__item">
-                    The Weeknd, Metro Boomin & Mike Dean - Live
-                  </button>
-                  <button class="broadcast__item">Дора</button>
-                </div>
-              </div>
-            </div>
+            <BaseAccordion
+                    v-for="broadcast in updatedColorBroadcasts"
+                    :key="broadcast.category"
+                    :categoryTitle="broadcast.category.title"
+                    :itemsInCategory="broadcast.count"
+                    :categoryItems="broadcast.items"
+                    :categoryName="broadcast.category.name"
+                    :broadcastUrl="broadcast.url"
+                    @update-video-source="updateVideoSource"
+            />
           </div>
           <div class="broadcast__right">
             <div class="broadcast__video">
               <video loop muted autoplay poster="" controls preload="metadata">
-                <source type="video/webm" src="" />
-                <source type="video/mp4" src="public/video/mp4/videoplayback.mp4" />
+                <source type="video/webm" :src="videoSource"  @updateVideoSource="updateVideoSource"/>
+                <source type="video/mp4" :src="videoSource" @updateVideoSource="updateVideoSource"/>
               </video>
             </div>
             <div class="broadcast__description">
@@ -115,7 +35,7 @@
                 <div class="broadcast__heading-title">
                   Coachella Festifal 2023
                 </div>
-                <ul class="broadcast__heading-additionals">
+                <ul class="broadcast__heading-additional">
                   <li class="broadcast__heading-additional">New-York</li>
                   <li class="broadcast__heading-additional">18+</li>
                 </ul>
@@ -135,8 +55,37 @@
 
 
 <script>
-
+import BaseAccordion from "@/components/ui/BaseAccordion.vue";
+import {mapState} from "vuex";
 export default {
+    components: {BaseAccordion},
+    name: "TheBroadcast",
+    data() {
+        return {
+            videoSource: "",
+        };
+    },
+    computed: {
+        ...mapState({
+            activeBroadcasts: state => state.activeBroadcasts,
+            categories: state => state.categories
+        }),
+        updatedColorBroadcasts() {
+            return this.activeBroadcasts.map(broadcast => {
+                return {
+                    ...broadcast,
+                    category: this.categories.find(category => category.id === broadcast.category)
+                };
+            });
+        },
+    },
+    methods: {
+        updateVideoSource(url) {
+            console.log(url + " from parent");
+            this.videoSource = url;
+        }
+    }
+
 
 };
 </script>

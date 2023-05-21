@@ -42,7 +42,7 @@ export default {
             container: "mapContainer",
             style: "mapbox://styles/benrise/clhvmskkx023s01pr6a4x5cad",
             center: [37.6174943, 55.7504461],
-            zoom: 9,
+            zoom: 12,
             language: 'ru',
         });
         map.addControl(new mapboxgl.NavigationControl());
@@ -53,8 +53,11 @@ export default {
                 .setLngLat(event.coordinates)
                 .addTo(map);
         });
+
+        map.setCenter()
+
         map.on('load', function () {
-            map.resize();
+            map.resize(37.6174943, 55.7504461);
         });
 
     },

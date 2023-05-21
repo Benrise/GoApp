@@ -30,7 +30,7 @@
         <div class="slide-card__functions-right">
             <div class="slide-card__functions-right-up">
                 <div class="slide-card__geo _icon-city">
-                    {{ rating }}
+                    {{ location }}
                 </div>
                 <div class="slide-card__price" :class="`_price-${price}`">
                     <span class="_icon-ruble-sign-square-1"></span>

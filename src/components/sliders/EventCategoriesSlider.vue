@@ -18,9 +18,6 @@
             :pauseOnMouseEnter="true"
             :reverseDirection="true"
             :breakpoints=" {
-            280:    {
-                        slidesPerView: 1
-                    },
             320:    {
                          slidesPerView: 2
                     },
