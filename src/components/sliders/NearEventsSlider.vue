@@ -117,7 +117,7 @@ export default {
                     rating: 7.9,
                     location: "Москва",
                     price: 'low',
-                    img: 'public/images/events/yoga-promo.jpg',
+                    img: '/images/events/yoga-promo.png',
                     category: 3
                 },
                 {
@@ -128,7 +128,7 @@ export default {
                     rating: 7.7,
                     location: "Москва",
                     price: 'avg',
-                    img: 'public/images/events/spider-man-promo.jpg',
+                    img: '/images/events/spider-man-promo.png',
                     category: 2
                 },
                 {
@@ -139,7 +139,7 @@ export default {
                     rating: 9.9,
                     location: "Москва",
                     price: 'high',
-                    img: 'public/images/events/the-beatles-promo.jpg',
+                    img: '/images/events/the-beatles-promo.png',
                     category: 4
                 },
                 {
@@ -150,7 +150,7 @@ export default {
                     rating: 8,
                     location: "Реутов",
                     price: 'free',
-                    img: 'public/images/events/art-promo.jpg',
+                    img: '/images/events/art-promo.png',
                     category: 9
                 },
 

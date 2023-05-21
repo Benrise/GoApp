@@ -8,7 +8,7 @@
                     <div class="main-block__body">
                         <div class="login">
                             <div class="login__sing-in">
-                                <img src="public/images/login_bg.png" class="login__bg" alt="">
+                                <img src="/public/images/login_bg.png" class="login__bg" alt="">
                                 <form class="form" id="sign-in" method="POST" action="">
                                     <div class="form__upper">
                                         <h2 class="form__title title">Авторизация</h2>
@@ -22,12 +22,12 @@
                                     <button class="form__button button ">Войти</button>
                                     <a class="form__link _hidden">Регистрация</a>
                                     <div class="form__icons">
-                                        <img class="form__icon" src="public/icons/VK_Compact_Logo.svg" />
+                                        <img class="form__icon" src="/public/icons/vk-compact-logo.svg" />
                                     </div>
                                 </form>
                             </div>
                             <div class="login__sing-up">
-                                <img src="public/images/login_bg.png" class="login__bg" alt="">
+                                <img src="/public/images/login_bg.png" class="login__bg" alt="">
                                 <form class="form" id="sign-up" method="POST" action="">
                                     <div class="form__upper">
                                         <h2 class="form__title title">Регистрация</h2>
@@ -44,7 +44,7 @@
                                     <button class="form__button button ">Зарегестрироваться</button>
                                     <a class="form__link _hidden">Регистрация</a>
                                     <div class="form__icons">
-                                        <img class="form__icon" src="public/icons/VK_Compact_Logo.svg" />
+                                        <img class="form__icon" src="/public/icons/vk-compact-logo.svg" />
                                     </div>
                                 </form>
                             </div>

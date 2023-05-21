@@ -8,9 +8,9 @@ export default defineComponent({
 
 <template>
     <div class="bonus__card b-card">
-        <img src="public/images/noise-filter.png" class="b-card__filter" alt="">
+        <img src="/images/noise-filter.png" class="b-card__filter" alt="">
         <!--          Проверка на адаптивность согласно макету карточки             -->
-        <!-- <img src="public/images/bonus-card.png" class="b-card__filter" alt=""> -->
+        <!-- <img src="/images/bonus-card.png" class="b-card__filter" alt=""> -->
         <div class="b-card__sign">
             GO
         </div>
@@ -24,7 +24,7 @@ export default defineComponent({
         </div>
         <div class="b-card__logo">
             <div class="b-card__img">
-                <img src="public/images/logo.png" alt="">
+                <img src="/images/logo.png" alt="">
             </div>
             <div class="b-card__label">
                 Бонус

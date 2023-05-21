@@ -3,7 +3,7 @@
     <div class="header__container">
       <router-link to="/" class="header__logo">
         <img
-          src="public/icons/Logo_group.svg"
+          src="/icons/go-logo-group.svg"
           class="header__image header__image_adaptive"
           alt="Logo"
         />

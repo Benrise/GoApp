@@ -40,9 +40,6 @@
                             <div class="bonus__main">
                                 <div class="bonus__left">
                                     <BonusCard/>
-
-
-
                                 </div>
                                 <div class="bonus__right">
                                     <div class="bonus__scores">

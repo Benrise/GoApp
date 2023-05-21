@@ -23,7 +23,7 @@
                                 </div>
                             </div>
                             <div class="profile__center">
-                                <div class="profile__pic"><img src="public/icons/Logo.svg" alt=""></div>
+                                <div class="profile__pic"><img src="../../public/icons/go-logo.svg" alt=""></div>
                                 <div class="profile__name">
                                     <div class="profile__name-title">
                                         Латыпов Артём Равилевич
@@ -119,7 +119,7 @@
                                                         Безопасно импортированы из
                                                     </div>
                                                     <div class="section__img">
-                                                        <img src="public/icons/Gosuslugi Logo.svg" alt="">
+                                                        <img src="../../public/icons/gosuslugi-logo.svg" alt="">
                                                     </div>
                                                     <div class="section__edit _icon-pencil">
 

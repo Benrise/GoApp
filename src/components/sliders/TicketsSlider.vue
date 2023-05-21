@@ -47,9 +47,9 @@
                     />
                 </swiper-slide>
         </swiper>
-        <div class="tickets__slider-btn-next swiper-button-next"><img src="public/images/slider-button.svg"
+        <div class="tickets__slider-btn-next swiper-button-next"><img src="/images/slider-button.svg"
                                                                       alt="Слайдер кнопка вперед"></div>
-        <div class="tickets__slider-btn-prev swiper-button-prev"><img src="public/images/slider-button.svg"
+        <div class="tickets__slider-btn-prev swiper-button-prev"><img src="/images/slider-button.svg"
                                                                       alt="Слайдер кнопка назад"></div>
         <div class="tickets__slider-pagination swiper-pagination"></div>
     </div>

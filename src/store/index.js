@@ -10,7 +10,7 @@ export default createStore({
                 date: '19.12.2023',
                 time: '13:00',
                 timeZone: 'МСК',
-                img: 'public/images/tickets/SpiderMan.jpg',
+                img: '/images/tickets/SpiderMan.png',
                 category: 2,
                 status: true
             },
@@ -21,7 +21,7 @@ export default createStore({
                 date: '19.12.2023',
                 time: '10:30',
                 timeZone: 'МСК',
-                img: 'public/images/tickets/WinterSports.jpg',
+                img: '/images/tickets/WinterSports.png',
                 category: 3,
                 status: true
             },
@@ -33,7 +33,7 @@ export default createStore({
                 date: '19.07.2023',
                 time: '16:20',
                 timeZone: 'МСК',
-                img: 'public/images/tickets/NewspapersWall.jpg',
+                img: '/images/tickets/NewspapersWall.png',
                 category: 9,
                 status: false
             },
@@ -44,7 +44,7 @@ export default createStore({
                 date: '03.09.2023',
                 time: '16:20',
                 timeZone: 'МСК',
-                img: 'public/images/tickets/Milk.jpg',
+                img: '/images/tickets/Milk.png',
                 category: 9,
                 status: false
             },
@@ -55,7 +55,7 @@ export default createStore({
                 date: '03.09.2013',
                 time: '16:20',
                 timeZone: 'МСК',
-                img: 'public/images/tickets/Starboy.jpg',
+                img: '/images/tickets/Starboy.png',
                 category: 5,
                 status: false
             }
@@ -131,7 +131,7 @@ export default createStore({
                 rating: 7.9,
                 location: "Москва",
                 price: 'low',
-                img: 'public/images/events/yoga-promo.jpg',
+                img: '/images/events/yoga-promo.png',
                 category: 3
             },
             {
@@ -142,7 +142,7 @@ export default createStore({
                 rating: 7.7,
                 location: "Москва",
                 price: 'avg',
-                img: 'public/images/events/spider-man-promo.jpg',
+                img: '/images/events/spider-man-promo.png',
                 category: 2
             },
             {
@@ -153,7 +153,7 @@ export default createStore({
                 rating: 9.9,
                 location: "Москва",
                 price: 'high',
-                img: 'public/images/events/the-beatles-promo.jpg',
+                img: '/images/events/the-beatles-promo.png',
                 category: 4
             },
             {
@@ -164,7 +164,7 @@ export default createStore({
                 rating: 8,
                 location: "Реутов",
                 price: 'free',
-                img: 'public/images/events/art-promo.jpg',
+                img: '/images/events/art-promo.png',
                 category: 9
             },
 
@@ -178,7 +178,7 @@ export default createStore({
                 rating: 7.9,
                 location: "Москва",
                 price: 'low',
-                img: 'public/images/events/yoga-promo.jpg',
+                img: '/images/events/yoga-promo.png',
                 category: 3,
                 coordinates: [37.59502, 55.743561]
             },
@@ -190,7 +190,7 @@ export default createStore({
                 rating: 7.7,
                 location: "Москва",
                 price: 'avg',
-                img: 'public/images/events/spider-man-promo.jpg',
+                img: '/images/events/spider-man-promo.png',
                 category: 2,
                 coordinates: [37.612259, 55.752229]
             },
@@ -202,7 +202,7 @@ export default createStore({
                 rating: 9.9,
                 location: "Москва",
                 price: 'high',
-                img: 'public/images/events/the-beatles-promo.jpg',
+                img: '/images/events/the-beatles-promo.png',
                 category: 4,
                 coordinates: [37.604, 55.7522]
             },
@@ -214,7 +214,7 @@ export default createStore({
                 rating: 8,
                 location: "Реутов",
                 price: 'free',
-                img: 'public/images/events/art-promo.jpg',
+                img: '/images/events/art-promo.png',
                 category: 9,
                 coordinates: [ 37.601638, 55.7595]
             },
@@ -226,7 +226,7 @@ export default createStore({
                 rating: 8.5,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/outdoor-cinema-promo.jpg",
+                img: "/images/events/outdoor-cinema-promo.png",
                 category: 2,
                 coordinates: [37.578952, 55.763532]
             },
@@ -238,7 +238,7 @@ export default createStore({
                 rating: 7.8,
                 location: "Москва",
                 price: "low",
-                img: "public/images/events/art-exhibition-promo.jpg",
+                img: "/images/events/art-exhibition-promo.png",
                 category: 9,
                 coordinates: [37.659198, 55.758108]
             },
@@ -250,7 +250,7 @@ export default createStore({
                 rating: 9.2,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/street-food-festival-promo.jpg",
+                img: "/images/events/street-food-festival-promo.png",
                 category: 7,
                 coordinates: [37.632611, 55.718355]
             },
@@ -262,7 +262,7 @@ export default createStore({
                 rating: 8.9,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/rock-concert-promo.jpg",
+                img: "/images/events/rock-concert-promo.png",
                 category: 5,
                 coordinates: [37.553312, 55.745801]
             },
@@ -274,7 +274,7 @@ export default createStore({
                 rating: 7.6,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/theatre-performance-promo.jpg",
+                img: "/images/events/theatre-performance-promo.png",
                 category: 8,
                 coordinates: [37.512738, 55.731634]
             },
@@ -286,7 +286,7 @@ export default createStore({
                 rating: 7.4,
                 location: "Москва",
                 price: "low",
-                img: "public/images/events/photography-exhibition-promo.jpg",
+                img: "/images/events/photography-exhibition-promo.png",
                 category: 9,
                 coordinates: [37.574905, 55.726860]
             },
@@ -298,7 +298,7 @@ export default createStore({
                 rating: 9.1,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/classical-music-concert-promo.jpg",
+                img: "/images/events/classical-music-concert-promo.png",
                 category: 4,
                 coordinates: [37.615620, 55.749234]
             },
@@ -310,7 +310,7 @@ export default createStore({
                 rating: 8.3,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/film-festival-promo.jpg",
+                img: "/images/events/film-festival-promo.png",
                 category: 2,
                 coordinates: [37.589617, 55.771330]
             },
@@ -322,7 +322,7 @@ export default createStore({
                 rating: 7.7,
                 location: "Москва",
                 price: "low",
-                img: "public/images/events/sculpture-exhibition-promo.jpg",
+                img: "/images/events/sculpture-exhibition-promo.png",
                 category: 9,
                 coordinates: [37.605349, 55.726049]
             },
@@ -334,7 +334,7 @@ export default createStore({
                 rating: 9.5,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/new-year-music-festival-promo.jpg",
+                img: "/images/events/new-year-music-festival-promo.png",
                 category: 4,
                 coordinates: [37.645428, 55.776591]
             },
@@ -346,7 +346,7 @@ export default createStore({
                 rating: 8.2,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/modern-art-exhibition-promo.jpg",
+                img: "/images/events/modern-art-exhibition-promo.png",
                 category: 9,
                 coordinates: [37.599812, 55.759232]
             },
@@ -358,7 +358,7 @@ export default createStore({
                 rating: 7.8,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/rock-band-concert-promo.jpg",
+                img: "/images/events/rock-band-concert-promo.png",
                 category: 4,
                 coordinates: [37.622635, 55.747326]
             },
@@ -370,7 +370,7 @@ export default createStore({
                 rating: 9.3,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/theater-performance-promo.jpg",
+                img: "/images/events/theater-performance-promo.png",
                 category: 8,
                 coordinates: [37.613645, 55.759797]
             },
@@ -382,7 +382,7 @@ export default createStore({
                 rating: 8.6,
                 location: "Москва",
                 price: "low",
-                img: "public/images/events/flower-exhibition-promo.jpg",
+                img: "/images/events/flower-exhibition-promo.png",
                 category: 9,
                 coordinates: [37.573173, 55.750867]
             },
@@ -394,7 +394,7 @@ export default createStore({
                 rating: 9.7,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/jazz-music-concert-promo.jpg",
+                img: "/images/events/jazz-music-concert-promo.png",
                 category: 4,
                 coordinates: [37.607852, 55.743519]
             },
@@ -406,7 +406,7 @@ export default createStore({
                 rating: 8.9,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/modern-art-exhibition-promo.jpg",
+                img: "/images/events/modern-art-exhibition-promo.png",
                 category: 1,
                 coordinates: [37.601095, 55.770239]
             },
@@ -418,7 +418,7 @@ export default createStore({
                 rating: 9.5,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/classical-music-concert-promo.jpg",
+                img: "/images/events/classical-music-concert-promo.png",
                 category: 4,
                 coordinates: [37.599533, 55.769687]
             },
@@ -430,7 +430,7 @@ export default createStore({
                 rating: 7.2,
                 location: "Москва",
                 price: "low",
-                img: "public/images/events/dance-show-promo.jpg",
+                img: "/images/events/dance-show-promo.png",
                 category: 1,
                 coordinates: [37.594215, 55.757518]
             },
@@ -442,7 +442,7 @@ export default createStore({
                 rating: 8.3,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/pop-artist-concert-promo.jpg",
+                img: "/images/events/pop-artist-concert-promo.png",
                 category: 5,
                 coordinates: [37.612911, 55.740953]
             },
@@ -454,7 +454,7 @@ export default createStore({
                 rating: 9.1,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/culinary-festival-promo.jpg",
+                img: "/images/events/culinary-festival-promo.png",
                 category: 1,
                 coordinates: [37.625145, 55.736993]
             },
@@ -466,7 +466,7 @@ export default createStore({
                 rating: 8.7,
                 location: "Москва",
                 price: "low",
-                img: "public/images/events/photography-exhibition-promo.jpg",
+                img: "/images/events/photography-exhibition-promo.png",
                 category: 2,
                 coordinates: [37.416560, 55.782423]
             },
@@ -478,7 +478,7 @@ export default createStore({
                 rating: 9.4,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/choir-music-concert-promo.jpg",
+                img: "/images/events/choir-music-concert-promo.png",
                 category: 4,
                 coordinates: [37.438650, 55.780358]
             },
@@ -490,7 +490,7 @@ export default createStore({
                 rating: 8.5,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/theater-performance-promo.jpg",
+                img: "/images/events/theater-performance-promo.png",
                 category: 2,
                 coordinates: [37.486959, 55.777894]
             },
@@ -502,7 +502,7 @@ export default createStore({
                 rating: 8.2,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/sculpture-exhibition-promo.jpg",
+                img: "/images/events/sculpture-exhibition-promo.png",
                 category: 4,
                 coordinates: [37.524195, 55.760628]
             },
@@ -514,7 +514,7 @@ export default createStore({
                 rating: 7.9,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/electronic-music-concert-promo.jpg",
+                img: "/images/events/electronic-music-concert-promo.png",
                 category: 4,
                 coordinates: [37.554650, 55.734924]
             },
@@ -527,7 +527,7 @@ export default createStore({
                 rating: 9.0,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/comedy-film-festival-promo.jpg",
+                img: "/images/events/comedy-film-festival-promo.png",
                 category: 4,
                 coordinates: [37.555670, 55.681119]
             },
@@ -539,7 +539,7 @@ export default createStore({
                 rating: 9.6,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/historical-artifacts-exhibition-promo.jpg",
+                img: "/images/events/historical-artifacts-exhibition-promo.png",
                 category: 3,
                 coordinates: [37.602573, 55.665523]
             },
@@ -551,7 +551,7 @@ export default createStore({
                 rating: 8.8,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/rap-artist-concert-promo.jpg",
+                img: "/images/events/rap-artist-concert-promo.png",
                 category: 5,
                 coordinates: [37.641832, 55.672297]
             },
@@ -563,7 +563,7 @@ export default createStore({
                 rating: 7.5,
                 location: "Москва",
                 price: "low",
-                img: "public/images/events/dance-flashmob-promo.jpg",
+                img: "/images/events/dance-flashmob-promo.png",
                 category: 2,
                 coordinates: [37.672494, 55.692981]
             },
@@ -575,7 +575,7 @@ export default createStore({
                 rating: 8.3,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/fashion-exhibition-promo.jpg",
+                img: "/images/events/fashion-exhibition-promo.png",
                 category: 1,
                 coordinates: [37.706374, 55.709521]
             },
@@ -587,7 +587,7 @@ export default createStore({
                 rating: 9.1,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/film-festival-promo.jpg",
+                img: "/images/events/film-festival-promo.png",
                 category: 2,
                 coordinates: [37.610762, 55.625122]
             },
@@ -599,7 +599,7 @@ export default createStore({
                 rating: 8.9,
                 location: "Москва",
                 price: "low",
-                img: "public/images/events/fitness-marathon-promo.jpg",
+                img: "/images/events/fitness-marathon-promo.png",
                 category: 3,
                 coordinates: [37.613100, 55.629870]
             },
@@ -611,7 +611,7 @@ export default createStore({
                 rating: 9.7,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/classical-music-concert-promo.jpg",
+                img: "/images/events/classical-music-concert-promo.png",
                 category: 4,
                 coordinates: [37.617260, 55.632618]
             },
@@ -623,7 +623,7 @@ export default createStore({
                 rating: 8.4,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/standup-comedy-show-promo.jpg",
+                img: "/images/events/standup-comedy-show-promo.png",
                 category: 6,
                 coordinates: [37.621303, 55.637339]
             },
@@ -635,7 +635,7 @@ export default createStore({
                 rating: 7.8,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/80s-party-promo.jpg",
+                img: "/images/events/80s-party-promo.png",
                 category: 7,
                 coordinates: [37.625200, 55.641541]
             },
@@ -648,7 +648,7 @@ export default createStore({
                 rating: 8.7,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/dance-festival-promo.jpg",
+                img: "/images/events/dance-festival-promo.png",
                 category: 9,
                 coordinates: [37.615866, 55.654872]
             },
@@ -660,7 +660,7 @@ export default createStore({
                 rating: 9.3,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/rap-artist-concert-promo.jpg",
+                img: "/images/events/rap-artist-concert-promo.png",
                 category: 5,
                 coordinates: [37.612956, 55.660820]
             },
@@ -672,7 +672,7 @@ export default createStore({
                 rating: 9.6,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/modern-art-exhibition-promo.jpg",
+                img: "/images/events/modern-art-exhibition-promo.png",
                 category: 9,
                 coordinates: [37.608889, 55.668736]
             },
@@ -684,7 +684,7 @@ export default createStore({
                 rating: 8.8,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/jazz-music-concert-promo.jpg",
+                img: "/images/events/jazz-music-concert-promo.png",
                 category: 4,
                 coordinates: [37.604231, 55.678094]
             },
@@ -696,7 +696,7 @@ export default createStore({
                 rating: 8.5,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/theater-performance-promo.jpg",
+                img: "/images/events/theater-performance-promo.png",
                 category: 8,
                 coordinates: [37.600548, 55.687382]
             },
@@ -709,7 +709,7 @@ export default createStore({
                 rating: 9.2,
                 location: "Москва",
                 price: "low",
-                img: "public/images/events/photography-exhibition-promo.jpg",
+                img: "/images/events/photography-exhibition-promo.png",
                 category: 9,
                 coordinates: [37.585459, 55.778269]
             },
@@ -721,7 +721,7 @@ export default createStore({
                 rating: 8.9,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/pop-band-concert-promo.jpg",
+                img: "/images/events/pop-band-concert-promo.png",
                 category: 5,
                 coordinates: [37.582282, 55.772491]
             },
@@ -733,7 +733,7 @@ export default createStore({
                 rating: 7.6,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/dance-party-promo.jpg",
+                img: "/images/events/dance-party-promo.png",
                 category: 7,
                 coordinates: [37.578003, 55.766592]
             },
@@ -745,7 +745,7 @@ export default createStore({
                 rating: 8.3,
                 location: "Москва",
                 price: "low",
-                img: "public/images/events/sculpture-exhibition-promo.jpg",
+                img: "/images/events/sculpture-exhibition-promo.png",
                 category: 9,
                 coordinates: [37.573723, 55.760574]
             },
@@ -757,7 +757,7 @@ export default createStore({
                 rating: 9.7,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/classical-music-concert-promo.jpg",
+                img: "/images/events/classical-music-concert-promo.png",
                 category: 4,
                 coordinates: [37.569335, 55.754440]
             },
@@ -770,7 +770,7 @@ export default createStore({
                 rating: 9.0,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/rock-band-concert-promo.jpg",
+                img: "/images/events/rock-band-concert-promo.png",
                 category: 5,
                 coordinates: [37.646677, 55.884390]
             },
@@ -782,7 +782,7 @@ export default createStore({
                 rating: 8.8,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/painting-exhibition-promo.jpg",
+                img: "/images/events/painting-exhibition-promo.png",
                 category: 9,
                 coordinates: [37.641813, 55.879679]
             },
@@ -794,7 +794,7 @@ export default createStore({
                 rating: 9.4,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/electronic-music-concert-promo.jpg",
+                img: "/images/events/electronic-music-concert-promo.png",
                 category: 4,
                 coordinates: [37.636939, 55.874958]
             },
@@ -806,7 +806,7 @@ export default createStore({
                 rating: 8.6,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/theater-performance-promo.jpg",
+                img: "/images/events/theater-performance-promo.png",
                 category: 8,
                 coordinates: [37.632070, 55.870211]
             },
@@ -818,7 +818,7 @@ export default createStore({
                 rating: 9.7,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/jazz-music-concert-promo.jpg",
+                img: "/images/events/jazz-music-concert-promo.png",
                 category: 4,
                 coordinates: [37.627205, 55.865437]
             },
@@ -831,7 +831,7 @@ export default createStore({
                 rating: 8.9,
                 location: "Москва",
                 price: "low",
-                img: "public/images/events/photography-exhibition-promo.jpg",
+                img: "/images/events/photography-exhibition-promo.png",
                 category: 9,
                 coordinates: [37.576932, 55.606840]
             },
@@ -843,7 +843,7 @@ export default createStore({
                 rating: 9.3,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/dance-festival-promo.jpg",
+                img: "/images/events/dance-festival-promo.png",
                 category: 9,
                 coordinates: [37.570756, 55.604279]
             },
@@ -855,7 +855,7 @@ export default createStore({
                 rating: 8.7,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/pop-artist-concert-promo.jpg",
+                img: "/images/events/pop-artist-concert-promo.png",
                 category: 5,
                 coordinates: [37.565415, 55.602470]
             },
@@ -867,7 +867,7 @@ export default createStore({
                 rating: 9.5,
                 location: "Москва",
                 price: "high",
-                img: "public/images/events/modern-art-exhibition-promo.jpg",
+                img: "/images/events/modern-art-exhibition-promo.png",
                 category: 9,
                 coordinates: [37.560215, 55.600521]
             },
@@ -879,7 +879,7 @@ export default createStore({
                 rating: 8.8,
                 location: "Москва",
                 price: "avg",
-                img: "public/images/events/rap-artist-concert-promo.jpg",
+                img: "/images/events/rap-artist-concert-promo.png",
                 category: 5,
                 coordinates: [37.555096, 55.598435]
             }
@@ -904,7 +904,7 @@ export default createStore({
             {
                 count: 3,
                 items: [
-                    { title: "Coachella Festifal 2023", url: "public/video/mp4/videoplayback.mp4" },
+                    { title: "Coachella Festifal 2023", url: "/video/mp4/videoplayback.mp4" },
                     { title: "Новые премьеры", url: "http://url5" },
                     { title: "Ретроспектива классики", url: "http://url6" }
                 ],

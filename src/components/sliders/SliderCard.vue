@@ -5,7 +5,7 @@
         <a href="#" class="slide-card__link">
             <div class="slide-card__img-blackout">
                 <div class="slide-card__image">
-                    <img :src="imgUrl" :alt="String">
+                    <img :src="imgUrl" :alt="name">
                 </div>
             </div>
         </a>

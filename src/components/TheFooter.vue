@@ -25,17 +25,17 @@
 
         <div class="footer__media">
           <img
-            src="public/icons/VK - Original.svg"
+            src="/icons/vk-logo.svg"
             alt="social"
             class="footer__media-item"
           />
           <img
-            src="public/icons/Telegram - Original.svg"
+            src="/icons/telegram.svg"
             alt="social"
             class="footer__media-item"
           />
           <img
-            src="public/icons/YouTube - Original.svg"
+            src="/icons/youtube-logo.svg"
             alt="social"
             class="footer__media-item"
           />
@@ -50,9 +50,9 @@
           <div class="footer__geo _icon-location-pin">Москва</div>
           <div class="footer__lang">
             <img
-              src="public/icons/Russia Flag.svg"
+              src="/icons/russia-flag.svg"
               class="footer__lang-img"
-            />
+             alt="russia-flag"/>
             <div class="footer__lang-text">Русский</div>
           </div>
         </div>
@@ -61,7 +61,7 @@
     </div>
     <div class="right-corner-logo">
       <img
-        src="public/images/bg-logo.png"
+        src="/images/bg-logo.png"
         alt="logo"
         class="right-corner-logo__image"
       />
