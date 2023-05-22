@@ -9,8 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@esbuild/darwin-arm64": "^0.17.19",
     "@vuepic/vue-datepicker": "^5.1.1",
+    "@esbuild/linux-x64": "^0.17.18",
     "mapbox-gl": "^2.14.1",
     "normalize.css": "^8.0.1",
     "swiper": "^9.3.2",
