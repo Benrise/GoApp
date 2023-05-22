@@ -1,28 +1,33 @@
 <template>
     <div class="upcoming-events__slider-area">
         <swiper :navigation="{
-    nextEl: '.upcoming-events__slider-btn-next',
-    prevEl: '.upcoming-events__slider-btn-prev'
-  }"
-                :pagination="{
-    el: '.upcoming-events__slider-pagination',
-    clickable: true,
-    dynamicBullets: true,
-  }"
-                :keyboard="{
-    enabled: true,
-    onlyInViewport: true,
-  }"
-                :spaceBetween="12"
-                :breakpoints="{
-    280: {
-      slidesPerView: 1
-    },
-    1100: {
-      slidesPerView: 1,
-    }
-  }"
+                    nextEl: '.upcoming-events__slider-btn-next',
+                    prevEl: '.upcoming-events__slider-btn-prev'
+              }"
+                            :pagination="{
+                el: '.upcoming-events__slider-pagination',
+                clickable: true,
+                dynamicBullets: true,
+              }"
+                            :keyboard="{
+                enabled: true,
+                onlyInViewport: true,
+              }"
+                            :spaceBetween="12"
+                            :breakpoints="{
+                280: {
+                  slidesPerView: 1
+                },
+                1100: {
+                  slidesPerView: 1,
+                }
+
+              }"
                 :modules="modules"
+                :autoplay="{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                }"
                 :slideToClickedSlide="true"
                 :prevent-clicks="true"
             class="upcoming-events__slider">
