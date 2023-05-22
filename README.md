@@ -1,9 +1,10 @@
 <br/>
 <p align="center">
   <a href="https://github.com/Benrise/https://github.com/Benrise/GoApp">
-    <img src="https://github.com/Benrise/GoApp/assets/55480132/38a8ef4f-46c5-43f0-8446-0de7e5bc16f6" alt="Logo" width="300" height="300">
+    <img src="https://github.com/Benrise/GoApp/assets/55480132/2487aba4-e4b8-405f-9c20-c3cf269844cb" alt="Logo" width="300" height="300">
   </a>
 
+  
   <h3 align="center">Go! <br>
 Мероприятия - сегодня!</h3>
 
