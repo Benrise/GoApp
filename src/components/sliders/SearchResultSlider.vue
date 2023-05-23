@@ -23,14 +23,13 @@
                   slidesPerView: 1.2,
                 }
             }"
-            :virtual="true"
             :modules="modules"
             :slideToClickedSlide="true"
             class="search-result__slider"
             :speed=600
             >
 
-            <swiper-slide :virtualIndex="event.id" v-for="event in updatedEvents" :key="event.id" class="swiper-slide">
+            <swiper-slide v-for="event in updatedEvents" :key="event.id" class="swiper-slide">
                 <SliderCard
                     :imgUrl="event.img"
                     :day="event.day"
@@ -84,7 +83,7 @@ export default {
     },
     setup() {
         return {
-            modules: [Autoplay, FreeMode, Navigation, Pagination, Virtual],
+            modules: [Autoplay, FreeMode, Navigation, Pagination],
         };
     },
 };

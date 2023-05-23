@@ -27,7 +27,7 @@
       <nav class="header__menu menu" :class="{ '_active': isMenuOpen }">
         <ul class="menu__list">
             <li class="menu__item" v-for="menuItem in menuItems" :key="menuItem.id">
-                <a v-if="menuItem.action" class="menu__link" :class="menuItem.iconClass" @click.prevent="openModal">
+                <a v-if="menuItem.modal" class="menu__link" :class="menuItem.iconClass" @click.prevent="openModal">
                     {{menuItem.label}}
                 </a>
                 <router-link v-else :to="menuItem.route" class="menu__link" :class="menuItem.iconClass">
@@ -99,15 +99,14 @@ export default {
                     route: "#",
                     iconClass: "_icon-message",
                     ariaLabel: "Subscribe to new events",
-                    action: true
+                    modal: true
                 },
                 {
                     id: 4,
                     label: "Москва",
                     route: "#",
                     iconClass: "_icon-geo",
-                    ariaLabel: "Change city",
-                    action: true
+                    ariaLabel: "Change city"
                 },
                 {
                     id: 5,

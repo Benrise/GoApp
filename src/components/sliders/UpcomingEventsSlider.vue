@@ -21,11 +21,10 @@
                 }"
                 :slideToClickedSlide="true"
                 :prevent-clicks="true"
-                :virtual="true"
                 :speed=600
             class="upcoming-events__slider">
 
-                <swiper-slide :virtualIndex="upcomingEvent.id" class="swiper-slide" v-for="upcomingEvent in updatedUpcomingEvents" :key="upcomingEvent.id">
+                <swiper-slide class="swiper-slide" v-for="upcomingEvent in updatedUpcomingEvents" :key="upcomingEvent.id">
                     <SliderCard
                         :imgUrl="upcomingEvent.img"
                         :day="upcomingEvent.day"
@@ -68,7 +67,7 @@ export default {
     components:{
         SliderCard,
         BaseButton,
-        Swiper, SwiperSlide, Virtual
+        Swiper, SwiperSlide
     },
     computed: {
         ...mapState({
@@ -89,7 +88,7 @@ export default {
     },
     setup() {
         return {
-            modules: [Autoplay, FreeMode, Navigation, Pagination, Virtual],
+            modules: [Autoplay, FreeMode, Navigation, Pagination],
         };
     },
 };

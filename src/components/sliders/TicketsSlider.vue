@@ -33,7 +33,7 @@
             :spaceBetween=24
 
             class="tickets__slider">
-                <swiper-slide :virtualIndex="ticket.id" v-for="ticket in updatedTickets" :key="ticket.id" class="swiper-slide">
+                <swiper-slide v-for="ticket in updatedTickets" :key="ticket.id" class="swiper-slide">
                     <TicketCard
                             :id="ticket.id"
                             :title="ticket.title"
@@ -69,7 +69,6 @@ export default {
         BaseButton,
         Swiper,
         SwiperSlide,
-        Virtual
     },
     data() {
         return {
@@ -101,7 +100,7 @@ export default {
     },
     setup() {
         return {
-            modules: [Autoplay, FreeMode, Navigation, Pagination, Virtual],
+            modules: [Autoplay, FreeMode, Navigation, Pagination],
         };
     },
 };

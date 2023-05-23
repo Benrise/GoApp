@@ -10,11 +10,7 @@
                     el: '.swiper-scrollbar',
                     draggable: true,
                 }"
-                :autoplay=" {
-                enabled: true,
-                delay: 3000,
-                disableOnInteraction: false,
-                }"
+
                 :direction="'vertical'"
                 :mousewheel="true"
                 :modules="modules"
