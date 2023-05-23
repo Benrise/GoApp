@@ -33,7 +33,7 @@
             :spaceBetween=24
 
             class="tickets__slider">
-                <swiper-slide v-for="ticket in updatedTickets" :key="ticket.id" class="swiper-slide">
+                <swiper-slide :virtualIndex="ticket.id" v-for="ticket in updatedTickets" :key="ticket.id" class="swiper-slide">
                     <TicketCard
                             :id="ticket.id"
                             :title="ticket.title"
@@ -44,6 +44,7 @@
                             :imgUrl="ticket.img"
                             :categoryName="ticket.category.name"
                             :categoryTitle="ticket.category.title"
+                            :virtual="true"
                     />
                 </swiper-slide>
         </swiper>
@@ -56,7 +57,7 @@
 </template>
 
 <script>
-import {Autoplay, FreeMode, Navigation, Pagination} from "swiper";
+import {Autoplay, FreeMode, Navigation, Pagination, Virtual} from "swiper";
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import BaseButton from "@/components/ui/BaseButton.vue";
 import TicketCard from "@/components/sliders/TicketCard.vue";
@@ -66,7 +67,9 @@ export default {
     components:{
         TicketCard,
         BaseButton,
-      Swiper, SwiperSlide
+        Swiper,
+        SwiperSlide,
+        Virtual
     },
     data() {
         return {
@@ -98,7 +101,7 @@ export default {
     },
     setup() {
         return {
-            modules: [Autoplay, FreeMode, Navigation, Pagination],
+            modules: [Autoplay, FreeMode, Navigation, Pagination, Virtual],
         };
     },
 };

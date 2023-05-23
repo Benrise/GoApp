@@ -3,26 +3,17 @@
         <swiper :navigation="{
                     nextEl: '.upcoming-events__slider-btn-next',
                     prevEl: '.upcoming-events__slider-btn-prev'
-              }"
-                            :pagination="{
-                el: '.upcoming-events__slider-pagination',
-                clickable: true,
-                dynamicBullets: true,
-              }"
-                            :keyboard="{
-                enabled: true,
-                onlyInViewport: true,
-              }"
-                            :spaceBetween="12"
-                            :breakpoints="{
-                280: {
-                  slidesPerView: 1
-                },
-                1100: {
-                  slidesPerView: 1,
-                }
-
-              }"
+                }"
+                :pagination="{
+                    el: '.upcoming-events__slider-pagination',
+                    clickable: true,
+                    dynamicBullets: true,
+                }"
+                :keyboard="{
+                    enabled: true,
+                    onlyInViewport: true,
+                }"
+                :spaceBetween="24"
                 :modules="modules"
                 :autoplay="{
                     delay: 3000,
@@ -30,9 +21,11 @@
                 }"
                 :slideToClickedSlide="true"
                 :prevent-clicks="true"
+                :virtual="true"
+                :speed=600
             class="upcoming-events__slider">
 
-                <swiper-slide class="swiper-slide" v-for="upcomingEvent in upcomingEvents" :key="upcomingEvent.id">
+                <swiper-slide :virtualIndex="upcomingEvent.id" class="swiper-slide" v-for="upcomingEvent in updatedUpcomingEvents" :key="upcomingEvent.id">
                     <SliderCard
                         :imgUrl="upcomingEvent.img"
                         :day="upcomingEvent.day"
@@ -66,120 +59,22 @@
 
 <script>
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import {Autoplay, FreeMode, Navigation, Pagination} from "swiper";
+import {Autoplay, FreeMode, Navigation, Pagination, Virtual} from "swiper";
 import BaseButton from "@/components/ui/BaseButton.vue";
 import SliderCard from "@/components/sliders/SliderCard.vue";
+import {mapState} from "vuex";
 
 export default {
     components:{
         SliderCard,
         BaseButton,
-        Swiper, SwiperSlide
-    },
-    data() {
-        return {
-            categories: [
-                {
-                    id: 0,
-                    title: "Путешествия",
-                    name: "travel"
-                },
-                {
-                    id: 1,
-                    title: "Здоровье и красота",
-                    name: "healthAndBeauty"
-                },
-                {
-                    id: 2,
-                    title: "Фильмы",
-                    name: "movie"
-                },
-                {
-                    id: 3,
-                    title: "Спорт и фитнес",
-                    name: "sportAndFitness"
-                },
-                {
-                    id: 4,
-                    title: "Музыка",
-                    name: "music"
-                },
-                {
-                    id: 5,
-                    title: "Концерт",
-                    name: "concert"
-                },
-                {
-                    id: 6,
-                    title: "Комедия",
-                    name: "comedy"
-                },
-                {
-                    id: 7,
-                    title: "Вечеринка",
-                    name: "party"
-                },
-                {
-                    id: 8,
-                    title: "Театр",
-                    name: "theater"
-                },
-                {
-                    id:9,
-                    title: "Культура",
-                    name: "art"
-                }
-            ],
-            upcomingEvents: [
-                {
-                    id: 1,
-                    day: "10",
-                    month: "мая",
-                    name: "Yoga Material",
-                    rating: 7.9,
-                    location: "Москва",
-                    price: 'low',
-                    img: '/images/events/yoga-promo.png',
-                    category: 3
-                },
-                {
-                    id: 2,
-                    day: "23",
-                    month: "мая",
-                    name: "Человек-павук",
-                    rating: 7.7,
-                    location: "Москва",
-                    price: 'avg',
-                    img: '/images/events/spider-man-promo.png',
-                    category: 2
-                },
-                {
-                    id: 3,
-                    day: "12",
-                    month: "мая",
-                    name: "Come Together",
-                    rating: 9.9,
-                    location: "Москва",
-                    price: 'high',
-                    img: '/images/events/the-beatles-promo.png',
-                    category: 4
-                },
-                {
-                    id: 4,
-                    day: "31",
-                    month: "мая",
-                    name: "ART - Цветная полоса",
-                    rating: 8,
-                    location: "Реутов",
-                    price: 'free',
-                    img: '/images/events/art-promo.png',
-                    category: 9
-                },
-
-            ]
-        }
+        Swiper, SwiperSlide, Virtual
     },
     computed: {
+        ...mapState({
+            upcomingEvents: state => state.upcomingEvents,
+            categories: state => state.categories
+        }),
         updatedUpcomingEvents() {
             return this.upcomingEvents.map(UpcomingEvent => {
                 return {
@@ -194,7 +89,7 @@ export default {
     },
     setup() {
         return {
-            modules: [Autoplay, FreeMode, Navigation, Pagination],
+            modules: [Autoplay, FreeMode, Navigation, Pagination, Virtual],
         };
     },
 };

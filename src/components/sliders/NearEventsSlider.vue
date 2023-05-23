@@ -5,24 +5,29 @@
                     enabled: true,
                     onlyInViewport: true,
                 }"
-                :autoplay="{
-                    delay: 3000,
-                    disableOnInteraction: false,
-                }"
                 :scrollbar="{
                     enabled: true,
                     el: '.swiper-scrollbar',
+                    draggable: true,
+                }"
+                :autoplay=" {
+                enabled: true,
+                delay: 3000,
+                disableOnInteraction: false,
                 }"
                 :direction="'vertical'"
-                :slidesPerView="'auto'"
                 :mousewheel="true"
-                :freeMode="true"
-                :spaceBetween="12"
                 :modules="modules"
-                :slideToClickedSlide="true"
-                :prevent-clicks="true"
+                :freeModeMomentum="true"
+                :freeModeMomentumRatio="0.5"
+                :freeModeMomentumBounce="false"
+                :freemode=true
+                :spaceBetween=24
+                :slidesPerView="'auto'"
+                :speed=600
+
             class="near-events__slider">
-                <swiper-slide v-for="nearEvent in nearEvents" :key="nearEvent.id" class="swiper-slide" >
+                <swiper-slide v-for="nearEvent in updatedNearEvents" :key="nearEvent.id" :virtualIndex="nearEvent.id" class="swiper-slide" >
                     <SliderCard
                         :imgUrl="nearEvent.img"
                         :day="nearEvent.day"
@@ -36,17 +41,18 @@
                     />
                 </swiper-slide>
         </swiper>
-        <div class="swiper-scrollbar"></div>
+        <div aria-label="Scroll" class="swiper-scrollbar"></div>
     </div>
 </template>
 
 <script>
 
 
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import {Autoplay, FreeMode, Scrollbar} from "swiper";
+import { Swiper, SwiperSlide} from 'swiper/vue';
+import {Autoplay, FreeMode, Scrollbar, Virtual} from "swiper";
 import BaseButton from "@/components/ui/BaseButton.vue";
 import SliderCard from "@/components/sliders/SliderCard.vue";
+import {mapState} from "vuex";
 
 export default {
     components:{
@@ -54,110 +60,11 @@ export default {
         BaseButton,
         Swiper, SwiperSlide
     },
-    data() {
-        return {
-            categories: [
-                {
-                    id: 0,
-                    title: "Путешествия",
-                    name: "travel"
-                },
-                {
-                    id: 1,
-                    title: "Здоровье и красота",
-                    name: "healthAndBeauty"
-                },
-                {
-                    id: 2,
-                    title: "Фильмы",
-                    name: "movie"
-                },
-                {
-                    id: 3,
-                    title: "Спорт и фитнес",
-                    name: "sportAndFitness"
-                },
-                {
-                    id: 4,
-                    title: "Музыка",
-                    name: "music"
-                },
-                {
-                    id: 5,
-                    title: "Концерт",
-                    name: "concert"
-                },
-                {
-                    id: 6,
-                    title: "Комедия",
-                    name: "comedy"
-                },
-                {
-                    id: 7,
-                    title: "Вечеринка",
-                    name: "party"
-                },
-                {
-                    id: 8,
-                    title: "Театр",
-                    name: "theater"
-                },
-                {
-                    id:9,
-                    title: "Культура",
-                    name: "art"
-                }
-            ],
-            nearEvents: [
-                {
-                    id: 1,
-                    day: "10",
-                    month: "мая",
-                    name: "Yoga Material",
-                    rating: 7.9,
-                    location: "Москва",
-                    price: 'low',
-                    img: '/images/events/yoga-promo.png',
-                    category: 3
-                },
-                {
-                    id: 2,
-                    day: "23",
-                    month: "мая",
-                    name: "Человек-павук",
-                    rating: 7.7,
-                    location: "Москва",
-                    price: 'avg',
-                    img: '/images/events/spider-man-promo.png',
-                    category: 2
-                },
-                {
-                    id: 3,
-                    day: "12",
-                    month: "мая",
-                    name: "Come Together",
-                    rating: 9.9,
-                    location: "Москва",
-                    price: 'high',
-                    img: '/images/events/the-beatles-promo.png',
-                    category: 4
-                },
-                {
-                    id: 4,
-                    day: "31",
-                    month: "мая",
-                    name: "ART - Цветная полоса",
-                    rating: 8,
-                    location: "Реутов",
-                    price: 'free',
-                    img: '/images/events/art-promo.png',
-                    category: 9
-                },
-
-            ]
-        }
-    },
     computed: {
+        ...mapState({
+            nearEvents: state => state.nearEvents,
+            categories: state => state.categories
+        }),
         updatedNearEvents() {
             return this.nearEvents.map(nearEvent => {
                 return {
@@ -178,6 +85,6 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 
 </style>

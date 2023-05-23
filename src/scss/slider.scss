@@ -1,8 +1,25 @@
 %slider-setup {
     [class*="_slider-area"] {
+        min-width: 50%;
         position: relative;
     }
 
+    .swiper-scrollbar {
+        cursor: pointer;
+        transition: all 0.1s ease-in !important;
+        --swiper-scrollbar-left: 99.5%;
+
+        &:hover {
+            width: 10px;
+            background: #c69cd5;
+        }
+
+        &-drag {
+            left: -50%;
+            width: 200% !important;
+            background-color: $fontColor !important;
+        }
+    }
     .swiper-button-next,
     .swiper-button-prev {
         width: fit-content;
@@ -10,13 +27,16 @@
         &::after {
             display: none;
         }
+        transition: scale 0.1s ease-in;
+        &:hover{
+            scale: 1.1;
+        }
     }
 
     .swiper-button-next.swiper-button-disabled,
     .swiper-button-prev.swiper-button-disabled {
         pointer-events: all;
     }
-
     .swiper-button {
         z-index: 5;
         &-prev {

@@ -9,7 +9,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <BaseButton class="_icon-xmark base-button_close" ></BaseButton>
+    <BaseButton aria-label="Close" class="_icon-xmark base-button_close" ></BaseButton>
 </template>
 
 <style lang="scss">

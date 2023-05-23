@@ -25,7 +25,7 @@ export default defineComponent({
             {{title}}
         </div>
         <div class="subscribe__main">
-            <form action="" class="subscribe__form">
+            <form class="subscribe__form">
                 <input
                         type="text"
                         placeholder="Электронная почта"

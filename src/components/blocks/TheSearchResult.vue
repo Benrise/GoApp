@@ -8,7 +8,7 @@
       <form method="post" class="main-block__form">
         <div class="search-main search">
           <div class="search__form">
-            <button type="submit" class="search__button _icon-magnify"></button>
+            <button type="submit" aria-label="Search" class="search__button _icon-magnify"></button>
             <input
               autocomplete="off"
               type="text"

@@ -5,7 +5,7 @@
         <a href="#" class="tickets-card__link">
             <div class="tickets-card__img-blackout">
                 <div class="tickets-card__image">
-                    <img :src="imgUrl" :alt="title">
+                    <img :src="imgUrl"  :aria-label="categoryTitle" @error="setDefaultImage" :alt="title">
                 </div>
             </div>
             <div class="tickets-card__category">
@@ -63,7 +63,12 @@ export default defineComponent({
         categoryName: String,
         categoryTitle: String,
         status: Boolean
-    }
+    },
+    methods: {
+        setDefaultImage(event) {
+            event.target.src = '/images/events/default-ticket-img.png';
+        },
+    },
 })
 </script>
 

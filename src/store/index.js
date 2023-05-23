@@ -55,7 +55,7 @@ export default createStore({
                 date: '03.09.2013',
                 time: '16:20',
                 timeZone: 'МСК',
-                img: '/images/tickets/Starboy.png',
+                img: '/images/tickets/starboy-promo.png',
                 category: 5,
                 status: false
             }
@@ -69,8 +69,8 @@ export default createStore({
             },
             {
                 id: 1,
-                title: "Здоровье и красота",
-                name: "healthAndBeauty",
+                title: "Здоровье",
+                name: "health",
                 color: "#ff0000"
             },
             {
@@ -120,6 +120,18 @@ export default createStore({
                 title: "Культура",
                 name: "art",
                 color: "#ff6321"
+            },
+            {
+                id:10,
+                title: "Природа",
+                name: "nature",
+                color: "#008000"
+            },
+            {
+                id:11,
+                title: "Квесты",
+                name: "quests",
+                color: "#800000"
             }
         ],
         events: [
@@ -918,7 +930,144 @@ export default createStore({
                 ],
                 category: 3
             }
-        ]
+        ],
+        recommendedEvents: [
+            {
+                id: 1,
+                day: "10",
+                month: "мая",
+                name: "Yoga Material",
+                rating: 7.9,
+                location: "Москва",
+                price: 'low',
+                img: '/images/events/yoga-promo.png',
+                category: 3
+            },
+            {
+                id: 2,
+                day: "23",
+                month: "мая",
+                name: "Человек-павук",
+                rating: 7.7,
+                location: "Москва",
+                price: 'avg',
+                img: '/images/events/spider-man-promo.png',
+                category: 2
+            },
+            {
+                id: 3,
+                day: "12",
+                month: "мая",
+                name: "Come Together",
+                rating: 9.9,
+                location: "Москва",
+                price: 'high',
+                img: '/images/events/the-beatles-promo.png',
+                category: 4
+            },
+            {
+                id: 4,
+                day: "31",
+                month: "мая",
+                name: "ART - Цветная полоса",
+                rating: 8,
+                location: "Реутов",
+                price: 'free',
+                img: '/images/events/art-promo.png',
+                category: 9
+            },
+            {
+                id: 5,
+                day: "10",
+                month: "мая",
+                name: "Yoga Material",
+                rating: 7.9,
+                location: "Москва",
+                price: 'low',
+                img: '/images/events/yoga-promo.png',
+                category: 3
+            },
+            {
+                id: 6,
+                day: "23",
+                month: "мая",
+                name: "Человек-павук",
+                rating: 7.7,
+                location: "Москва",
+                price: 'avg',
+                img: '/images/events/spider-man-promo.png',
+                category: 2
+            },
+            {
+                id: 7,
+                day: "12",
+                month: "мая",
+                name: "Come Together",
+                rating: 9.9,
+                location: "Москва",
+                price: 'high',
+                img: '/images/events/the-beatles-promo.png',
+                category: 4
+            },
+            {
+                id: 8,
+                day: "31",
+                month: "мая",
+                name: "ART - Цветная полоса",
+                rating: 8,
+                location: "Реутов",
+                price: 'free',
+                img: '/images/events/art-promo.png',
+                category: 9
+            },
+
+        ],
+        upcomingEvents: [
+            {
+            id: 1,
+            day: "10",
+            month: "мая",
+            name: "Зоопарк на московском",
+            rating: 7.9,
+            location: "Москва",
+            price: 'low',
+            img: '/images/events/green-promo.png',
+            category: 10
+            },
+            {
+                id: 2,
+                day: "23",
+                month: "мая",
+                name: "Битва красок",
+                rating: 7.7,
+                location: "Москва",
+                price: 'avg',
+                img: '/images/events/color-promo.png',
+                category: 2
+            },
+            {
+                id: 3,
+                day: "12",
+                month: "мая",
+                name: "Лыжный фестиваль",
+                rating: 9.9,
+                location: "Москва",
+                price: 'high',
+                img: '/images/events/ski-promo.png',
+                category: 3
+            },
+            {
+                id: 4,
+                day: "21",
+                month: "июня",
+                name: "7even 7nines",
+                rating: 8,
+                location: "Москва",
+                price: 'high',
+                img: '/images/events/party-promo.png',
+                category: 4
+            },],
+
 
 
     },

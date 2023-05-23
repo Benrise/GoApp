@@ -38,7 +38,7 @@
     max-width: rem(250);
     ::placeholder {
       all: unset;
-      color: $secondaryFontColor;
+      color: rgba(128, 0, 128, 0.6);
       font-family: 'Inter',sans-serif;
       @include adaptiveValue('font-size',16,12);
       font-weight: 600;
@@ -82,4 +82,5 @@
   &_subscribe{
     background-color: $funcButton_color ;
   }
+
 }

@@ -1,5 +1,5 @@
 <template>
-    <BaseButton class="base-button_submit" @click="submit"></BaseButton>
+    <BaseButton aria-label="Search" class="base-button_submit" @click="submit"></BaseButton>
 </template>
 
 <script>

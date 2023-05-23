@@ -2,15 +2,20 @@
     display: flex;
     flex-direction: column;
     gap: rem(24);
+    position: relative;
     &__link {
         position: relative;
+        background-color: black;
+        border-radius: rem(12);
+        background-repeat: no-repeat;
+        background-position: center;
+        backdrop-filter: brightness(0);
     }
     &__image {
         display: flex;
         align-items: center;
         overflow: hidden;
         position: relative;
-        min-height: 100%;
         img {
             display: block;
             border-radius: 12px;
@@ -78,6 +83,10 @@
         @include adaptiveValue("font-size", 48, 16);
         font-weight: 500;
         color: white;
+        max-width: 370px;
+        line-height: normal;
+        max-height: max-content;
+        overflow: hidden;
     }
 
     &__functions-right {
@@ -87,7 +96,6 @@
         position: absolute;
         bottom: rem(30);
         right: rem(30);
-        display: flex;
         gap: 12px;
         color: white;
         &-up,

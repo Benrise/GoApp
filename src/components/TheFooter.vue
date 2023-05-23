@@ -24,21 +24,27 @@
         </nav>
 
         <div class="footer__media">
-          <img
-            src="/icons/vk-logo.svg"
-            alt="social"
-            class="footer__media-item"
-          />
-          <img
-            src="/icons/telegram.svg"
-            alt="social"
-            class="footer__media-item"
-          />
-          <img
-            src="/icons/youtube-logo.svg"
-            alt="social"
-            class="footer__media-item"
-          />
+            <a href="https://vk.com/rtuitlab" target="_blank" class="footer__link">
+                <img
+                        src="/icons/vk-logo.svg"
+                        alt="social"
+                        class="footer__media-item"
+                />
+            </a>
+            <a href="https://t.me/rtuitlab_2023_enrollment"  target="_blank" class="footer__link">
+                <img
+                        src="/icons/telegram.svg"
+                        alt="social"
+                        class="footer__media-item"
+                />
+            </a>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"  target="_blank" class="footer__link">
+                <img
+                  src="/icons/youtube-logo.svg"
+                  alt="social"
+                  class="footer__media-item"
+                />
+            </a>
         </div>
       </div>
       <div class="footer__below">

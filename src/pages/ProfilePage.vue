@@ -23,7 +23,7 @@
                                 </div>
                             </div>
                             <div class="profile__center">
-                                <div class="profile__pic"><img src="../../public/icons/go-logo.svg" alt=""></div>
+                                <div class="profile__pic"><img src="/images/go-logo.png" alt=""></div>
                                 <div class="profile__name">
                                     <div class="profile__name-title">
                                         Латыпов Артём Равилевич

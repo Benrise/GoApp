@@ -25,10 +25,6 @@
           </div>
           <div class="broadcast__right">
             <div class="broadcast__video">
-<!--              <video loop muted autoplay poster="" controls preload="metadata">-->
-<!--                <source type="video/webm" :src="videoSource"  @updateVideoSource="updateVideoSource"/>-->
-<!--                <source type="video/mp4" :src="videoSource" @updateVideoSource="updateVideoSource"/>-->
-<!--              </video>-->
                 <video type="video/mp4" loop muted autoplay controls preload="metadata" :src="videoSource" @updateVideoSource="updateVideoSource"/>
             </div>
             <div class="broadcast__description">

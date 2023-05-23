@@ -24,7 +24,7 @@ export default defineComponent({
         </div>
         <div class="b-card__logo">
             <div class="b-card__img">
-                <img src="/images/logo.png" alt="">
+                <img src="/images/go-logo.png" alt="">
             </div>
             <div class="b-card__label">
                 Бонус

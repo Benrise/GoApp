@@ -1,13 +1,14 @@
 <template>
   <header class="header">
     <div class="header__container">
-      <router-link to="/" class="header__logo">
-        <img
-          src="/icons/go-logo-group.svg"
-          class="header__image header__image_adaptive"
-          alt="Logo"
-        />
-      </router-link>
+            <router-link to="/" class="header__logo">
+                <img
+                        src="/images/go-logo.png"
+                        class="header__image header__image_adaptive"
+                        alt="Logo"
+                />
+                <div class="header__logo-title">Go</div>
+            </router-link>
       <div class="header__search _hidden">
         <div class="search">
           <form action="" class="search__form">
@@ -25,35 +26,15 @@
       </div>
       <nav class="header__menu menu" :class="{ '_active': isMenuOpen }">
         <ul class="menu__list">
-          <li class="menu__item">
-            <router-link to="/calendar" class="menu__link _icon-calendar"
-              >Календарь мероприятий</router-link
-            >
-          </li>
-          <li class="menu__item">
-            <router-link to="/tickets" class="menu__link _icon-ticket"
-              >Мои билеты</router-link
-            >
-          </li>
-          <li class="menu__item">
-            <a href="" class="menu__link _icon-message"
-               @click.prevent="openModal"
-
-            >Будьте в курсе</a>
-          </li>
-          <li class="menu__item">
-            <a href="" class="menu__link _icon-geo" >Москва</a>
-          </li>
-          <li class="menu__item _hidden">
-            <router-link to="/profile" class="menu__link _icon-profile"
-              >Профиль</router-link
-            >
-          </li>
-            <li class="menu__item _hidden">
-                <router-link to="/profile" class="menu__link _icon-exit"
-                >Войти</router-link
-                >
+            <li class="menu__item" v-for="menuItem in menuItems" :key="menuItem.id">
+                <a v-if="menuItem.action" class="menu__link" :class="menuItem.iconClass" @click.prevent="openModal">
+                    {{menuItem.label}}
+                </a>
+                <router-link v-else :to="menuItem.route" class="menu__link" :class="menuItem.iconClass">
+                    {{menuItem.label}}
+                </router-link>
             </li>
+
         </ul>
       </nav>
         <!-- Показать в случае авторизации -->
@@ -95,7 +76,48 @@ export default {
     data() {
         return {
             isMenuOpen: false,
-            isModalOpen: false
+            isModalOpen: false,
+            menuItems: [
+                {
+                    id: 1,
+                    label: "Календарь мероприятий",
+                    route: "/calendar",
+                    iconClass: "_icon-calendar",
+                    ariaLabel: "Go to event calendar"
+
+                },
+                {
+                    id: 2,
+                    label: "Мои билеты",
+                    route: "/tickets",
+                    iconClass: "_icon-ticket",
+                    ariaLabel: "Go to tickets"
+                },
+                {
+                    id: 3,
+                    label: "Будьте в курсе",
+                    route: "#",
+                    iconClass: "_icon-message",
+                    ariaLabel: "Subscribe to new events",
+                    action: true
+                },
+                {
+                    id: 4,
+                    label: "Москва",
+                    route: "#",
+                    iconClass: "_icon-geo",
+                    ariaLabel: "Change city",
+                    action: true
+                },
+                {
+                    id: 5,
+                    label: "Профиль",
+                    route: "/profile",
+                    iconClass: "_icon-profile",
+                    hidden: true,
+                    ariaLabel: "Go to profile"
+                }
+            ]
         };
     },
     methods: {
@@ -114,6 +136,7 @@ export default {
     watch: {
         '$route' () {
             this.isMenuOpen = false
+            document.body.classList.remove('_lock');
         }
     }
 

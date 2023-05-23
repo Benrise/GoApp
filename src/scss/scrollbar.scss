@@ -9,7 +9,6 @@
     --swiper-scrollbar-drag-bg-color: rgba(164, 62, 164, 0.5);
     --swiper-scrollbar-size: 7px;
 }
-
 ::-webkit-scrollbar {
     border-radius: 6px;
     background-color: rgba(247, 225, 255, 0.5);
@@ -18,7 +17,7 @@
 }
 ::-webkit-scrollbar-thumb {
     background-color: rgba(164, 62, 164, 0.5);
-    border-radius: 6px; 
+    border-radius: 6px;
 }
 
 /* Для горизонтального скролла */

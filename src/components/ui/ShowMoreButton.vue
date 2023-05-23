@@ -1,6 +1,6 @@
 <template>
     <BaseButton
-        class="base-button_show-more _icon-arrow" ></BaseButton>
+        aria-label="Show more" class="base-button_show-more _icon-arrow" ></BaseButton>
 </template>
 
 <script>

@@ -3,9 +3,9 @@
     &-travel {
         background-color: map-get($map: $categories, $key: travel) !important;
     }
-    &-healthAndBeauty {
+    &-health {
 
-        background-color: map-get($map: $categories, $key: healthAndBeauty) !important;
+        background-color: map-get($map: $categories, $key: health) !important;
     }
     &-movie {
 
@@ -36,8 +36,13 @@
         background-color: map-get($map: $categories, $key: theater) !important;
     }
     &-art {
-
         background-color: map-get($map: $categories, $key: art) !important;
+    }
+    &-nature {
+        background-color: map-get($map: $categories, $key: nature) !important;
+    }
+    &-quests {
+        background-color: map-get($map: $categories, $key: quests) !important;
     }
 }
 
@@ -76,7 +81,7 @@
 
 
 .event-categories {
-    padding: rem(26);
+    @include adaptiveValue("padding",24,6);
     &__container {
         position: relative;
         background-image: url("/images/events/categories-background.jpg");

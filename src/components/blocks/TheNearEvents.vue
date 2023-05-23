@@ -28,6 +28,7 @@
               <TheMap/>
               <NearEventsSlider />
           </div>
+
           <div class="near-events__below">
             <div class="near-events__show-categories-toggle"></div>
             <div class="near-events__categories"></div>
@@ -35,10 +36,14 @@
         </div>
       </div>
     </div>
+
   </section>
+
 </template>
 
 <style>
+
+
 
 </style>
 <script setup>

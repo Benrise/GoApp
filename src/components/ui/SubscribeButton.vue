@@ -1,5 +1,5 @@
 <template>
-    <BaseButton class="base-button_subscribe" @click="subscribe"></BaseButton>
+    <BaseButton aria-label="Subscribe" class="base-button_subscribe" @click="subscribe"></BaseButton>
 </template>
 
 <script>

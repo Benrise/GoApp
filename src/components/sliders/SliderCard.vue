@@ -5,7 +5,7 @@
         <a href="#" class="slide-card__link">
             <div class="slide-card__img-blackout">
                 <div class="slide-card__image">
-                    <img :src="imgUrl" :alt="name">
+                    <img :src="imgUrl" :aria-label="categoryTitle" @error="setDefaultImage">
                 </div>
             </div>
         </a>
@@ -40,8 +40,8 @@
                 </div>
             </div>
             <div class="slide-card__functions-right-down">
-                <a href="#" class="slide-card__buy-button">Купить билеты</a>
-                <button class="slide-card__fav-button _icon-heart"></button>
+                <a href="#" aria-label="Buy tickets" class="slide-card__buy-button">Купить билеты</a>
+                <button type="button"  aria-label="Add to favorite" class="slide-card__fav-button _icon-heart"></button>
             </div>
         </div>
     </div>
@@ -65,11 +65,15 @@ export default defineComponent({
         imgUrl: String,
         categoryTitle: String,
         categoryName: String,
-
-    }
+    },
+    methods: {
+        setDefaultImage(event) {
+            event.target.src = '/images/events/default-event-img.png';
+        },
+    },
 })
 </script>
 
-<style scoped>
+<style>
 
 </style>

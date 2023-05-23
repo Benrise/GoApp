@@ -12,7 +12,7 @@ $successColor: #00CA8D;
 
 $categories: (
         travel: #8da0d1,
-        healthAndBeauty: #ff0000,
+        health: #ff0000,
         movie: #800080,
         sportAndFitness: #00ca8d,
         music: #0bb8ad,
@@ -21,6 +21,8 @@ $categories: (
         party: #5200ff,
         theater: #823e00,
         art: #ff6321,
+        nature: #008000,
+        quests: #800000
 );
 
 
@@ -41,4 +43,6 @@ $mobile: em(767.98);
 $mobileSmall: em(479.98);
 $mobileXSmall: em(339.98);
 $mobileXSSmall: em(281.98);
+
+
 

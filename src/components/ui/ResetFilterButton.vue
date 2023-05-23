@@ -1,5 +1,5 @@
 <template>
-    <FilterButton class="base-button_reset _icon-xmark" @click="reset"></FilterButton>
+    <FilterButton aria-label="Reset" class="base-button_reset _icon-xmark" @click="reset"></FilterButton>
 </template>
 
 <script>

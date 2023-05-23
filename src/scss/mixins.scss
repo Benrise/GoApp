@@ -21,7 +21,7 @@
 	$font-size-mobile: 16,
 	$line-height: 29,
 	$color: #a94aa9,
-	$opacity: 0.5
+	$opacity: 0.8
 ) {
 	font-weight: $font-weight;
 	@include adaptiveValue("font-size", $font-size, $font-size-mobile);

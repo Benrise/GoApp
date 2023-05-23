@@ -1,6 +1,6 @@
 .main {
     flex: 1 1 auto;
-    padding: rem(26);
+    @include adaptiveValue("padding", 24,6);
 }
 
 .search-main__filters {

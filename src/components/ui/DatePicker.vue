@@ -1,5 +1,5 @@
 <template>
-    <DatePicker :placeholder="placeholderText" class="base-button_date-picker" v-model="date"/>
+    <DatePicker aria-label="Datepicker" :placeholder="placeholderText" class="base-button_date-picker" v-model="date"/>
 </template>
 
 <script>
@@ -36,7 +36,7 @@ export default {
     --dp-cell-padding: 5px; /*Padding in the cell*/
     --dp-common-padding: 10px; /*Common padding used*/
     --dp-input-icon-padding: 35px; /*Padding on the left side of the input if icon is present*/
-    --dp-input-padding: 6px 30px 6px 12px; /*Padding in the input*/
+    --dp-input-padding: 7px 30px 7px 12px; /*Padding in the input*/
     --dp-menu-min-width: 260px; /*Adjust the min width of the menu*/
     --dp-action-buttons-padding: 2px 5px; /*Adjust padding for the action buttons in action row*/
     --dp-row-maring:  5px 0; /*Adjust the spacing between rows in the calendar*/
