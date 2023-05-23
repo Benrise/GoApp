@@ -101,7 +101,7 @@ export default defineComponent({
             <BaseModal :title="selectedEvent ? selectedEvent.title : ''"  :show="modalVisible" @update:show="modalVisible = $event">
                 <p v-if="selectedEvent">{{ formatDate(selectedEvent.start) }}</p>
                 <img style="border-radius: 12px" :alt="selectedEvent.title" :src="calendarEvents[selectedEvent.id-1].img">
-                <a class="menu__link" :href="selectedEvent.start.url">Подробнее</a>
+                <a class="menu__link" target="_blank" :href="selectedEvent.url">Подробнее</a>
             </BaseModal>
         </transition>
     </div>
