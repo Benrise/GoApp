@@ -2,7 +2,7 @@
 <div class="wrapper">
     <main class="main">
         <section class="main-block">
-            <div class="main-block__container _profile-margin">
+            <div class="main-block__container _heading-block">
                 <div class="main-block__info">
                     <h2 class="main-block__title">
                         Мой профиль

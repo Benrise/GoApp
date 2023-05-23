@@ -192,7 +192,8 @@ export default createStore({
                 price: 'low',
                 img: '/images/events/yoga-promo.webp',
                 category: 3,
-                coordinates: [37.59502, 55.743561]
+                coordinates: [37.59502, 55.743561],
+
             },
             {
                 id: 2,
@@ -1067,6 +1068,606 @@ export default createStore({
                 img: '/images/events/party-promo.webp',
                 category: 4
             },],
+        calendarEvents:[
+            {
+                id: 1,
+                title: "Yoga Material",
+                start: "2023-05-10",
+                location: "Москва",
+                color: "red",
+                img: "/images/events/yoga-promo.webp",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 2,
+                title: "Человек-павук",
+                start: "2023-05-23",
+                location: "Москва",
+                color: "purple",
+                img: "/images/events/spider-man-promo.webp",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 3,
+                title: "Come Together",
+                start: "2023-05-12",
+                location: "Москва",
+                color: 'yellow',
+                textColor: "black",
+                img: "/images/events/the-beatles-promo.webp",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 4,
+                title: "ART - Цветная полоса",
+                start: "2023-05-31",
+                location: "Реутов",
+                color: 'orange',
+                img: "/images/events/art-promo.webp",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 5,
+                title: "Школьные танцы",
+                start: "2023-05-15",
+                location: "Москва",
+                color: "#8da0d1",
+                category: 0,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 6,
+                title: "Фестиваль красок",
+                start: "2023-05-28",
+                location: "Москва",
+                color: "#ff0000",
+                category: 1,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 7,
+                title: "Танцевальная вечеринка",
+                start: "2023-05-17",
+                location: "Москва",
+                color: "#5200ff",
+                category: 7,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 8,
+                title: "Концерт рок-группы",
+                start: "2023-05-25",
+                location: "Москва",
+                color: "#0bb8ad",
+                category: 5,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 9,
+                title: "Фильмовый кинофестиваль",
+                start: "2023-05-20",
+                location: "Москва",
+                color: "#800080",
+                category: 2,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            },
+            {
+                id: 10,
+                title: "Спортивный марафон",
+                start: "2023-05-19",
+                location: "Москва",
+                color: "#00ca8d",
+                category: 3,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 11,
+                title: "Театральная постановка",
+                start: "2023-05-14",
+                location: "Москва",
+                color: "#823e00",
+                category: 8,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 12,
+                title: "Музыкальный фестиваль",
+                start: "2023-05-26",
+                location: "Москва",
+                color: "#0bb8ad",
+                category: 4,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 13,
+                title: "Велосипедная прогулка",
+                start: "2023-05-18",
+                location: "Москва",
+                color: "#008000",
+                category: 10,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 14,
+                title: "Квест-игра",
+                start: "2023-05-21",
+                location: "Москва",
+                color: "#800000",
+                category: 11,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 15,
+                title: "Юмористический шоу",
+                start: "2023-05-30",
+                location: "Москва",
+                color: "#ffa500",
+                category: 6,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 16,
+                title: "Фотографическая выставка",
+                start: "2023-05-11",
+                location: "Москва",
+                color: "#ff6321",
+                category: 9,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 17,
+                title: "Вечер под открытым небом",
+                start: "2023-05-19",
+                location: "Москва",
+                color: "#001d82",
+                category: 5,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 18,
+                title: "Спортивный турнир",
+                start: "2023-05-25",
+                location: "Москва",
+                color: "#00ca8d",
+                category: 3,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 19,
+                title: "Кинофестиваль",
+                start: "2023-05-28",
+                location: "Москва",
+                color: "#800080",
+                category: 2,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 20,
+                title: "Вечеринка на пляже",
+                start: "2023-05-31",
+                location: "Москва",
+                color: "#5200ff",
+                category: 7,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 21,
+                title: "Школьный театральный спектакль",
+                start: "2023-05-14",
+                location: "Москва",
+                color: "#823e00",
+                category: 8,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 22,
+                title: "Фестиваль кулинарии",
+                start: "2023-05-18",
+                location: "Москва",
+                color: "#ff0000",
+                category: 1,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 23,
+                title: "Концерт рок-группы",
+                start: "2023-05-23",
+                location: "Санкт-Петербург",
+                color: "#0bb8ad",
+                category: 4,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 24,
+                title: "Выставка современного искусства",
+                start: "2023-05-25",
+                location: "Москва",
+                color: "#ff6321",
+                category: 9,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 25,
+                title: "Мастер-класс по акварели",
+                start: "2023-05-25",
+                location: "Москва",
+                color: "#008000",
+                category: 10,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 26,
+                title: "Фестиваль современного танца",
+                start: "2023-06-05",
+                location: "Санкт-Петербург",
+                color: "#5200ff",
+                category: 5,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 27,
+                title: "Спортивный марафон",
+                start: "2023-06-10",
+                location: "Москва",
+                color: "#00ca8d",
+                category: 3,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 28,
+                title: "Кинопремьера нового блокбастера",
+                start: "2023-06-15",
+                location: "Москва",
+                color: "#800080",
+                category: 2,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 29,
+                title: "Выставка фотографии",
+                start: "2023-06-20",
+                location: "Санкт-Петербург",
+                color: "#8da0d1",
+                category: 0,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 30,
+                title: "Квест-игра \"Побег из психушки\"",
+                start: "2023-06-25",
+                location: "Москва",
+                color: "#800000",
+                category: 11,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 31,
+                title: "Концерт рок-группы",
+                start: "2023-07-02",
+                location: "Москва",
+                color: "#001d82",
+                category: 5,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 32,
+                title: "Фестиваль еды и напитков",
+                start: "2023-07-05",
+                location: "Санкт-Петербург",
+                color: "#ff6321",
+                category: 9,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 33,
+                title: "Театральное представление",
+                start: "2023-07-10",
+                location: "Москва",
+                color: "#823e00",
+                category: 8,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 34,
+                title: "Комедийное шоу",
+                start: "2023-07-15",
+                location: "Санкт-Петербург",
+                color: "#ffa500",
+                category: 6,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 35,
+                title: "Музыкальный фестиваль",
+                start: "2023-07-15",
+                location: "Москва",
+                color: "#0bb8ad",
+                category: 4,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 36,
+                title: "Поход в горы",
+                start: "2023-07-20",
+                location: "Сочи",
+                color: "#008000",
+                category: 10,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 37,
+                title: "Выставка искусства",
+                start: "2023-07-25",
+                location: "Москва",
+                color: "#ff6321",
+                category: 9,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 38,
+                title: "Кинофестиваль",
+                start: "2023-07-28",
+                location: "Санкт-Петербург",
+                color: "#800080",
+                category: 2,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 39,
+                title: "Спортивный марафон",
+                start: "2023-07-30",
+                location: "Москва",
+                color: "#00ca8d",
+                category: 3,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 40,
+                title: "Вечеринка на пляже",
+                start: "2023-07-31",
+                location: "Сочи",
+                color: "#5200ff",
+                category: 7,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 41,
+                title: "Фестиваль еды",
+                start: "2023-08-05",
+                location: "Москва",
+                color: "#ffa500",
+                category: 6,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 42,
+                title: "Концерт рок-группы",
+                start: "2023-08-10",
+                location: "Санкт-Петербург",
+                color: "#0bb8ad",
+                category: 5,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 43,
+                title: "Театральное представление",
+                start: "2023-08-15",
+                location: "Москва",
+                color: "#823e00",
+                category: 8,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 44,
+                title: "Квест-игра",
+                start: "2023-08-20",
+                location: "Санкт-Петербург",
+                color: "#800000",
+                category: 11,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 45,
+                title: "Выставка фотографий",
+                start: "2023-08-25",
+                location: "Москва",
+                color: "#8da0d1",
+                category: 0,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 46,
+                title: "Фестиваль цветов",
+                start: "2023-09-02",
+                location: "Сочи",
+                color: "#008000",
+                category: 10,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 47,
+                title: "Вечеринка на пляже",
+                start: "2023-09-05",
+                location: "Гоа",
+                color: "#5200ff",
+                category: 7,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 48,
+                title: "Фильмовечер",
+                start: "2023-09-10",
+                location: "Москва",
+                color: "#800080",
+                category: 2,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 49,
+                title: "Концерт классической музыки",
+                start: "2023-09-15",
+                location: "Санкт-Петербург",
+                color: "#0bb8ad",
+                category: 4,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            },
+            {
+                id: 50,
+                title: "Выставка современного искусства",
+                start: "2023-09-20",
+                location: "Москва",
+                color: "#ff6321",
+                category: 9,
+                img: "/images/events/default-event-img.png",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu arcu at est lacinia ultricies. Vestibulum dapibus tincidunt tristique. Sed sed erat auctor, cursus diam eget, efficitur ligula. Vivamus malesuada ipsum ut arcu varius, ac dapibus nibh vestibulum. Fusce efficitur metus id erat accumsan ultricies. Nulla facilisi. Integer consectetur feugiat lectus id facilisis. Cras semper faucibus ultrices.",
+                url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                
+            }
+
+
+        ],
 
 
 
