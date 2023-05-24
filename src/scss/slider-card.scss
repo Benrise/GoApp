@@ -181,6 +181,8 @@
     @media (max-width: $mobile) {
         gap: rem(12);
         padding: rem(16);
+        border: 1px solid $containerBorderColor;
+        border-radius: rem(12);
         &__functions-right {
             left: 0;
             bottom: 0;

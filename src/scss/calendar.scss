@@ -3,15 +3,15 @@
   --fc-page-bg-color: #fff;
   --fc-neutral-bg-color: rgba(208, 208, 208, 0.3);
   --fc-neutral-text-color: #808080;
-  --fc-border-color: transparent;
+  --fc-border-color: $containerBorderColor;
 
   --fc-button-text-color: #fff;
   --fc-button-bg-color: #800080;
-  --fc-button-border-color: #2C3E50;
-  --fc-button-hover-bg-color: #1e2b37;
-  --fc-button-hover-border-color: #1a252f;
-  --fc-button-active-bg-color: #1a252f;
-  --fc-button-active-border-color: #151e27;
+  --fc-button-border-color: #ffabf2;
+  --fc-button-hover-bg-color: #bb00bb;
+  --fc-button-hover-border-color: #2f1a2e;
+  --fc-button-active-bg-color: #800080;
+  --fc-button-active-border-color: #800080;
 
   --fc-event-bg-color: #3788d8;
   --fc-event-border-color: #3788d8;
