@@ -111,11 +111,17 @@ https://www.figma.com/file/sHGiZ71sPiEAv1Bg0yJgpm/Lab---Go?type=design&node-id=0
 
 ```sh
 npm install npm@latest -g
-``
+```
 ```sh
 npm run dev
 ```
-
+Note:
+Если у вас Mac на ARM архитектуре, в случае ошибки установки модуля "node-sass", ниже представлено возможное решение:
+```sh
+npm uninstall node-sass
+npm install --save-dev sass
+```
+   
 
 ## Авторы
 
