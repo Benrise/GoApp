@@ -11,11 +11,6 @@
     Веб-приложение для отслеживания мероприятий
   </p>
 </p>
-<div align="center">
-  <strong> Google диск проекта </strong>
-    <br>
-    https://drive.google.com/drive/folders/1Ah_MyeXhIqf0CdkQuggmI6invulp7cL1
-</div>
 <br>
 
 
